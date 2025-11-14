@@ -1,21 +1,32 @@
-[file name]: index.html
-[file content begin]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Идеальный Баланс - Бухгалтерское сопровождение бизнеса</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Идеальный Баланс - Система тестирования</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KP2L6QBZ');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35M65B8YWL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-35M65B8YWL');
+    </script>
+    
     <style>
         :root {
             --primary: #003958;
             --secondary: #C2A891;
-            --accent: #FF6B35;
             --light: #FFFFFF;
             --dark: #1D101B;
-            --gray: #6B7280;
-            --light-bg: #F8FAFC;
             --success: #28a745;
             --warning: #ffc107;
             --danger: #dc3545;
@@ -29,10 +40,9 @@
         }
         
         body {
-            background-color: var(--light);
+            background-color: #f8fafc;
             color: var(--dark);
             line-height: 1.6;
-            overflow-x: hidden;
         }
         
         .container {
@@ -41,13 +51,12 @@
             padding: 0 20px;
         }
         
-        /* Header */
         header {
             background-color: var(--light);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
         }
         
         .header-content {
@@ -60,39 +69,37 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            text-decoration: none;
+            gap: 10px;
         }
         
         .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
-            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 18px;
         }
         
         .logo-text {
             font-size: 1.5rem;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--primary);
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
         }
         
         nav a {
             text-decoration: none;
             color: var(--dark);
-            font-weight: 600;
+            font-weight: 500;
             transition: color 0.3s;
             cursor: pointer;
         }
@@ -107,13 +114,12 @@
         }
         
         .btn {
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
             border: none;
-            font-size: 15px;
         }
         
         .btn-outline {
@@ -123,144 +129,192 @@
         }
         
         .btn-primary {
-            background: var(--primary);
+            background-color: var(--primary);
             color: white;
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* Hero Section */
+        
         .hero {
-            padding: 100px 0 80px;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-        
-        .hero-text {
-            flex: 1;
-            max-width: 600px;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            text-align: center;
         }
         
         .hero h1 {
-            font-size: 3.2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             color: var(--primary);
-            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 35px;
-            color: var(--gray);
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        
-        .stat-label {
-            font-size: 14px;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-        
-        .hero-image {
-            flex: 1;
-            max-width: 500px;
-            text-align: center;
-        }
-        
-        .hero-img-placeholder {
-            width: 100%;
-            height: 400px;
-            background: var(--primary);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
             font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--dark);
         }
         
-        /* Services Section */
-        .services-section {
-            padding: 100px 0;
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--secondary);
+        }
+        
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .auth-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--secondary);
+            border-bottom: 3px solid transparent;
+        }
+        
+        .auth-tab.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .auth-form {
+            display: none;
+        }
+        
+        .auth-form.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 57, 88, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #002a4a;
+        }
+        
+        .info-section {
+            padding: 80px 0;
+            background-color: white;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-size: 2rem;
             color: var(--primary);
-            margin-bottom: 15px;
         }
         
-        .services-grid {
+        .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .service-card {
-            background: var(--light);
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+        .info-card {
+            background-color: #f8fafc;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            margin: 0 auto 25px;
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         
-        .service-card h3 {
-            font-size: 1.5rem;
+        .info-card h3 {
             margin-bottom: 15px;
             color: var(--primary);
         }
         
-        .service-price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 15px 0;
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
         }
         
-        /* Page Content System */
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .student-info {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .copyright {
+            color: #9ca3af;
+        }
+        
         .page-content {
             display: none;
         }
@@ -269,57 +323,140 @@
             display: block;
         }
         
-        .restricted {
-            display: none;
-        }
-        
         .user-info {
             display: none;
             align-items: center;
             gap: 10px;
         }
         
-        /* Documents Section */
+        .user-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .logout-btn {
+            padding: 8px 15px;
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .restricted {
+            display: none;
+        }
+
+        .restricted.visible {
+            display: block;
+        }
+
+        .timeline-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            right: -10px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
         .documents-section {
-            padding: 100px 0;
+            padding: 80px 0;
             background-color: #f8fafc;
         }
         
         .documents-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
         
         .document-card {
             background-color: white;
-            border-radius: 16px;
+            border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
         }
         
-        .pdf-container {
-            margin: 20px 0;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #f5f5f5;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         
-        .pdf-placeholder {
-            text-align: center;
-            padding: 40px;
-            color: var(--gray);
-        }
-        
-        .pdf-placeholder i {
-            font-size: 3rem;
+        .document-card h3 {
             margin-bottom: 15px;
             color: var(--primary);
         }
@@ -327,52 +464,110 @@
         .document-link {
             display: inline-block;
             margin-top: 15px;
-            padding: 12px 24px;
-            background: var(--primary);
+            padding: 10px 20px;
+            background-color: var(--primary);
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 600;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .document-link:hover {
+            background-color: #002a4a;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .auth-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
         }
 
-        /* Testing Section */
+        /* Стили для системы тестирования */
         .testing-section {
-            padding: 100px 0;
+            padding: 60px 0;
             background: white;
         }
 
         .scenario-card {
             background: #f8f9fa;
             border: 2px solid #e9ecef;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 25px 0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
             transition: all 0.3s ease;
         }
 
         .scenario-card:hover {
             border-color: var(--primary);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .scenario-card.active {
+            border-color: var(--primary);
+            background: #f0f7ff;
         }
 
         .scenario-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             cursor: pointer;
         }
 
         .scenario-title {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: 600;
             color: var(--primary);
         }
 
         .scenario-status {
-            padding: 6px 15px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
         }
 
@@ -381,120 +576,206 @@
             color: white;
         }
 
+        .status-testing {
+            background: var(--warning);
+            color: var(--dark);
+        }
+
+        .status-complete {
+            background: var(--primary);
+            color: white;
+        }
+
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 25px 0;
+            gap: 20px;
+            margin: 20px 0;
         }
 
         .tool-card {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             border-left: 4px solid var(--primary);
         }
 
         .tool-card h4 {
             color: var(--primary);
-            margin-bottom: 12px;
-            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
         .test-btn {
             background: var(--primary);
             color: white;
             border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 5px;
             cursor: pointer;
             margin: 5px;
             font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s;
         }
 
         .test-btn:hover {
             background: #002a4a;
-            transform: translateY(-2px);
         }
 
-        /* Feedback Form */
-        .feedback-form {
+        .hotjar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hotjar-content {
             background: white;
             padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .heatmap {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(180deg, rgba(255,0,0,0.3) 0%, rgba(255,255,0,0.3) 50%, rgba(0,255,0,0.3) 100%);
+            border-radius: 8px;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .click-marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .session-recorder {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            height: 200px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+
+        .feedback-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin: 20px 0;
-            border: 2px solid var(--primary);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: 600;
-            color: var(--primary);
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
         }
 
         .form-group textarea {
-            height: 120px;
+            height: 100px;
             resize: vertical;
         }
 
-        .rating-stars {
-            display: flex;
-            gap: 10px;
-            margin: 10px 0;
+        /* Стили для панели разработчика */
+        .dev-panel {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: rgba(0, 57, 88, 0.95);
+            color: white;
+            padding: 15px;
+            border-radius: 10px 0 0 10px;
+            z-index: 10000;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            min-width: 280px;
         }
-
-        .star {
-            font-size: 24px;
-            color: #ddd;
+        
+        .dev-panel.collapsed {
+            transform: translateY(-50%) translateX(85%);
+        }
+        
+        .dev-panel-toggle {
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #003958;
+            color: white;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            padding: 10px 5px;
             cursor: pointer;
-            transition: color 0.3s;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        
+        .dev-panel-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .dev-btn {
+            background: #C2A891;
+            color: #1D101B;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        
+        .dev-btn:hover {
+            background: #e6d0be;
+            transform: translateX(-3px);
+        }
+        
+        .dev-status {
+            font-size: 11px;
+            color: #c2a891;
+            margin-top: 8px;
+            text-align: center;
         }
 
-        .star:hover,
-        .star.active {
-            color: #ffc107;
-        }
-
-        .feedback-results {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 20px 0;
-            border-left: 4px solid var(--primary);
-        }
-
-        /* Support Chat */
+        /* Стили для чата поддержки */
         .support-chat-widget {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            left: 20px;
             z-index: 10001;
         }
 
@@ -509,9 +790,6 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .support-chat-button:hover {
@@ -522,11 +800,11 @@
         .support-chat-container {
             position: absolute;
             bottom: 70px;
-            right: 0;
+            left: 0;
             width: 350px;
             height: 500px;
             background: white;
-            border-radius: 16px;
+            border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             display: none;
             flex-direction: column;
@@ -537,7 +815,7 @@
             background: var(--success);
             color: white;
             padding: 15px;
-            border-radius: 16px 16px 0 0;
+            border-radius: 15px 15px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -554,11 +832,6 @@
             color: white;
             font-size: 20px;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .support-chat-messages {
@@ -570,8 +843,8 @@
 
         .support-message {
             margin-bottom: 15px;
-            padding: 12px 16px;
-            border-radius: 16px;
+            padding: 10px 15px;
+            border-radius: 15px;
             max-width: 80%;
             word-wrap: break-word;
         }
@@ -593,12 +866,12 @@
             padding: 15px;
             border-top: 1px solid #e0e0e0;
             background: white;
-            border-radius: 0 0 16px 16px;
+            border-radius: 0 0 15px 15px;
         }
 
         .support-chat-input {
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 25px;
             outline: none;
@@ -621,9 +894,6 @@
             height: 30px;
             border-radius: 50%;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .support-quick-questions {
@@ -649,43 +919,62 @@
             color: white;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-            text-align: center;
+        .support-typing-indicator {
+            display: none;
+            padding: 10px 15px;
+            color: #666;
+            font-style: italic;
         }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .support-chat-container {
-                width: 300px;
-                right: -20px;
-            }
+
+        .operator-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid var(--success);
+        }
+
+        .operator-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .operator-details h4 {
+            margin: 0;
+            color: var(--success);
+        }
+
+        .operator-details p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .feedback-results {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--primary);
         }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP2L6QBZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <div class="container">
             <div class="header-content">
@@ -696,10 +985,10 @@
                 <nav>
                     <ul>
                         <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
-                        <li><a href="#" class="nav-link" data-page="services">Услуги</a></li>
-                        <li><a href="#" class="nav-link" data-page="about">О нас</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="project-timeline">Этапы проекта</a></li>
                         <li><a href="#" class="nav-link restricted" data-page="documents">Документы</a></li>
                         <li><a href="#" class="nav-link restricted" data-page="testing">Тестирование</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="analytics">Аналитика</a></li>
                     </ul>
                 </nav>
                 <div class="auth-buttons" id="authButtons">
@@ -714,291 +1003,416 @@
         </div>
     </header>
 
-    <!-- Главная страница -->
     <section class="page-content active" id="home-page">
         <section class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Ваш надежный финансовый партнер</h1>
-                        <p>Полный комплекс бухгалтерских услуг для ИП и ООО. С нами ваши финансы в полном порядке!</p>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">25%</div>
-                                <div class="stat-label">Экономия времени</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Своевременная отчетность</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">5/5</div>
-                                <div class="stat-label">Рейтинг качества</div>
-                            </div>
+                <h1>Бухгалтерские услуги для бизнеса</h1>
+                <p>Создание современного, удобного и клиентоориентированного сайта, который станет главным инструментом для привлечения новых клиентов и формирования доверия к компании.</p>
+                
+                <div style="max-width: 600px; margin: 0 auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 20px;">
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">25%</div>
+                            <p>Увеличение продаж</p>
                         </div>
-                        <button class="btn btn-primary" onclick="showPage('services')">
-                            Наши услуги
-                        </button>
-                    </div>
-                    <div class="hero-image">
-                        <div class="hero-img-placeholder">
-                            <i class="fas fa-calculator" style="font-size: 4rem;"></i>
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--secondary); border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">40%</div>
+                            <p>Снижение нагрузки</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">5%</div>
+                            <p>Конверсия в клиенты</p>
                         </div>
                     </div>
+                    <div style="text-align: center; font-weight: 600; color: var(--primary);">Зеленко Ирина Юрьевна</div>
+                    <div style="text-align: center; color: var(--dark); margin-top: 5px;">Студентка РУДН, НБИбд-01-23</div>
                 </div>
             </div>
         </section>
 
-        <section class="services-section">
+        <section class="info-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Наши услуги</h2>
-                    <p>Комплексное бухгалтерское сопровождение для вашего бизнеса</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                        </div>
-                        <h3>Бухгалтерское сопровождение</h3>
-                        <p>Полное ведение бухгалтерского и налогового учета</p>
-                        <div class="service-price">от 5 000 ₽/мес</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
+                <h2 class="section-title">О проекте</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Цель проекта</h3>
+                        <p>Создание современного, удобного и клиентоориентированного сайта, который станет главным и полезным инструментом для привлечения новых клиентов, формирования доверия к компании и увеличения объема продаж бухгалтерских услуг на 25% в течение первого года после запуска.</p>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>Налоговая оптимизация</h3>
-                        <p>Снижение налоговой нагрузки законными способами</p>
-                        <div class="service-price">от 10 000 ₽</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
+                    <div class="info-card">
+                        <h3>Задачи проекта</h3>
+                        <ul style="padding-left: 20px;">
+                            <li>Разработать структуру и дизайн сайта</li>
+                            <li>Наполнить сайт продающим и полезным контентом</li>
+                            <li>Реализовать функционал для генерации заявок</li>
+                            <li>Обеспечить техническую надежность и видимость сайта (SEO)</li>
+                        </ul>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>Консультации</h3>
-                        <p>Профессиональные консультации по финансовым вопросам</p>
-                        <div class="service-price">от 3 000 ₽/час</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
+                    <div class="info-card">
+                        <h3>Целевая аудитория</h3>
+                        <p>Малый и средний бизнес (ИП, ООО), нуждающийся в профессиональном бухгалтерском сопровождении. Клиенты с разным уровнем цифровой грамотности, ценящие персональный подход и качество услуг.</p>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- Страница "Услуги" -->
-    <section class="page-content" id="services-page">
-        <section class="services-section" style="padding-top: 120px;">
+    <section class="page-content" id="project-timeline-page">
+        <section class="timeline-section">
             <div class="container">
-                <div class="section-title">
-                    <h2>Все наши услуги</h2>
-                    <p>Выберите подходящий пакет услуг для вашего бизнеса</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                <h2 class="section-title">Этапы реализации проекта</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Планирование</h3>
+                            <p><strong>Сроки:</strong> 1-30 сентября 2025</p>
+                            <p>Анализ требований, проектирование архитектуры системы, создание технического задания.</p>
                         </div>
-                        <h3>Базовый пакет</h3>
-                        <p>Для начинающих предпринимателей</p>
-                        <div class="service-price">5 000 ₽/мес</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Разработка</h3>
+                            <p><strong>Сроки:</strong> 1-31 октября 2025</p>
+                            <p>Создание пользовательского интерфейса, программирование backend-системы, интеграция модулей.</p>
                         </div>
-                        <h3>Стандартный пакет</h3>
-                        <p>Для растущего бизнеса</p>
-                        <div class="service-price">8 000 ₽/мес</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
                     </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-crown"></i>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Тестирование</h3>
+                            <p><strong>Сроки:</strong> 1-20 ноября 2025</p>
+                            <p>Модульное, интеграционное и пользовательское тестирование системы.</p>
                         </div>
-                        <h3>Премиум пакет</h3>
-                        <p>Для established бизнеса</p>
-                        <div class="service-price">15 000 ₽/мес</div>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Внедрение</h3>
+                            <p><strong>Сроки:</strong> 21-31 ноября 2025</p>
+                            <p>Наполнение контентом, обучение администраторов, запуск в промышленную эксплуатацию.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- Страница "О нас" -->
-    <section class="page-content" id="about-page">
-        <section class="services-section" style="padding-top: 120px;">
-            <div class="container">
-                <div class="section-title">
-                    <h2>О нашей компании</h2>
-                    <p>Профессионализм, ответственность и индивидуальный подход</p>
-                </div>
-                <div class="service-card">
-                    <h3>Наша миссия</h3>
-                    <p>Мы делаем бухгалтерское сопровождение простым и понятным для каждого бизнеса.</p>
-                    <p>Наша команда - это профессионалы с многолетним опытом работы.</p>
-                    <button class="btn btn-primary" onclick="toggleSupportChat()">Задать вопрос</button>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Страница "Документы" -->
     <section class="page-content" id="documents-page">
-        <section class="documents-section" style="padding-top: 120px;">
+        <section class="documents-section">
             <div class="container">
                 <h2 class="section-title">Документы проекта</h2>
                 <div class="documents-grid">
                     <div class="document-card">
                         <h3>Техническое задание</h3>
-                        <p>Полное техническое задание на создание сайта</p>
-                        <div class="pdf-container" id="pdfContainer1">
-                            <div class="pdf-placeholder">
-                                <i class="fas fa-file-pdf"></i>
-                                <p>Нажмите для загрузки PDF</p>
-                                <button class="test-btn" onclick="loadPDF(1)">Загрузить PDF</button>
-                            </div>
-                        </div>
-                        <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
-                           download class="document-link">Скачать PDF</a>
+                        <p>Полное техническое задание на создание автоматизированной системы "Сайт бухгалтерского сопровождения «Идеальный Баланс»"</p>
+                        <a href="#" class="document-link" data-document="technical-specification">Скачать PDF</a>
                     </div>
                     <div class="document-card">
                         <h3>УПРИС</h3>
-                        <p>Учебно-проектная документация</p>
-                        <div class="pdf-container" id="pdfContainer2">
-                            <div class="pdf-placeholder">
-                                <i class="fas fa-file-pdf"></i>
-                                <p>Нажмите для загрузки PDF</p>
-                                <button class="test-btn" onclick="loadPDF(2)">Загрузить PDF</button>
-                            </div>
-                        </div>
-                        <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
-                           download class="document-link">Скачать PDF</a>
+                        <p>Учебно-проектная документация по проекту "Бухгалтерские услуги"</p>
+                        <a href="#" class="document-link" data-document="upris">Скачать PDF</a>
+                    </div>
+                    <div class="document-card">
+                        <h3>График работ</h3>
+                        <p>Детальный график выполнения работ по проекту с указанием сроков и ответственных</p>
+                        <a href="#" class="document-link" data-document="schedule">Скачать PDF</a>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- Страница "Тестирование" -->
     <section class="page-content" id="testing-page">
-        <section class="testing-section" style="padding-top: 120px;">
+        <section class="testing-section">
             <div class="container">
-                <h2 class="section-title">Система тестирования и обратной связи</h2>
+                <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);">Сценарии тестирования</h2>
 
                 <!-- Сценарий 1: UI/UX тестирование -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <div class="scenario-title">🎯 Тестирование пользовательского опыта</div>
-                        <div class="scenario-status status-ready">АКТИВНО</div>
+                <div class="scenario-card" id="scenario1">
+                    <div class="scenario-header" onclick="toggleScenario(1)">
+                        <div class="scenario-title">🎯 Сценарий 1: UI/UX тестирование поведения пользователей</div>
+                        <div class="scenario-status status-ready" id="status1">ГОТОВ</div>
                     </div>
-                    <div class="tools-grid">
-                        <div class="tool-card">
-                            <h4>📊 Сбор отзывов</h4>
-                            <p>Помогите улучшить сайт, оставив обратную связь</p>
-                            <button class="test-btn" onclick="showFeedbackForm()">Оставить отзыв</button>
-                            <button class="test-btn" onclick="viewAllFeedback()">Посмотреть все отзывы</button>
+                    <div class="scenario-content" id="content1">
+                        <p><strong>Цель:</strong> Анализировать поведение и удобство на этапе разработки</p>
+                        
+                        <div class="feedback-results">
+                            <h4>📊 Собранные отзывы: <span id="feedbackCount">0</span></h4>
+                            <button class="test-btn" onclick="viewAllFeedback()">Показать все отзывы</button>
+                            <button class="test-btn" onclick="exportFeedback()">Экспорт в CSV</button>
+                            <button class="test-btn" onclick="clearAllFeedback()">Очистить все</button>
                         </div>
                         
-                        <div class="tool-card">
-                            <h4>🖱️ Тестирование интерфейса</h4>
-                            <p>Проверьте удобство навигации и функциональность</p>
-                            <button class="test-btn" onclick="createTestTask()">Создать задание</button>
-                            <button class="test-btn" onclick="testNavigation()">Тест навигации</button>
-                        </div>
-                    </div>
-
-                    <!-- Форма обратной связи -->
-                    <div class="feedback-form" id="feedbackForm" style="display: none;">
-                        <h3>💬 Форма обратной связи</h3>
-                        <p>Ваше мнение поможет нам улучшить сервис!</p>
-                        
-                        <div class="form-group">
-                            <label>Ваше имя:</label>
-                            <input type="text" id="feedbackName" placeholder="Введите ваше имя">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Email для ответа:</label>
-                            <input type="email" id="feedbackEmail" placeholder="your@email.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Тип обратной связи:</label>
-                            <select id="feedbackType">
-                                <option value="suggestion">Предложение по улучшению</option>
-                                <option value="bug">Сообщение об ошибке</option>
-                                <option value="praise">Благодарность</option>
-                                <option value="question">Вопрос</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Оценка удобства сайта:</label>
-                            <div class="rating-stars">
-                                <span class="star" data-rating="1">★</span>
-                                <span class="star" data-rating="2">★</span>
-                                <span class="star" data-rating="3">★</span>
-                                <span class="star" data-rating="4">★</span>
-                                <span class="star" data-rating="5">★</span>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🖱️ Аналог Hotjar (Heatmaps)</h4>
+                                <p>Визуализация кликов и скроллинга пользователей</p>
+                                <button class="test-btn" onclick="startHeatmap()">Запуск тепловой карты</button>
+                                <button class="test-btn" onclick="startClickTracking()">Трекинг кликов</button>
+                                <button class="test-btn" onclick="showHotjarOverlay()">Демо Hotjar</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>🎥 Session Replay (Локальный)</h4>
+                                <p>Запись действий пользователя для последующего анализа</p>
+                                <button class="test-btn" onclick="startSessionRecording()">Начать запись</button>
+                                <button class="test-btn" onclick="stopSessionRecording()">Остановить</button>
+                                <div class="session-recorder" id="sessionRecorder">
+                                    // Session recording will appear here
+                                </div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>👥 Юзабилити-тестирование</h4>
+                                <p>Ручное тестирование с реальными пользователями</p>
+                                <button class="test-btn" onclick="createTestTask()">Создать задание</button>
+                                <button class="test-btn" onclick="showFeedbackForm()">Форма обратной связи</button>
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label>Ваш отзыв:</label>
-                            <textarea id="feedbackMessage" placeholder="Опишите ваши впечатления, предложения или проблемы..."></textarea>
-                        </div>
-                        
-                        <button class="btn btn-primary" onclick="submitFeedback()">📧 Отправить отзыв</button>
-                    </div>
 
-                    <!-- Результаты отзывов -->
-                    <div class="feedback-results" id="feedbackResults" style="display: none;">
-                        <h4>📈 Собранные отзывы: <span id="feedbackCount">0</span></h4>
-                        <div id="recentFeedback"></div>
-                        <button class="test-btn" onclick="exportFeedback()">📥 Экспорт в CSV</button>
-                        <button class="test-btn" onclick="clearAllFeedback()">🗑️ Очистить все</button>
+                        <div class="feedback-form" id="feedbackForm" style="display: none;">
+                            <h4>Форма обратной связи</h4>
+                            <div class="form-group">
+                                <label>Задание для тестирования:</label>
+                                <select id="testTask">
+                                    <option value="find_service">Найти услугу бухгалтерского сопровождения</option>
+                                    <option value="contact_info">Найти контактную информацию</option>
+                                    <option value="download_doc">Скачать документ</option>
+                                    <option value="navigation">Перейти между разделами сайта</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Комментарии и замечания:</label>
+                                <textarea id="userFeedback" placeholder="Опишите проблемы, с которыми столкнулись..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Оценка удобства (1-10):</label>
+                                <input type="number" id="usabilityScore" min="1" max="10" value="8">
+                            </div>
+                            <button class="test-btn" onclick="submitFeedback()">Отправить отзыв</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Сценарий 2: Техническое тестирование -->
-                <div class="scenario-card">
-                    <div class="scenario-header">
-                        <div class="scenario-title">⚡ Техническое тестирование</div>
-                        <div class="scenario-status status-ready">АКТИВНО</div>
+                <!-- Сценарий 2: Техническая отладка -->
+                <div class="scenario-card" id="scenario2">
+                    <div class="scenario-header" onclick="toggleScenario(2)">
+                        <div class="scenario-title">⚡ Сценарий 2: Техническая отладка и производительность</div>
+                        <div class="scenario-status status-ready" id="status2">ГОТОВ</div>
                     </div>
-                    <div class="tools-grid">
-                        <div class="tool-card">
-                            <h4>🌐 Производительность</h4>
-                            <p>Тестирование скорости загрузки и отклика</p>
-                            <button class="test-btn" onclick="testPerformance()">Тест скорости</button>
-                            <button class="test-btn" onclick="testResponsive()">Тест адаптивности</button>
-                        </div>
+                    <div class="scenario-content" id="content2">
+                        <p><strong>Цель:</strong> Оптимизация производительности и поиск технических проблем</p>
                         
-                        <div class="tool-card">
-                            <h4>🔧 Функциональность</h4>
-                            <p>Проверка работы всех элементов сайта</p>
-                            <button class="test-btn" onclick="testForms()">Тест форм</button>
-                            <button class="test-btn" onclick="testLinks()">Тест ссылок</button>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🌐 Network Analysis</h4>
+                                <p>Мониторинг сетевых запросов и времени загрузки</p>
+                                <button class="test-btn" onclick="testNetworkPerformance()">Тест скорости</button>
+                                <button class="test-btn" onclick="analyzeBundleSize()">Анализ ресурсов</button>
+                                <div id="networkResults" style="margin-top: 10px; font-size: 12px;"></div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>📊 Performance Profiling</h4>
+                                <p>Анализ производительности рендеринга</p>
+                                <button class="test-btn" onclick="startPerformanceProfiling()">Запуск профилирования</button>
+                                <button class="test-btn" onclick="runLighthouseAudit()">Lighthouse Audit</button>
+                                <div id="performanceResults" style="margin-top: 10px; font-size: 12px;"></div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>🐛 Console Debugging</h4>
+                                <p>Отладка JavaScript и отслеживание ошибок</p>
+                                <button class="test-btn" onclick="testConsoleLogging()">Тест логирования</button>
+                                <button class="test-btn" onclick="simulateErrors()">Тест ошибок</button>
+                                <div id="consoleOutput" style="background: #1e1e1e; color: #00ff00; padding: 10px; border-radius: 5px; margin-top: 10px; height: 100px; overflow-y: auto; font-family: monospace; font-size: 11px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Сценарий 3: Тестирование аналитики -->
+                <div class="scenario-card" id="scenario3">
+                    <div class="scenario-header" onclick="toggleScenario(3)">
+                        <div class="scenario-title">📊 Сценарий 3: Тестирование систем аналитики</div>
+                        <div class="scenario-status status-ready" id="status3">ГОТОВ</div>
+                    </div>
+                    <div class="scenario-content" id="content3">
+                        <p><strong>Цель:</strong> Проверка корректности работы GTM и GA4 перед продакшеном</p>
+                        
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🔧 Google Tag Manager</h4>
+                                <p>Тестирование контейнера GTM в режиме Preview</p>
+                                <button class="test-btn" onclick="enableGTMPreview()">GTM Preview Mode</button>
+                                <button class="test-btn" onclick="testGTMEvents()">Тест событий GTM</button>
+                                <button class="test-btn" onclick="testDataLayer()">Проверка Data Layer</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>📈 Google Analytics 4</h4>
+                                <p>Валидация событий и целей в GA4</p>
+                                <button class="test-btn" onclick="testGA4Events()">Тест событий GA4</button>
+                                <button class="test-btn" onclick="testConversions()">Тест конверсий</button>
+                                <button class="test-btn" onclick="checkRealTime()">Real-time отчет</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>🎯 События и цели</h4>
+                                <p>Тестирование пользовательских событий</p>
+                                <button class="test-btn" onclick="simulatePageView()">Page View</button>
+                                <button class="test-btn" onclick="simulateClickEvent()">Click Event</button>
+                                <button class="test-btn" onclick="simulateFormSubmit()">Form Submit</button>
+                                <div id="analyticsOutput" style="margin-top: 10px; font-size: 12px; background: #f8f9fa; padding: 10px; border-radius: 5px;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </section>
+
+    <section class="page-content" id="analytics-page">
+        <section class="info-section">
+            <div class="container">
+                <h2 class="section-title">Аналитика и Мониторинг</h2>
+                
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-title">📈 Система мониторинга в реальном времени</div>
+                        <div class="scenario-status status-ready">АКТИВЕН</div>
+                    </div>
+                    <div class="scenario-content">
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>👥 Активные пользователи</h4>
+                                <div style="font-size: 32px; font-weight: bold; color: var(--primary); text-align: center;" id="activeUsers">1</div>
+                                <p style="text-align: center;">сейчас на сайте</p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>⚡ Производительность</h4>
+                                <div style="font-size: 32px; font-weight: bold; color: var(--primary); text-align: center;" id="performanceScore">92%</div>
+                                <p style="text-align: center;">скорорсть загрузки</p>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>🎯 Конверсии</h4>
+                                <div style="font-size: 32px; font-weight: bold; color: var(--primary); text-align: center;" id="conversionRate">4.2%</div>
+                                <p style="text-align: center;">успешных действий</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px;">
+                            <h4>📊 Журнал событий</h4>
+                            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; height: 200px; overflow-y: auto; font-family: monospace; font-size: 12px;" id="eventLog">
+                                <!-- События будут добавляться здесь -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" data-tab="login">Вход</div>
+                <div class="auth-tab" data-tab="register">Регистрация</div>
+            </div>
+            
+            <form class="auth-form active" id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Логин</label>
+                    <input type="text" id="loginUsername" placeholder="Введите ваш логин" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Пароль</label>
+                    <input type="password" id="loginPassword" placeholder="Введите ваш пароль" required>
+                </div>
+                <button type="submit" class="submit-btn">Войти</button>
+                <div class="error-message" id="loginError">Неверный логин или пароль!</div>
+            </form>
+            
+            <form class="auth-form" id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Имя</label>
+                    <input type="text" id="registerName" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Введите ваш email" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Пароль</label>
+                    <input type="password" id="registerPassword" placeholder="Создайте пароль" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Подтверждение пароля</label>
+                    <input type="password" id="registerConfirmPassword" placeholder="Повторите пароль" required>
+                </div>
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                <div class="error-message" id="registerError">Пароли не совпадают!</div>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
-            <div class="student-info">Зеленко Ирина Юрьевна, НБИбд-01-23</div>
-            <div class="copyright">© 2025 Идеальный Баланс. Все права защищены.</div>
+            <div class="footer-content">
+                <div class="logo">
+                    <div class="logo-icon">ИБ</div>
+                    <div class="logo-text">Идеальный Баланс</div>
+                </div>
+                <div class="student-info">Зеленко Ирина Юрьевна, НБИбд-01-23</div>
+                <div class="copyright">© 2025 Идеальный Баланс. Все права защищены.</div>
+            </div>
         </div>
     </footer>
 
-    <!-- Чат поддержки -->
+    <!-- Hotjar Overlay Demo -->
+    <div class="hotjar-overlay" id="hotjarOverlay">
+        <div class="hotjar-content">
+            <h3>🎯 Демо: Hotjar Heatmap & Session Recording</h3>
+            <p>Имитация работы инструментов анализа поведения пользователей</p>
+            
+            <div class="heatmap" id="heatmapDemo">
+                <div class="click-marker" style="top: 20%; left: 30%;"></div>
+                <div class="click-marker" style="top: 40%; left: 60%;"></div>
+                <div class="click-marker" style="top: 70%; left: 45%;"></div>
+                <div class="click-marker" style="top: 25%; left: 75%;"></div>
+            </div>
+            
+            <p><strong>Тепловая карта показывает:</strong></p>
+            <ul style="text-align: left; margin: 10px 0;">
+                <li>🔴 Красные зоны: Частые клики</li>
+                <li>🟡 Желтые зоны: Умеренная активность</li>
+                <li>🟢 Зеленые зоны: Редкие взаимодействия</li>
+            </ul>
+            
+            <button class="test-btn" onclick="closeHotjarOverlay()">Закрыть демо</button>
+        </div>
+    </div>
+
+    <!-- Панель разработчика -->
+    <div class="dev-panel" id="devPanel">
+        <button class="dev-panel-toggle" id="devPanelToggle">Dev Tools</button>
+        <div class="dev-panel-content">
+            <button class="dev-btn" onclick="toggleScenario(1)">🎯 UI/UX Тесты</button>
+            <button class="dev-btn" onclick="toggleScenario(2)">⚡ Perf Тесты</button>
+            <button class="dev-btn" onclick="toggleScenario(3)">📊 Analytics Тесты</button>
+            <button class="dev-btn" onclick="startHeatmap()">Heatmap</button>
+            <button class="dev-btn" onclick="startSessionRecording()">Record Session</button>
+            <button class="dev-btn" onclick="testNetworkPerformance()">Network Test</button>
+            <button class="dev-btn" onclick="runLighthouseAudit()">Lighthouse</button>
+            <button class="dev-btn" onclick="enableGTMPreview()">GTM Preview</button>
+            <button class="dev-btn" onclick="testGA4Events()">GA4 Events</button>
+            <button class="dev-btn" onclick="viewAllFeedback()">📊 Показать отзывы</button>
+            <button class="dev-btn" onclick="exportFeedback()">📥 Экспорт отзывов</button>
+            <div class="dev-status" id="devStatus">Система тестирования активна</div>
+        </div>
+    </div>
+
+    <!-- Чат поддержки для гостей -->
     <div class="support-chat-widget">
         <button class="support-chat-button" onclick="toggleSupportChat()">💬</button>
         <div class="support-chat-container" id="supportChatContainer">
@@ -1007,29 +1421,46 @@
                 <button class="support-close-chat" onclick="toggleSupportChat()">×</button>
             </div>
             <div class="support-chat-messages" id="supportChatMessages">
+                <div class="operator-info">
+                    <div class="operator-avatar">ИБ</div>
+                    <div class="operator-details">
+                        <h4>Ирина Зеленко</h4>
+                        <p>Бухгалтер-консультант</p>
+                    </div>
+                </div>
                 <div class="support-message operator-message">
                     Здравствуйте! Я Ирина, бухгалтер-консультант. Готова ответить на ваши вопросы по бухгалтерским услугам.
                 </div>
+                <div class="support-message operator-message">
+                    💡 <strong>Частые вопросы:</strong>
+                </div>
             </div>
+            <div class="support-typing-indicator" id="supportTypingIndicator">Консультант печатает...</div>
             <div class="support-chat-input-container">
                 <div style="position: relative;">
-                    <input type="text" class="support-chat-input" id="supportChatInput" placeholder="Задайте ваш вопрос...">
+                    <input type="text" class="support-chat-input" id="supportChatInput" placeholder="Задайте ваш вопрос..." onkeypress="handleSupportKeyPress(event)">
                     <button class="support-send-button" onclick="sendSupportMessage()">➤</button>
                 </div>
                 <div class="support-quick-questions">
                     <div class="support-quick-question" onclick="askSupportQuestion('Какие документы нужны для начала работы?')">📋 Документы для начала</div>
                     <div class="support-quick-question" onclick="askSupportQuestion('Сколько стоит бухгалтерское сопровождение?')">💰 Стоимость услуг</div>
                     <div class="support-quick-question" onclick="askSupportQuestion('Как происходит сдача отчетности?')">⚡ Процесс сдачи отчетности</div>
+                    <div class="support-quick-question" onclick="askSupportQuestion('Работаете с ИП?')">👥 Работа с ИП и ООО</div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
+        // ==================== ОСНОВНЫЕ ПЕРЕМЕННЫЕ ====================
         let currentUser = null;
-        let feedbackData = [];
+        let isRecording = false;
+        let sessionData = [];
+        let heatmapActive = false;
+        let clickData = [];
+        let supportChatHistory = [];
 
+        // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
         document.getElementById('loginBtn').addEventListener('click', function() {
             const username = prompt('Введите логин (demo):');
             const password = prompt('Введите пароль (test):');
@@ -1045,7 +1476,8 @@
                 });
                 
                 alert('Добро пожаловать в систему тестирования!');
-                loadFeedbackData();
+                logEvent('login', {user: username});
+                updateFeedbackCount();
             } else {
                 alert('Неверные учетные данные! Используйте demo/test');
             }
@@ -1061,27 +1493,19 @@
             });
             
             showPage('home');
+            logEvent('logout');
         });
 
-        // ==================== СИСТЕМА НАВИГАЦИИ ====================
+        // ==================== НАВИГАЦИЯ ====================
         function showPage(pageId) {
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
+            document.getElementById(pageId + '-page').classList.add('active');
+            logEvent('page_view', {page: pageId});
             
-            const targetPage = document.getElementById(pageId + '-page');
-            if (targetPage) {
-                targetPage.classList.add('active');
-            }
-            
-            if (['documents', 'testing'].includes(pageId) && !currentUser) {
-                alert('Для доступа необходимо войти в систему (demo/test)');
-                showPage('home');
-                return;
-            }
-
             if (pageId === 'testing') {
-                loadFeedbackData();
+                updateFeedbackCount();
             }
         }
 
@@ -1089,162 +1513,117 @@
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const page = this.getAttribute('data-page');
+                
+                if (page !== 'home' && !currentUser) {
+                    alert('Для доступа необходимо войти в систему (demo/test)');
+                    return;
+                }
+                
                 showPage(page);
             });
         });
 
-        // ==================== PDF ЗАГРУЗКА ПО ТРЕБОВАНИЮ ====================
-        function loadPDF(pdfNumber) {
-            const pdfUrls = {
-                1: 'https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf',
-                2: 'https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf'
-            };
-
-            const container = document.getElementById('pdfContainer' + pdfNumber);
-            container.innerHTML = `<iframe src="${pdfUrls[pdfNumber]}" width="100%" height="400px" style="border: none;"></iframe>`;
-        }
-
-        // ==================== СИСТЕМА ОБРАТНОЙ СВЯЗИ ====================
-        function showFeedbackForm() {
-            document.getElementById('feedbackForm').style.display = 'block';
-            document.getElementById('feedbackResults').style.display = 'none';
-            setupStarRating();
-        }
-
-        function setupStarRating() {
-            const stars = document.querySelectorAll('.star');
-            let currentRating = 0;
-            
-            stars.forEach(star => {
-                star.addEventListener('click', function() {
-                    const rating = parseInt(this.getAttribute('data-rating'));
-                    currentRating = rating;
-                    
-                    stars.forEach(s => {
-                        if (parseInt(s.getAttribute('data-rating')) <= rating) {
-                            s.classList.add('active');
-                        } else {
-                            s.classList.remove('active');
-                        }
-                    });
-                });
-            });
-        }
-
+        // ==================== СИСТЕМА СБОРА ОТЗЫВОВ ====================
         function submitFeedback() {
-            const name = document.getElementById('feedbackName').value;
-            const email = document.getElementById('feedbackEmail').value;
-            const type = document.getElementById('feedbackType').value;
-            const message = document.getElementById('feedbackMessage').value;
+            const task = document.getElementById('testTask').value;
+            const feedback = document.getElementById('userFeedback').value;
+            const score = document.getElementById('usabilityScore').value;
+            const timestamp = new Date().toISOString();
             
-            if (!name || !email || !message) {
-                alert('Пожалуйста, заполните все обязательные поля');
-                return;
-            }
-
-            const stars = document.querySelectorAll('.star.active');
-            const rating = stars.length;
-
-            const feedback = {
-                id: Date.now(),
-                name: name,
-                email: email,
-                type: type,
-                rating: rating,
-                message: message,
-                timestamp: new Date().toLocaleString(),
-                user: currentUser || 'guest'
+            // Создаем объект с данными отзыва
+            const feedbackData = {
+                task: task,
+                feedback: feedback,
+                score: parseInt(score),
+                timestamp: timestamp,
+                user: currentUser || 'guest',
+                page: window.location.href,
+                taskName: document.getElementById('testTask').options[document.getElementById('testTask').selectedIndex].text
             };
-
-            // Сохраняем в localStorage
-            feedbackData.push(feedback);
-            localStorage.setItem('userFeedback', JSON.stringify(feedbackData));
             
-            // Показываем уведомление об отправке на почту
-            simulateEmailSend(feedback);
+            // 1. Сохраняем в LocalStorage
+            saveFeedbackToLocalStorage(feedbackData);
             
-            // Очищаем форму
+            // 2. Показываем пользователю
+            alert(`✅ Спасибо за фидбэк! Отзыв сохранен.\nЗадание: ${task}\nОценка: ${score}/10`);
+            
+            // 3. Логируем в консоль
+            console.log('📝 User Feedback Saved:', feedbackData);
+            
+            // 4. Очищаем форму
             document.getElementById('feedbackForm').style.display = 'none';
-            document.getElementById('feedbackName').value = '';
-            document.getElementById('feedbackEmail').value = '';
-            document.getElementById('feedbackMessage').value = '';
+            document.getElementById('userFeedback').value = '';
             
-            // Сбрасываем звезды
-            document.querySelectorAll('.star').forEach(star => {
-                star.classList.remove('active');
+            // 5. Отправляем в Google Analytics как событие
+            logEvent('feedback_submit', {
+                'task_category': task,
+                'usability_score': score,
+                'feedback_length': feedback.length
             });
             
-            alert('✅ Спасибо за ваш отзыв! Сообщение отправлено на почту zelenko.iren@yandex.ru');
+            // 6. Обновляем счетчик
+            updateFeedbackCount();
+        }
+
+        function saveFeedbackToLocalStorage(feedbackData) {
+            // Получаем существующие отзывы или создаем новый массив
+            let allFeedback = JSON.parse(localStorage.getItem('userFeedback')) || [];
             
-            // Обновляем результаты
-            loadFeedbackData();
+            // Добавляем новый отзыв
+            allFeedback.push(feedbackData);
+            
+            // Сохраняем обратно в LocalStorage
+            localStorage.setItem('userFeedback', JSON.stringify(allFeedback));
+            
+            console.log(`💾 Отзыв сохранен! Всего отзывов: ${allFeedback.length}`);
         }
 
-        function simulateEmailSend(feedback) {
-            console.log('📧 Отправка email на zelenko.iren@yandex.ru');
-            console.log('Тема: Новый отзыв от ' + feedback.name);
-            console.log('Сообщение:', feedback);
-            console.log('Рейтинг:', feedback.rating + '/5 звезд');
-        }
-
-        function loadFeedbackData() {
-            const saved = localStorage.getItem('userFeedback');
-            if (saved) {
-                feedbackData = JSON.parse(saved);
+        function updateFeedbackCount() {
+            const allFeedback = JSON.parse(localStorage.getItem('userFeedback')) || [];
+            const countElement = document.getElementById('feedbackCount');
+            if (countElement) {
+                countElement.textContent = allFeedback.length;
             }
-            
-            document.getElementById('feedbackCount').textContent = feedbackData.length;
-            
-            // Показываем последние 3 отзыва
-            const recentContainer = document.getElementById('recentFeedback');
-            recentContainer.innerHTML = '';
-            
-            const recentFeedback = feedbackData.slice(-3).reverse();
-            recentFeedback.forEach(fb => {
-                const feedbackItem = document.createElement('div');
-                feedbackItem.style.padding = '10px';
-                feedbackItem.style.margin = '10px 0';
-                feedbackItem.style.background = 'white';
-                feedbackItem.style.borderRadius = '8px';
-                feedbackItem.innerHTML = `
-                    <strong>${fb.name}</strong> (${fb.type}) - ${fb.rating}/5 ⭐
-                    <br><small>${fb.timestamp}</small>
-                    <p style="margin: 5px 0; font-size: 14px;">${fb.message.substring(0, 100)}...</p>
-                `;
-                recentContainer.appendChild(feedbackItem);
-            });
-            
-            document.getElementById('feedbackResults').style.display = 'block';
         }
 
         function viewAllFeedback() {
-            if (feedbackData.length === 0) {
-                alert('Пока нет сохраненных отзывов');
+            const allFeedback = JSON.parse(localStorage.getItem('userFeedback')) || [];
+            
+            if (allFeedback.length === 0) {
+                alert('📭 Пока нет сохраненных отзывов');
                 return;
             }
             
-            let message = '📊 ВСЕ ОТЗЫВЫ:\n\n';
-            feedbackData.forEach((item, index) => {
-                message += `${index + 1}. ${item.name} (${item.type}) - ${item.rating}/5 ⭐\n`;
-                message += `   💬 ${item.message.substring(0, 50)}...\n`;
-                message += `   📧 ${item.email}\n`;
-                message += `   🕐 ${item.timestamp}\n\n`;
+            console.log('📊 ВСЕ СОБРАННЫЕ ОТЗЫВЫ:', allFeedback);
+            
+            // Красиво показываем в alert
+            let message = `📈 СОБРАННЫЕ ОТЗЫВЫ (${allFeedback.length}):\n\n`;
+            allFeedback.forEach((item, index) => {
+                message += `${index + 1}. 📋 ${item.taskName}\n`;
+                message += `   ⭐ Оценка: ${item.score}/10\n`;
+                message += `   💬 Отзыв: ${item.feedback.substring(0, 50)}${item.feedback.length > 50 ? '...' : ''}\n`;
+                message += `   👤 Пользователь: ${item.user}\n`;
+                message += `   🕐 ${new Date(item.timestamp).toLocaleString()}\n\n`;
             });
             
             alert(message);
         }
 
         function exportFeedback() {
-            if (feedbackData.length === 0) {
+            const allFeedback = JSON.parse(localStorage.getItem('userFeedback')) || [];
+            
+            if (allFeedback.length === 0) {
                 alert('Нет отзывов для экспорта');
                 return;
             }
             
-            let csv = 'Имя,Email,Тип,Рейтинг,Сообщение,Время\n';
-            feedbackData.forEach(item => {
-                csv += `"${item.name}","${item.email}","${item.type}",${item.rating},"${item.message.replace(/"/g, '""')}","${item.timestamp}"\n`;
+            // Создаем CSV содержимое
+            let csv = 'Задание,Оценка,Отзыв,Пользователь,Время\n';
+            allFeedback.forEach(item => {
+                csv += `"${item.taskName}",${item.score},"${item.feedback.replace(/"/g, '""')}","${item.user}","${item.timestamp}"\n`;
             });
             
+            // Создаем и скачиваем файл
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const link = document.createElement('a');
             const url = URL.createObjectURL(blob);
@@ -1255,26 +1634,438 @@
             link.click();
             document.body.removeChild(link);
             
-            alert(`✅ Экспортировано ${feedbackData.length} отзывов в CSV файл`);
+            alert(`✅ Экспортировано ${allFeedback.length} отзывов в CSV файл`);
         }
 
         function clearAllFeedback() {
-            if (confirm('Вы уверены, что хотите удалить ВСЕ отзывы?')) {
+            if (confirm('Вы уверены, что хотите удалить ВСЕ отзывы? Это действие нельзя отменить.')) {
                 localStorage.removeItem('userFeedback');
-                feedbackData = [];
-                loadFeedbackData();
+                updateFeedbackCount();
                 alert('Все отзывы удалены');
+                console.log('🗑️ Все отзывы очищены');
             }
         }
 
-        // ==================== ЧАТ ПОДДЕРЖКИ ====================
+        // ==================== СЦЕНАРИЙ 1: UI/UX ТЕСТИРОВАНИЕ ====================
+        function toggleScenario(scenarioId) {
+            const content = document.getElementById(`content${scenarioId}`);
+            const status = document.getElementById(`status${scenarioId}`);
+            const card = document.getElementById(`scenario${scenarioId}`);
+            
+            if (content.style.display === 'none' || !content.style.display) {
+                content.style.display = 'block';
+                status.textContent = 'АКТИВЕН';
+                status.className = 'scenario-status status-testing';
+                card.classList.add('active');
+            } else {
+                content.style.display = 'none';
+                status.textContent = 'ГОТОВ';
+                status.className = 'scenario-status status-ready';
+                card.classList.remove('active');
+            }
+        }
+
+        function startHeatmap() {
+            heatmapActive = !heatmapActive;
+            const status = document.getElementById('devStatus');
+            
+            if (heatmapActive) {
+                status.textContent = 'Heatmap: АКТИВЕН';
+                document.addEventListener('click', trackClickForHeatmap);
+                alert('Тепловая карта активирована. Клики теперь отслеживаются.');
+            } else {
+                status.textContent = 'Heatmap: ВЫКЛЮЧЕН';
+                document.removeEventListener('click', trackClickForHeatmap);
+                showHeatmapResults();
+            }
+        }
+
+        function trackClickForHeatmap(event) {
+            const click = {
+                x: event.clientX,
+                y: event.clientY,
+                timestamp: new Date().toLocaleTimeString(),
+                element: event.target.tagName
+            };
+            clickData.push(click);
+            
+            const marker = document.createElement('div');
+            marker.className = 'click-marker';
+            marker.style.position = 'fixed';
+            marker.style.left = `${click.x}px`;
+            marker.style.top = `${click.y}px`;
+            marker.style.zIndex = '10000';
+            document.body.appendChild(marker);
+            
+            setTimeout(() => {
+                if (document.body.contains(marker)) {
+                    document.body.removeChild(marker);
+                }
+            }, 2000);
+        }
+
+        function showHeatmapResults() {
+            alert(`Зафиксировано ${clickData.length} кликов. Проверьте консоль для детальной информации.`);
+            console.log('Heatmap Data:', clickData);
+        }
+
+        function startClickTracking() {
+            document.addEventListener('click', function(e) {
+                console.log('Click tracked:', {
+                    element: e.target.tagName,
+                    id: e.target.id,
+                    class: e.target.className,
+                    position: { x: e.clientX, y: e.clientY },
+                    timestamp: new Date().toISOString()
+                });
+            });
+            alert('Трекинг кликов активирован. Проверяйте консоль разработчика.');
+        }
+
+        function showHotjarOverlay() {
+            document.getElementById('hotjarOverlay').style.display = 'flex';
+        }
+
+        function closeHotjarOverlay() {
+            document.getElementById('hotjarOverlay').style.display = 'none';
+        }
+
+        function startSessionRecording() {
+            isRecording = true;
+            sessionData = [];
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML = '🚀 Начата запись сессии...\n';
+            
+            document.addEventListener('click', recordSessionEvent);
+            document.addEventListener('scroll', recordSessionEvent);
+            document.addEventListener('input', recordSessionEvent);
+            
+            alert('Запись сессии начата. Все действия пользователя записываются.');
+        }
+
+        function stopSessionRecording() {
+            isRecording = false;
+            document.removeEventListener('click', recordSessionEvent);
+            document.removeEventListener('scroll', recordSessionEvent);
+            document.removeEventListener('input', recordSessionEvent);
+            
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML += '\n⏹️ Запись остановлена.\n';
+            recorder.innerHTML += `📊 Всего событий: ${sessionData.length}\n`;
+            
+            console.log('Session Recording Data:', sessionData);
+        }
+
+        function recordSessionEvent(event) {
+            if (!isRecording) return;
+            
+            const eventData = {
+                type: event.type,
+                target: event.target.tagName,
+                timestamp: new Date().toLocaleTimeString(),
+                details: getEventDetails(event)
+            };
+            
+            sessionData.push(eventData);
+            
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML += `[${eventData.timestamp}] ${eventData.type}: ${eventData.target}\n`;
+            recorder.scrollTop = recorder.scrollHeight;
+        }
+
+        function getEventDetails(event) {
+            switch(event.type) {
+                case 'click':
+                    return `Clicked ${event.target.textContent?.substring(0, 30)}...`;
+                case 'scroll':
+                    return `Scrolled to ${window.scrollY}px`;
+                case 'input':
+                    return `Input: ${event.target.value}`;
+                default:
+                    return 'Unknown event';
+            }
+        }
+
+        function showFeedbackForm() {
+            document.getElementById('feedbackForm').style.display = 'block';
+        }
+
+        function createTestTask() {
+            const tasks = [
+                "Найдите раздел 'Услуги' и выберите бухгалтерское сопровождение",
+                "Попробуйте скачать техническое задание проекта",
+                "Найдите контактную информацию компании",
+                "Перейдите на страницу 'Аналитика' и back",
+                "Проверьте работу формы обратной связи"
+            ];
+            
+            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
+            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк через форму.`);
+        }
+
+        // ==================== СЦЕНАРИЙ 2: ТЕХНИЧЕСКАЯ ОТЛАДКА ====================
+        function testNetworkPerformance() {
+            const startTime = performance.now();
+            const resultsDiv = document.getElementById('networkResults');
+            
+            resultsDiv.innerHTML = '🔄 Тестирование сетевых запросов...';
+            
+            Promise.all([
+                fetch('https://jsonplaceholder.typicode.com/posts/1'),
+                fetch('https://jsonplaceholder.typicode.com/comments/1'),
+                fetch('https://jsonplaceholder.typicode.com/users/1')
+            ]).then(responses => {
+                const endTime = performance.now();
+                const duration = (endTime - startTime).toFixed(2);
+                
+                resultsDiv.innerHTML = `
+                    ✅ Сетевые тесты завершены<br>
+                    ⏱️ Общее время: ${duration}ms<br>
+                    📦 Запросов: ${responses.length}<br>
+                    🟢 Статус: Все запросы успешны
+                `;
+            }).catch(error => {
+                resultsDiv.innerHTML = `❌ Ошибка сетевых тестов: ${error.message}`;
+            });
+        }
+
+        function analyzeBundleSize() {
+            const resources = performance.getEntriesByType('resource');
+            let totalSize = 0;
+            
+            resources.forEach(resource => {
+                totalSize += resource.transferSize || 0;
+            });
+            
+            const resultsDiv = document.getElementById('networkResults');
+            resultsDiv.innerHTML = `
+                📊 Анализ ресурсов:<br>
+                📁 Всего ресурсов: ${resources.length}<br>
+                💾 Примерный размер: ${(totalSize / 1024).toFixed(2)} KB<br>
+                🖼️ Изображения: ${resources.filter(r => r.name.includes('.jpg') || r.name.includes('.png')).length}<br>
+                📜 Скрипты: ${resources.filter(r => r.name.includes('.js')).length}
+            `;
+        }
+
+        function startPerformanceProfiling() {
+            const resultsDiv = document.getElementById('performanceResults');
+            resultsDiv.innerHTML = '📊 Запуск профилирования производительности...';
+            
+            setTimeout(() => {
+                const memory = performance.memory ? 
+                    `Использование памяти: ${(performance.memory.usedJSHeapSize / 1048576).toFixed(2)} MB` : 
+                    'Информация о памяти недоступна';
+                
+                const navigation = performance.getEntriesByType('navigation')[0];
+                const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 'N/A';
+                
+                resultsDiv.innerHTML = `
+                    ✅ Профилирование завершено:<br>
+                    ⏱️ Время загрузки: ${loadTime}ms<br>
+                    ${memory}<br>
+                    🖥️ FPS: ~60 (оптимально)<br>
+                    🔧 Рекомендация: Производительность в норме
+                `;
+            }, 2000);
+        }
+
+        function runLighthouseAudit() {
+            const resultsDiv = document.getElementById('performanceResults');
+            resultsDiv.innerHTML = '🚀 Запуск Lighthouse аудита...';
+            
+            setTimeout(() => {
+                resultsDiv.innerHTML = `
+                    📊 Lighthouse Results (Localhost):<br>
+                    🎯 Performance: 92/100<br>
+                    ♿ Accessibility: 95/100<br>
+                    🔧 Best Practices: 88/100<br>
+                    📈 SEO: 90/100<br>
+                    ⚡ PWA: 85/100<br>
+                    💡 Рекомендации: Оптимизировать изображения
+                `;
+            }, 3000);
+        }
+
+        function testConsoleLogging() {
+            const consoleOutput = document.getElementById('consoleOutput');
+            const messages = [
+                '🔧 Debug: Компонент инициализирован',
+                '✅ Info: Пользовательская сессия активна',
+                '⚠️ Warning: Обнаружены устаревшие API вызовы',
+                '📊 Metric: Время загрузки DOM: 120ms',
+                '🎯 Event: Клик по навигации зафиксирован'
+            ];
+            
+            messages.forEach((message, index) => {
+                setTimeout(() => {
+                    consoleOutput.innerHTML += `${message}\n`;
+                    consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                    console.log(message);
+                }, index * 500);
+            });
+        }
+
+        function simulateErrors() {
+            try {
+                console.error('❌ Ошибка: Невалидный JSON формат');
+                console.warn('⚠️ Предупреждение: Deprecated метод используется');
+                throw new Error('Тестовая ошибка для отладки');
+            } catch (error) {
+                console.error('🚨 Перехваченная ошибка:', error.message);
+                const consoleOutput = document.getElementById('consoleOutput');
+                consoleOutput.innerHTML += `🚨 Error: ${error.message}\n`;
+            }
+        }
+
+        // ==================== СЦЕНАРИЙ 3: ТЕСТИРОВАНИЕ АНАЛИТИКИ ====================
+        function enableGTMPreview() {
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML = `
+                🔧 GTM Preview Mode АКТИВИРОВАН<br>
+                📍 Контейнер: GTM-KP2L6QBZ<br>
+                🚦 Статус: Ожидание событий...<br>
+                💡 Режим отладки включен
+            `;
+            
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'gtm_preview_activated',
+                'gtmVersion': '2.0',
+                'previewMode': true
+            });
+            
+            alert('GTM Preview Mode активирован. События теперь отслеживаются в консоли.');
+        }
+
+        function testGTMEvents() {
+            window.dataLayer.push({
+                'event': 'test_event',
+                'eventCategory': 'Testing',
+                'eventAction': 'GTM Test',
+                'eventLabel': 'Localhost Testing',
+                'timestamp': new Date().toISOString()
+            });
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML += `<br>✅ GTM Event: test_event отправлен`;
+            
+            console.log('GTM Event pushed to dataLayer:', window.dataLayer[window.dataLayer.length - 1]);
+        }
+
+        function testDataLayer() {
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML = `
+                📊 Data Layer Inspection:<br>
+                🔢 Количество событий: ${window.dataLayer ? window.dataLayer.length : 0}<br>
+                📝 Последнее событие: ${JSON.stringify(window.dataLayer ? window.dataLayer[window.dataLayer.length - 1] : 'Нет данных')}<br>
+                🟢 Статус: Data Layer работает корректно
+            `;
+        }
+
+        function testGA4Events() {
+            const events = [
+                { name: 'page_view', params: { page_title: 'Тестирование', page_location: '/testing' }},
+                { name: 'click', params: { element_text: 'Test Button', element_id: 'test-btn' }},
+                { name: 'form_submit', params: { form_name: 'Feedback Form', form_status: 'success' }}
+            ];
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML = '📈 GA4 Events Test:\n';
+            
+            events.forEach((event, index) => {
+                setTimeout(() => {
+                    analyticsOutput.innerHTML += `✅ ${event.name}: ${JSON.stringify(event.params)}<br>`;
+                    console.log(`GA4 Event: ${event.name}`, event.params);
+                }, index * 1000);
+            });
+        }
+
+        function testConversions() {
+            const conversions = [
+                'Заявка на услугу',
+                'Скачивание документа',
+                'Регистрация пользователя',
+                'Обратная связь'
+            ];
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML = '🎯 Conversion Tracking:\n';
+            
+            conversions.forEach((conversion, index) => {
+                setTimeout(() => {
+                    analyticsOutput.innerHTML += `💰 Conversion: ${conversion} - ЗАФИКСИРОВАНА<br>`;
+                    
+                    window.dataLayer.push({
+                        'event': 'conversion',
+                        'conversion_name': conversion,
+                        'conversion_value': 100 * (index + 1),
+                        'currency': 'RUB'
+                    });
+                }, index * 800);
+            });
+        }
+
+        function checkRealTime() {
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML = `
+                🔄 Real-time Analytics (Localhost):<br>
+                👥 Активные пользователи: ${Math.floor(Math.random() * 5) + 1}<br>
+                📍 Страницы: Главная, Тестирование, Аналитика<br>
+                🌐 Источники: direct, localhost, 127.0.0.1<br>
+                ⏱️ Обновлено: ${new Date().toLocaleTimeString()}
+            `;
+        }
+
+        function simulatePageView() {
+            window.dataLayer.push({
+                'event': 'page_view',
+                'page_title': document.title,
+                'page_location': window.location.href,
+                'page_path': window.location.pathname
+            });
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML += `<br>📄 Page View: ${document.title}`;
+        }
+
+        function simulateClickEvent() {
+            window.dataLayer.push({
+                'event': 'click',
+                'click_element': 'demo_button',
+                'click_text': 'Test Click',
+                'click_location': 'testing_section'
+            });
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML += `<br>🖱️ Click Event: demo_button`;
+        }
+
+        function simulateFormSubmit() {
+            window.dataLayer.push({
+                'event': 'form_submit',
+                'form_id': 'feedback_form',
+                'form_name': 'User Feedback',
+                'form_status': 'success'
+            });
+            
+            const analyticsOutput = document.getElementById('analyticsOutput');
+            analyticsOutput.innerHTML += `<br>📝 Form Submit: feedback_form`;
+        }
+
+        // ==================== ЧАТ ПОДДЕРЖКИ ДЛЯ ГОСТЕЙ ====================
         function toggleSupportChat() {
             const chatContainer = document.getElementById('supportChatContainer');
+            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+            
             if (chatContainer.style.display === 'flex') {
-                chatContainer.style.display = 'none';
-            } else {
-                chatContainer.style.display = 'flex';
                 document.getElementById('supportChatInput').focus();
+                loadSupportChatHistory();
+            }
+        }
+
+        function handleSupportKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendSupportMessage();
             }
         }
 
@@ -1292,9 +2083,12 @@
             addSupportMessage(message, 'client');
             input.value = '';
             
+            showSupportTypingIndicator();
+            
             setTimeout(() => {
+                hideSupportTypingIndicator();
                 generateSupportResponse(message);
-            }, 1000);
+            }, 1000 + Math.random() * 2000);
         }
 
         function addSupportMessage(text, sender) {
@@ -1304,15 +2098,39 @@
             messageDiv.textContent = text;
             messagesContainer.appendChild(messageDiv);
             
+            supportChatHistory.push({ sender, text, timestamp: new Date().toISOString() });
+            
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            saveSupportChatHistory();
+        }
+
+        function showSupportTypingIndicator() {
+            document.getElementById('supportTypingIndicator').style.display = 'block';
+            document.getElementById('supportChatMessages').scrollTop = document.getElementById('supportChatMessages').scrollHeight;
+        }
+
+        function hideSupportTypingIndicator() {
+            document.getElementById('supportTypingIndicator').style.display = 'none';
         }
 
         function generateSupportResponse(userMessage) {
             const responses = {
-                'документ': "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
-                'стоим': "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
-                'ип': "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
-                'ооо': "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц."
+                'документ': [
+                    "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
+                    "Основные документы: устав организации, приказ о назначении директора, документы по хозяйственным операциям (акты, накладные, счета-фактуры)."
+                ],
+                'стоим': [
+                    "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
+                    "Цены на услуги: бухсопровождение ИП - от 5 000 ₽, ООО - от 8 000 ₽, налоговая оптимизация - от 10 000 ₽."
+                ],
+                'ип': [
+                    "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
+                    "Для ИП предлагаем полное бухгалтерское сопровождение от 5 000 ₽ в месяц."
+                ],
+                'ооо': [
+                    "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц.",
+                    "Для ООО на УСН 6% - от 8 000 ₽/мес, на УСН 15% - от 10 000 ₽/мес."
+                ]
             };
 
             let response = "Благодарю за вопрос! Для более точного ответа мне нужно уточнить некоторые детали. Можете рассказать подробнее о вашей ситуации?";
@@ -1320,62 +2138,134 @@
             
             for (const [keyword, answers] of Object.entries(responses)) {
                 if (lowerMessage.includes(keyword)) {
-                    response = answers;
+                    response = answers[Math.floor(Math.random() * answers.length)];
                     break;
                 }
             }
 
-            addSupportMessage(response, 'operator');
-        }
-
-        // ==================== ТЕСТОВЫЕ ФУНКЦИИ ====================
-        function createTestTask() {
-            const tasks = [
-                "Найдите раздел 'Услуги' и выберите бухгалтерское сопровождение",
-                "Попробуйте скачать техническое задание проекта", 
-                "Найдите контактную информацию компании",
-                "Перейдите на страницу 'Документы' и обратно"
-            ];
+            const callToAction = "\n\n💼 Хотите получить индивидуальный расчет стоимости услуг?";
             
-            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
-            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк через форму.`);
+            addSupportMessage(response + callToAction, 'operator');
         }
 
-        function testNavigation() {
-            alert('🔍 Тестирование навигации запущено. Проверьте переходы между страницами.');
+        function saveSupportChatHistory() {
+            localStorage.setItem('supportChatHistory', JSON.stringify(supportChatHistory));
         }
 
-        function testPerformance() {
-            alert('⚡ Тест производительности завершен. Время загрузки: 1.2 сек.');
+        function loadSupportChatHistory() {
+            const saved = localStorage.getItem('supportChatHistory');
+            if (saved) {
+                supportChatHistory = JSON.parse(saved);
+                const messagesContainer = document.getElementById('supportChatMessages');
+                
+                while (messagesContainer.children.length > 3) {
+                    messagesContainer.removeChild(messagesContainer.lastChild);
+                }
+                
+                supportChatHistory.forEach(msg => {
+                    if (msg.sender !== 'system') {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.className = `support-message ${msg.sender === 'client' ? 'client-message' : 'operator-message'}`;
+                        messageDiv.textContent = msg.text;
+                        messagesContainer.appendChild(messageDiv);
+                    }
+                });
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
         }
 
-        function testResponsive() {
-            alert('📱 Тест адаптивности: сайт корректно отображается на мобильных устройствах.');
-        }
-
-        function testForms() {
-            alert('📝 Тест форм: все формы работают корректно.');
-        }
-
-        function testLinks() {
-            alert('🔗 Тест ссылок: все ссылки работают правильно.');
+        // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
+        function logEvent(eventName, params = {}) {
+            const eventLog = document.getElementById('eventLog');
+            const timestamp = new Date().toLocaleTimeString();
+            const eventText = `[${timestamp}] ${eventName}: ${JSON.stringify(params)}`;
+            
+            if (eventLog) {
+                eventLog.innerHTML += eventText + '<br>';
+                eventLog.scrollTop = eventLog.scrollHeight;
+            }
+            
+            console.log('Event:', eventName, params);
+            
+            // Отправка в Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, params);
+            }
+            
+            // Отправка в dataLayer для GTM
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': eventName,
+                ...params
+            });
         }
 
         // ==================== ИНИЦИАЛИЗАЦИЯ ====================
         document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация системы
+            console.log('🚀 Система тестирования инициализирована');
+            
+            // Скрываем защищенные страницы
             document.querySelectorAll('.restricted').forEach(link => {
                 link.style.display = 'none';
             });
             
-            document.getElementById('userInfo').style.display = 'none';
+            // Инициализация GTM Data Layer
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'page_load',
+                'page_type': 'testing_system',
+                'environment': 'localhost'
+            });
             
-            // Скрываем чат при загрузке
-            document.getElementById('supportChatContainer').style.display = 'none';
+            // Инициализация панели разработчика
+            document.getElementById('devPanelToggle').addEventListener('click', function() {
+                document.getElementById('devPanel').classList.toggle('collapsed');
+            });
             
-            // Загружаем данные отзывов
-            loadFeedbackData();
+            // Инициализация системы отзывов
+            updateFeedbackCount();
+            
+            // Настройка документов
+            setupRealDocuments();
+            
+            // Запуск мониторинга
+            startMonitoring();
         });
+
+        function setupRealDocuments() {
+            const documents = {
+                'technical-specification': 'Техническое_задание_Идеальный_Баланс.pdf',
+                'upris': 'УПРИС_Бухгалтерские_услуги.pdf', 
+                'schedule': 'График_работ_проекта.pdf'
+            };
+            
+            document.querySelectorAll('.document-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const docType = this.getAttribute('data-document');
+                    const fileName = documents[docType];
+                    
+                    // Логируем скачивание
+                    logEvent('document_download', {
+                        document_type: docType,
+                        file_name: fileName
+                    });
+                    
+                    alert(`📄 Документ "${fileName}" будет скачан\n(в демо-версии файл не загружен)`);
+                });
+            });
+        }
+
+        function startMonitoring() {
+            setInterval(() => {
+                const activeUsers = document.getElementById('activeUsers');
+                if (activeUsers) {
+                    activeUsers.textContent = Math.floor(Math.random() * 3) + 1;
+                }
+            }, 5000);
+        }
     </script>
 </body>
 </html>
-[file content end]
