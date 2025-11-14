@@ -131,7 +131,7 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+
         /* Hero Section */
         .hero {
             padding: 100px 0 80px;
@@ -321,7 +321,7 @@
             border-radius: 8px;
             font-weight: 600;
         }
-        
+
         /* Testing Section */
         .testing-section {
             padding: 100px 0;
@@ -477,6 +477,154 @@
             border-left: 4px solid var(--primary);
         }
 
+        /* Support Chat */
+        .support-chat-widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 10001;
+        }
+
+        .support-chat-button {
+            width: 60px;
+            height: 60px;
+            background: var(--success);
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .support-chat-button:hover {
+            transform: scale(1.1);
+            background: #218838;
+        }
+
+        .support-chat-container {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            border: 2px solid var(--success);
+        }
+
+        .support-chat-header {
+            background: var(--success);
+            color: white;
+            padding: 15px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .support-chat-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .support-close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .support-chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .support-message {
+            margin-bottom: 15px;
+            padding: 12px 16px;
+            border-radius: 16px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .operator-message {
+            background: white;
+            border: 1px solid #e0e0e0;
+            align-self: flex-start;
+        }
+
+        .client-message {
+            background: var(--success);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .support-chat-input-container {
+            padding: 15px;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+            border-radius: 0 0 16px 16px;
+        }
+
+        .support-chat-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .support-chat-input:focus {
+            border-color: var(--success);
+        }
+
+        .support-send-button {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--success);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .support-quick-questions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .support-quick-question {
+            background: #d4edda;
+            border: 1px solid var(--success);
+            border-radius: 15px;
+            padding: 8px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .support-quick-question:hover {
+            background: var(--success);
+            color: white;
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -586,7 +734,7 @@
                         <h3>Бухгалтерское сопровождение</h3>
                         <p>Полное ведение бухгалтерского и налогового учета</p>
                         <div class="service-price">от 5 000 ₽/мес</div>
-                        <button class="btn btn-primary">Заказать услугу</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -595,7 +743,7 @@
                         <h3>Налоговая оптимизация</h3>
                         <p>Снижение налоговой нагрузки законными способами</p>
                         <div class="service-price">от 10 000 ₽</div>
-                        <button class="btn btn-primary">Заказать услугу</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -604,7 +752,7 @@
                         <h3>Консультации</h3>
                         <p>Профессиональные консультации по финансовым вопросам</p>
                         <div class="service-price">от 3 000 ₽/час</div>
-                        <button class="btn btn-primary">Заказать услугу</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
                     </div>
                 </div>
             </div>
@@ -627,7 +775,7 @@
                         <h3>Базовый пакет</h3>
                         <p>Для начинающих предпринимателей</p>
                         <div class="service-price">5 000 ₽/мес</div>
-                        <button class="btn btn-primary">Выбрать пакет</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -636,7 +784,7 @@
                         <h3>Стандартный пакет</h3>
                         <p>Для растущего бизнеса</p>
                         <div class="service-price">8 000 ₽/мес</div>
-                        <button class="btn btn-primary">Выбрать пакет</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -645,7 +793,7 @@
                         <h3>Премиум пакет</h3>
                         <p>Для established бизнеса</p>
                         <div class="service-price">15 000 ₽/мес</div>
-                        <button class="btn btn-primary">Выбрать пакет</button>
+                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
                     </div>
                 </div>
             </div>
@@ -664,6 +812,7 @@
                     <h3>Наша миссия</h3>
                     <p>Мы делаем бухгалтерское сопровождение простым и понятным для каждого бизнеса.</p>
                     <p>Наша команда - это профессионалы с многолетним опытом работы.</p>
+                    <button class="btn btn-primary" onclick="toggleSupportChat()">Задать вопрос</button>
                 </div>
             </div>
         </section>
@@ -819,6 +968,33 @@
             <div class="copyright">© 2025 Идеальный Баланс. Все права защищены.</div>
         </div>
     </footer>
+
+    <!-- Чат поддержки -->
+    <div class="support-chat-widget">
+        <button class="support-chat-button" onclick="toggleSupportChat()">💬</button>
+        <div class="support-chat-container" id="supportChatContainer" style="display: none;">
+            <div class="support-chat-header">
+                <div class="support-chat-title">💼 Консультация по услугам</div>
+                <button class="support-close-chat" onclick="toggleSupportChat()">×</button>
+            </div>
+            <div class="support-chat-messages" id="supportChatMessages">
+                <div class="support-message operator-message">
+                    Здравствуйте! Я Ирина, бухгалтер-консультант. Готова ответить на ваши вопросы по бухгалтерским услугам.
+                </div>
+            </div>
+            <div class="support-chat-input-container">
+                <div style="position: relative;">
+                    <input type="text" class="support-chat-input" id="supportChatInput" placeholder="Задайте ваш вопрос..." onkeypress="handleSupportKeyPress(event)">
+                    <button class="support-send-button" onclick="sendSupportMessage()">➤</button>
+                </div>
+                <div class="support-quick-questions">
+                    <div class="support-quick-question" onclick="askSupportQuestion('Какие документы нужны для начала работы?')">📋 Документы для начала</div>
+                    <div class="support-quick-question" onclick="askSupportQuestion('Сколько стоит бухгалтерское сопровождение?')">💰 Стоимость услуг</div>
+                    <div class="support-quick-question" onclick="askSupportQuestion('Как происходит сдача отчетности?')">⚡ Процесс сдачи отчетности</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
@@ -1051,6 +1227,72 @@
             }
         }
 
+        // ==================== ЧАТ ПОДДЕРЖКИ ====================
+        function toggleSupportChat() {
+            const chatContainer = document.getElementById('supportChatContainer');
+            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+            
+            if (chatContainer.style.display === 'flex') {
+                document.getElementById('supportChatInput').focus();
+            }
+        }
+
+        function handleSupportKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendSupportMessage();
+            }
+        }
+
+        function askSupportQuestion(question) {
+            document.getElementById('supportChatInput').value = question;
+            sendSupportMessage();
+        }
+
+        function sendSupportMessage() {
+            const input = document.getElementById('supportChatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addSupportMessage(message, 'client');
+            input.value = '';
+            
+            setTimeout(() => {
+                generateSupportResponse(message);
+            }, 1000);
+        }
+
+        function addSupportMessage(text, sender) {
+            const messagesContainer = document.getElementById('supportChatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `support-message ${sender === 'client' ? 'client-message' : 'operator-message'}`;
+            messageDiv.textContent = text;
+            messagesContainer.appendChild(messageDiv);
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function generateSupportResponse(userMessage) {
+            const responses = {
+                'документ': "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
+                'стоим': "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
+                'ип': "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
+                'ооо': "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц."
+            };
+
+            let response = "Благодарю за вопрос! Для более точного ответа мне нужно уточнить некоторые детали. Можете рассказать подробнее о вашей ситуации?";
+            const lowerMessage = userMessage.toLowerCase();
+            
+            for (const [keyword, answers] of Object.entries(responses)) {
+                if (lowerMessage.includes(keyword)) {
+                    response = answers;
+                    break;
+                }
+            }
+
+            addSupportMessage(response, 'operator');
+        }
+
         // ==================== ТЕСТОВЫЕ ФУНКЦИИ ====================
         function createTestTask() {
             const tasks = [
@@ -1094,13 +1336,6 @@
             
             // Загружаем данные отзывов
             loadFeedbackData();
-        });
-
-        // Обработчики для кнопок услуг
-        document.querySelectorAll('.service-card .btn').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Функция заказа услуги будет реализована в будущем');
-            });
         });
     </script>
 </body>
