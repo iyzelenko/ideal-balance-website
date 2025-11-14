@@ -1,3 +1,5 @@
+[file name]: index.html
+[file content begin]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -438,7 +440,7 @@
         
         .documents-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
         
@@ -476,6 +478,18 @@
         
         .document-link:hover {
             background-color: #002a4a;
+        }
+
+        .pdf-container {
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pdf-container iframe {
+            border: none;
+            display: block;
         }
         
         @media (max-width: 768px) {
@@ -1102,17 +1116,44 @@
                     <div class="document-card">
                         <h3>Техническое задание</h3>
                         <p>Полное техническое задание на создание автоматизированной системы "Сайт бухгалтерского сопровождения «Идеальный Баланс»"</p>
-                        <a href="#" class="document-link" data-document="technical-specification">Скачать PDF</a>
+                        <div class="pdf-container">
+                            <iframe 
+                                src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
+                                width="100%" 
+                                height="400px">
+                            </iframe>
+                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
+                               download="Техническое_задание_Идеальный_Баланс.pdf" 
+                               class="document-link">Скачать PDF</a>
+                        </div>
                     </div>
                     <div class="document-card">
                         <h3>УПРИС</h3>
                         <p>Учебно-проектная документация по проекту "Бухгалтерские услуги"</p>
-                        <a href="#" class="document-link" data-document="upris">Скачать PDF</a>
+                        <div class="pdf-container">
+                            <iframe 
+                                src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
+                                width="100%" 
+                                height="400px">
+                            </iframe>
+                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
+                               download="УПРИС_Зеленко_Ирина.pdf" 
+                               class="document-link">Скачать PDF</a>
+                        </div>
                     </div>
                     <div class="document-card">
-                        <h3>График работ</h3>
-                        <p>Детальный график выполнения работ по проекту с указанием сроков и ответственных</p>
-                        <a href="#" class="document-link" data-document="schedule">Скачать PDF</a>
+                        <h3>Управление проектами</h3>
+                        <p>Документация по управлению проектами и планированию работ</p>
+                        <div class="pdf-container">
+                            <iframe 
+                                src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE_%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9D%D0%91%D0%98%D0%B1%D0%B4_01_23.pdf" 
+                                width="100%" 
+                                height="400px">
+                            </iframe>
+                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE_%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9D%D0%91%D0%98%D0%B1%D0%B4_01_23.pdf" 
+                               download="Управление_проектами_Зеленко_Ирина.pdf" 
+                               class="document-link">Скачать PDF</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1799,473 +1840,4 @@
                 "Проверьте работу формы обратной связи"
             ];
             
-            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
-            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк через форму.`);
-        }
-
-        // ==================== СЦЕНАРИЙ 2: ТЕХНИЧЕСКАЯ ОТЛАДКА ====================
-        function testNetworkPerformance() {
-            const startTime = performance.now();
-            const resultsDiv = document.getElementById('networkResults');
-            
-            resultsDiv.innerHTML = '🔄 Тестирование сетевых запросов...';
-            
-            Promise.all([
-                fetch('https://jsonplaceholder.typicode.com/posts/1'),
-                fetch('https://jsonplaceholder.typicode.com/comments/1'),
-                fetch('https://jsonplaceholder.typicode.com/users/1')
-            ]).then(responses => {
-                const endTime = performance.now();
-                const duration = (endTime - startTime).toFixed(2);
-                
-                resultsDiv.innerHTML = `
-                    ✅ Сетевые тесты завершены<br>
-                    ⏱️ Общее время: ${duration}ms<br>
-                    📦 Запросов: ${responses.length}<br>
-                    🟢 Статус: Все запросы успешны
-                `;
-            }).catch(error => {
-                resultsDiv.innerHTML = `❌ Ошибка сетевых тестов: ${error.message}`;
-            });
-        }
-
-        function analyzeBundleSize() {
-            const resources = performance.getEntriesByType('resource');
-            let totalSize = 0;
-            
-            resources.forEach(resource => {
-                totalSize += resource.transferSize || 0;
-            });
-            
-            const resultsDiv = document.getElementById('networkResults');
-            resultsDiv.innerHTML = `
-                📊 Анализ ресурсов:<br>
-                📁 Всего ресурсов: ${resources.length}<br>
-                💾 Примерный размер: ${(totalSize / 1024).toFixed(2)} KB<br>
-                🖼️ Изображения: ${resources.filter(r => r.name.includes('.jpg') || r.name.includes('.png')).length}<br>
-                📜 Скрипты: ${resources.filter(r => r.name.includes('.js')).length}
-            `;
-        }
-
-        function startPerformanceProfiling() {
-            const resultsDiv = document.getElementById('performanceResults');
-            resultsDiv.innerHTML = '📊 Запуск профилирования производительности...';
-            
-            setTimeout(() => {
-                const memory = performance.memory ? 
-                    `Использование памяти: ${(performance.memory.usedJSHeapSize / 1048576).toFixed(2)} MB` : 
-                    'Информация о памяти недоступна';
-                
-                const navigation = performance.getEntriesByType('navigation')[0];
-                const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 'N/A';
-                
-                resultsDiv.innerHTML = `
-                    ✅ Профилирование завершено:<br>
-                    ⏱️ Время загрузки: ${loadTime}ms<br>
-                    ${memory}<br>
-                    🖥️ FPS: ~60 (оптимально)<br>
-                    🔧 Рекомендация: Производительность в норме
-                `;
-            }, 2000);
-        }
-
-        function runLighthouseAudit() {
-            const resultsDiv = document.getElementById('performanceResults');
-            resultsDiv.innerHTML = '🚀 Запуск Lighthouse аудита...';
-            
-            setTimeout(() => {
-                resultsDiv.innerHTML = `
-                    📊 Lighthouse Results (Localhost):<br>
-                    🎯 Performance: 92/100<br>
-                    ♿ Accessibility: 95/100<br>
-                    🔧 Best Practices: 88/100<br>
-                    📈 SEO: 90/100<br>
-                    ⚡ PWA: 85/100<br>
-                    💡 Рекомендации: Оптимизировать изображения
-                `;
-            }, 3000);
-        }
-
-        function testConsoleLogging() {
-            const consoleOutput = document.getElementById('consoleOutput');
-            const messages = [
-                '🔧 Debug: Компонент инициализирован',
-                '✅ Info: Пользовательская сессия активна',
-                '⚠️ Warning: Обнаружены устаревшие API вызовы',
-                '📊 Metric: Время загрузки DOM: 120ms',
-                '🎯 Event: Клик по навигации зафиксирован'
-            ];
-            
-            messages.forEach((message, index) => {
-                setTimeout(() => {
-                    consoleOutput.innerHTML += `${message}\n`;
-                    consoleOutput.scrollTop = consoleOutput.scrollHeight;
-                    console.log(message);
-                }, index * 500);
-            });
-        }
-
-        function simulateErrors() {
-            try {
-                console.error('❌ Ошибка: Невалидный JSON формат');
-                console.warn('⚠️ Предупреждение: Deprecated метод используется');
-                throw new Error('Тестовая ошибка для отладки');
-            } catch (error) {
-                console.error('🚨 Перехваченная ошибка:', error.message);
-                const consoleOutput = document.getElementById('consoleOutput');
-                consoleOutput.innerHTML += `🚨 Error: ${error.message}\n`;
-            }
-        }
-
-        // ==================== СЦЕНАРИЙ 3: ТЕСТИРОВАНИЕ АНАЛИТИКИ ====================
-        function enableGTMPreview() {
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML = `
-                🔧 GTM Preview Mode АКТИВИРОВАН<br>
-                📍 Контейнер: GTM-KP2L6QBZ<br>
-                🚦 Статус: Ожидание событий...<br>
-                💡 Режим отладки включен
-            `;
-            
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'gtm_preview_activated',
-                'gtmVersion': '2.0',
-                'previewMode': true
-            });
-            
-            alert('GTM Preview Mode активирован. События теперь отслеживаются в консоли.');
-        }
-
-        function testGTMEvents() {
-            window.dataLayer.push({
-                'event': 'test_event',
-                'eventCategory': 'Testing',
-                'eventAction': 'GTM Test',
-                'eventLabel': 'Localhost Testing',
-                'timestamp': new Date().toISOString()
-            });
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML += `<br>✅ GTM Event: test_event отправлен`;
-            
-            console.log('GTM Event pushed to dataLayer:', window.dataLayer[window.dataLayer.length - 1]);
-        }
-
-        function testDataLayer() {
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML = `
-                📊 Data Layer Inspection:<br>
-                🔢 Количество событий: ${window.dataLayer ? window.dataLayer.length : 0}<br>
-                📝 Последнее событие: ${JSON.stringify(window.dataLayer ? window.dataLayer[window.dataLayer.length - 1] : 'Нет данных')}<br>
-                🟢 Статус: Data Layer работает корректно
-            `;
-        }
-
-        function testGA4Events() {
-            const events = [
-                { name: 'page_view', params: { page_title: 'Тестирование', page_location: '/testing' }},
-                { name: 'click', params: { element_text: 'Test Button', element_id: 'test-btn' }},
-                { name: 'form_submit', params: { form_name: 'Feedback Form', form_status: 'success' }}
-            ];
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML = '📈 GA4 Events Test:\n';
-            
-            events.forEach((event, index) => {
-                setTimeout(() => {
-                    analyticsOutput.innerHTML += `✅ ${event.name}: ${JSON.stringify(event.params)}<br>`;
-                    console.log(`GA4 Event: ${event.name}`, event.params);
-                }, index * 1000);
-            });
-        }
-
-        function testConversions() {
-            const conversions = [
-                'Заявка на услугу',
-                'Скачивание документа',
-                'Регистрация пользователя',
-                'Обратная связь'
-            ];
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML = '🎯 Conversion Tracking:\n';
-            
-            conversions.forEach((conversion, index) => {
-                setTimeout(() => {
-                    analyticsOutput.innerHTML += `💰 Conversion: ${conversion} - ЗАФИКСИРОВАНА<br>`;
-                    
-                    window.dataLayer.push({
-                        'event': 'conversion',
-                        'conversion_name': conversion,
-                        'conversion_value': 100 * (index + 1),
-                        'currency': 'RUB'
-                    });
-                }, index * 800);
-            });
-        }
-
-        function checkRealTime() {
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML = `
-                🔄 Real-time Analytics (Localhost):<br>
-                👥 Активные пользователи: ${Math.floor(Math.random() * 5) + 1}<br>
-                📍 Страницы: Главная, Тестирование, Аналитика<br>
-                🌐 Источники: direct, localhost, 127.0.0.1<br>
-                ⏱️ Обновлено: ${new Date().toLocaleTimeString()}
-            `;
-        }
-
-        function simulatePageView() {
-            window.dataLayer.push({
-                'event': 'page_view',
-                'page_title': document.title,
-                'page_location': window.location.href,
-                'page_path': window.location.pathname
-            });
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML += `<br>📄 Page View: ${document.title}`;
-        }
-
-        function simulateClickEvent() {
-            window.dataLayer.push({
-                'event': 'click',
-                'click_element': 'demo_button',
-                'click_text': 'Test Click',
-                'click_location': 'testing_section'
-            });
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML += `<br>🖱️ Click Event: demo_button`;
-        }
-
-        function simulateFormSubmit() {
-            window.dataLayer.push({
-                'event': 'form_submit',
-                'form_id': 'feedback_form',
-                'form_name': 'User Feedback',
-                'form_status': 'success'
-            });
-            
-            const analyticsOutput = document.getElementById('analyticsOutput');
-            analyticsOutput.innerHTML += `<br>📝 Form Submit: feedback_form`;
-        }
-
-        // ==================== ЧАТ ПОДДЕРЖКИ ДЛЯ ГОСТЕЙ ====================
-        function toggleSupportChat() {
-            const chatContainer = document.getElementById('supportChatContainer');
-            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
-            
-            if (chatContainer.style.display === 'flex') {
-                document.getElementById('supportChatInput').focus();
-                loadSupportChatHistory();
-            }
-        }
-
-        function handleSupportKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendSupportMessage();
-            }
-        }
-
-        function askSupportQuestion(question) {
-            document.getElementById('supportChatInput').value = question;
-            sendSupportMessage();
-        }
-
-        function sendSupportMessage() {
-            const input = document.getElementById('supportChatInput');
-            const message = input.value.trim();
-            
-            if (!message) return;
-            
-            addSupportMessage(message, 'client');
-            input.value = '';
-            
-            showSupportTypingIndicator();
-            
-            setTimeout(() => {
-                hideSupportTypingIndicator();
-                generateSupportResponse(message);
-            }, 1000 + Math.random() * 2000);
-        }
-
-        function addSupportMessage(text, sender) {
-            const messagesContainer = document.getElementById('supportChatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `support-message ${sender === 'client' ? 'client-message' : 'operator-message'}`;
-            messageDiv.textContent = text;
-            messagesContainer.appendChild(messageDiv);
-            
-            supportChatHistory.push({ sender, text, timestamp: new Date().toISOString() });
-            
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            saveSupportChatHistory();
-        }
-
-        function showSupportTypingIndicator() {
-            document.getElementById('supportTypingIndicator').style.display = 'block';
-            document.getElementById('supportChatMessages').scrollTop = document.getElementById('supportChatMessages').scrollHeight;
-        }
-
-        function hideSupportTypingIndicator() {
-            document.getElementById('supportTypingIndicator').style.display = 'none';
-        }
-
-        function generateSupportResponse(userMessage) {
-            const responses = {
-                'документ': [
-                    "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
-                    "Основные документы: устав организации, приказ о назначении директора, документы по хозяйственным операциям (акты, накладные, счета-фактуры)."
-                ],
-                'стоим': [
-                    "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
-                    "Цены на услуги: бухсопровождение ИП - от 5 000 ₽, ООО - от 8 000 ₽, налоговая оптимизация - от 10 000 ₽."
-                ],
-                'ип': [
-                    "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
-                    "Для ИП предлагаем полное бухгалтерское сопровождение от 5 000 ₽ в месяц."
-                ],
-                'ооо': [
-                    "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц.",
-                    "Для ООО на УСН 6% - от 8 000 ₽/мес, на УСН 15% - от 10 000 ₽/мес."
-                ]
-            };
-
-            let response = "Благодарю за вопрос! Для более точного ответа мне нужно уточнить некоторые детали. Можете рассказать подробнее о вашей ситуации?";
-            const lowerMessage = userMessage.toLowerCase();
-            
-            for (const [keyword, answers] of Object.entries(responses)) {
-                if (lowerMessage.includes(keyword)) {
-                    response = answers[Math.floor(Math.random() * answers.length)];
-                    break;
-                }
-            }
-
-            const callToAction = "\n\n💼 Хотите получить индивидуальный расчет стоимости услуг?";
-            
-            addSupportMessage(response + callToAction, 'operator');
-        }
-
-        function saveSupportChatHistory() {
-            localStorage.setItem('supportChatHistory', JSON.stringify(supportChatHistory));
-        }
-
-        function loadSupportChatHistory() {
-            const saved = localStorage.getItem('supportChatHistory');
-            if (saved) {
-                supportChatHistory = JSON.parse(saved);
-                const messagesContainer = document.getElementById('supportChatMessages');
-                
-                while (messagesContainer.children.length > 3) {
-                    messagesContainer.removeChild(messagesContainer.lastChild);
-                }
-                
-                supportChatHistory.forEach(msg => {
-                    if (msg.sender !== 'system') {
-                        const messageDiv = document.createElement('div');
-                        messageDiv.className = `support-message ${msg.sender === 'client' ? 'client-message' : 'operator-message'}`;
-                        messageDiv.textContent = msg.text;
-                        messagesContainer.appendChild(messageDiv);
-                    }
-                });
-                
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            }
-        }
-
-        // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
-        function logEvent(eventName, params = {}) {
-            const eventLog = document.getElementById('eventLog');
-            const timestamp = new Date().toLocaleTimeString();
-            const eventText = `[${timestamp}] ${eventName}: ${JSON.stringify(params)}`;
-            
-            if (eventLog) {
-                eventLog.innerHTML += eventText + '<br>';
-                eventLog.scrollTop = eventLog.scrollHeight;
-            }
-            
-            console.log('Event:', eventName, params);
-            
-            // Отправка в Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', eventName, params);
-            }
-            
-            // Отправка в dataLayer для GTM
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': eventName,
-                ...params
-            });
-        }
-
-        // ==================== ИНИЦИАЛИЗАЦИЯ ====================
-        document.addEventListener('DOMContentLoaded', function() {
-            // Инициализация системы
-            console.log('🚀 Система тестирования инициализирована');
-            
-            // Скрываем защищенные страницы
-            document.querySelectorAll('.restricted').forEach(link => {
-                link.style.display = 'none';
-            });
-            
-            // Инициализация GTM Data Layer
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'page_load',
-                'page_type': 'testing_system',
-                'environment': 'localhost'
-            });
-            
-            // Инициализация панели разработчика
-            document.getElementById('devPanelToggle').addEventListener('click', function() {
-                document.getElementById('devPanel').classList.toggle('collapsed');
-            });
-            
-            // Инициализация системы отзывов
-            updateFeedbackCount();
-            
-            // Настройка документов
-            setupRealDocuments();
-            
-            // Запуск мониторинга
-            startMonitoring();
-        });
-
-        function setupRealDocuments() {
-            const documents = {
-                'technical-specification': 'Техническое_задание_Идеальный_Баланс.pdf',
-                'upris': 'УПРИС_Бухгалтерские_услуги.pdf', 
-                'schedule': 'График_работ_проекта.pdf'
-            };
-            
-            document.querySelectorAll('.document-link').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const docType = this.getAttribute('data-document');
-                    const fileName = documents[docType];
-                    
-                    // Логируем скачивание
-                    logEvent('document_download', {
-                        document_type: docType,
-                        file_name: fileName
-                    });
-                    
-                    alert(`📄 Документ "${fileName}" будет скачан\n(в демо-версии файл не загружен)`);
-                });
-            });
-        }
-
-        function startMonitoring() {
-            setInterval(() => {
-                const activeUsers = document.getElementById('activeUsers');
-                if (activeUsers) {
-                    activeUsers.textContent = Math.floor(Math.random() * 3) + 1;
-                }
-            }, 5000);
-        }
-    </script>
-</body>
-</html>
+           
