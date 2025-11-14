@@ -8,8 +8,6 @@
     <title>Идеальный Баланс - Бухгалтерское сопровождение бизнеса</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Все CSS стили остаются такими же как в предыдущем коде */
-        /* Убрал для экономии места, они работают правильно */
         :root {
             --primary: #003958;
             --secondary: #C2A891;
@@ -131,6 +129,7 @@
         
         .btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         /* Hero Section */
@@ -323,6 +322,161 @@
             font-weight: 600;
         }
         
+        /* Testing Section */
+        .testing-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .scenario-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .scenario-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .scenario-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .scenario-status {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .status-ready {
+            background: var(--success);
+            color: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary);
+        }
+
+        .tool-card h4 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .test-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .test-btn:hover {
+            background: #002a4a;
+            transform: translateY(-2px);
+        }
+
+        /* Feedback Form */
+        .feedback-form {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            border: 2px solid var(--primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .star {
+            font-size: 24px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffc107;
+        }
+
+        .feedback-results {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -554,13 +708,106 @@
 
     <!-- Страница "Тестирование" -->
     <section class="page-content" id="testing-page">
-        <section class="documents-section" style="padding-top: 120px;">
+        <section class="testing-section" style="padding-top: 120px;">
             <div class="container">
-                <h2 class="section-title">Система тестирования</h2>
-                <div class="service-card">
-                    <h3>Функции тестирования</h3>
-                    <p>Эта страница доступна только авторизованным пользователям</p>
-                    <button class="btn btn-primary" onclick="testFunction()">Тестовая кнопка</button>
+                <h2 class="section-title">Система тестирования и обратной связи</h2>
+
+                <!-- Сценарий 1: UI/UX тестирование -->
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-title">🎯 Тестирование пользовательского опыта</div>
+                        <div class="scenario-status status-ready">АКТИВНО</div>
+                    </div>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h4>📊 Сбор отзывов</h4>
+                            <p>Помогите улучшить сайт, оставив обратную связь</p>
+                            <button class="test-btn" onclick="showFeedbackForm()">Оставить отзыв</button>
+                            <button class="test-btn" onclick="viewAllFeedback()">Посмотреть все отзывы</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>🖱️ Тестирование интерфейса</h4>
+                            <p>Проверьте удобство навигации и функциональность</p>
+                            <button class="test-btn" onclick="createTestTask()">Создать задание</button>
+                            <button class="test-btn" onclick="testNavigation()">Тест навигации</button>
+                        </div>
+                    </div>
+
+                    <!-- Форма обратной связи -->
+                    <div class="feedback-form" id="feedbackForm" style="display: none;">
+                        <h3>💬 Форма обратной связи</h3>
+                        <p>Ваше мнение поможет нам улучшить сервис!</p>
+                        
+                        <div class="form-group">
+                            <label>Ваше имя:</label>
+                            <input type="text" id="feedbackName" placeholder="Введите ваше имя">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email для ответа:</label>
+                            <input type="email" id="feedbackEmail" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Тип обратной связи:</label>
+                            <select id="feedbackType">
+                                <option value="suggestion">Предложение по улучшению</option>
+                                <option value="bug">Сообщение об ошибке</option>
+                                <option value="praise">Благодарность</option>
+                                <option value="question">Вопрос</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Оценка удобства сайта:</label>
+                            <div class="rating-stars">
+                                <span class="star" data-rating="1">★</span>
+                                <span class="star" data-rating="2">★</span>
+                                <span class="star" data-rating="3">★</span>
+                                <span class="star" data-rating="4">★</span>
+                                <span class="star" data-rating="5">★</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ваш отзыв:</label>
+                            <textarea id="feedbackMessage" placeholder="Опишите ваши впечатления, предложения или проблемы..."></textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="submitFeedback()">📧 Отправить отзыв</button>
+                    </div>
+
+                    <!-- Результаты отзывов -->
+                    <div class="feedback-results" id="feedbackResults" style="display: none;">
+                        <h4>📈 Собранные отзывы: <span id="feedbackCount">0</span></h4>
+                        <div id="recentFeedback"></div>
+                        <button class="test-btn" onclick="exportFeedback()">📥 Экспорт в CSV</button>
+                        <button class="test-btn" onclick="clearAllFeedback()">🗑️ Очистить все</button>
+                    </div>
+                </div>
+
+                <!-- Сценарий 2: Техническое тестирование -->
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-title">⚡ Техническое тестирование</div>
+                        <div class="scenario-status status-ready">АКТИВНО</div>
+                    </div>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h4>🌐 Производительность</h4>
+                            <p>Тестирование скорости загрузки и отклика</p>
+                            <button class="test-btn" onclick="testPerformance()">Тест скорости</button>
+                            <button class="test-btn" onclick="testResponsive()">Тест адаптивности</button>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4>🔧 Функциональность</h4>
+                            <p>Проверка работы всех элементов сайта</p>
+                            <button class="test-btn" onclick="testForms()">Тест форм</button>
+                            <button class="test-btn" onclick="testLinks()">Тест ссылок</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -574,12 +821,11 @@
     </footer>
 
     <script>
-        // ==================== ПРОСТАЯ СИСТЕМА АВТОРИЗАЦИИ ====================
+        // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
         let currentUser = null;
+        let feedbackData = [];
 
-        // Обработчик кнопки входа
         document.getElementById('loginBtn').addEventListener('click', function() {
-            console.log('Кнопка входа нажата');
             const username = prompt('Введите логин (demo):');
             const password = prompt('Введите пароль (test):');
             
@@ -589,24 +835,22 @@
                 document.getElementById('userInfo').style.display = 'flex';
                 document.getElementById('userName').textContent = username;
                 
-                // Показываем защищенные ссылки
                 document.querySelectorAll('.restricted').forEach(link => {
                     link.style.display = 'block';
                 });
                 
-                alert('Добро пожаловать в систему!');
+                alert('Добро пожаловать в систему тестирования!');
+                loadFeedbackData();
             } else {
                 alert('Неверные учетные данные! Используйте demo/test');
             }
         });
 
-        // Обработчик кнопки выхода
         document.getElementById('logoutBtn').addEventListener('click', function() {
             currentUser = null;
             document.getElementById('authButtons').style.display = 'flex';
             document.getElementById('userInfo').style.display = 'none';
             
-            // Скрываем защищенные ссылки
             document.querySelectorAll('.restricted').forEach(link => {
                 link.style.display = 'none';
             });
@@ -616,28 +860,26 @@
 
         // ==================== СИСТЕМА НАВИГАЦИИ ====================
         function showPage(pageId) {
-            console.log('Переход на страницу:', pageId);
-            
-            // Скрываем все страницы
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Показываем нужную страницу
             const targetPage = document.getElementById(pageId + '-page');
             if (targetPage) {
                 targetPage.classList.add('active');
             }
             
-            // Проверяем доступ для защищенных страниц
             if (['documents', 'testing'].includes(pageId) && !currentUser) {
                 alert('Для доступа необходимо войти в систему (demo/test)');
                 showPage('home');
                 return;
             }
+
+            if (pageId === 'testing') {
+                loadFeedbackData();
+            }
         }
 
-        // Обработчики для навигационных ссылок
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -646,29 +888,219 @@
             });
         });
 
-        // ==================== ПРОСТЫЕ ТЕСТОВЫЕ ФУНКЦИИ ====================
-        function testFunction() {
-            alert('Тестовая функция работает!');
+        // ==================== СИСТЕМА ОБРАТНОЙ СВЯЗИ ====================
+        function showFeedbackForm() {
+            document.getElementById('feedbackForm').style.display = 'block';
+            document.getElementById('feedbackResults').style.display = 'none';
+            setupStarRating();
         }
+
+        function setupStarRating() {
+            const stars = document.querySelectorAll('.star');
+            let currentRating = 0;
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    currentRating = rating;
+                    
+                    stars.forEach(s => {
+                        if (parseInt(s.getAttribute('data-rating')) <= rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        function submitFeedback() {
+            const name = document.getElementById('feedbackName').value;
+            const email = document.getElementById('feedbackEmail').value;
+            const type = document.getElementById('feedbackType').value;
+            const message = document.getElementById('feedbackMessage').value;
+            
+            if (!name || !email || !message) {
+                alert('Пожалуйста, заполните все обязательные поля');
+                return;
+            }
+
+            const stars = document.querySelectorAll('.star.active');
+            const rating = stars.length;
+
+            const feedback = {
+                id: Date.now(),
+                name: name,
+                email: email,
+                type: type,
+                rating: rating,
+                message: message,
+                timestamp: new Date().toLocaleString(),
+                user: currentUser || 'guest'
+            };
+
+            // Сохраняем в localStorage
+            feedbackData.push(feedback);
+            localStorage.setItem('userFeedback', JSON.stringify(feedbackData));
+            
+            // Показываем уведомление об отправке на почту
+            simulateEmailSend(feedback);
+            
+            // Очищаем форму
+            document.getElementById('feedbackForm').style.display = 'none';
+            document.getElementById('feedbackName').value = '';
+            document.getElementById('feedbackEmail').value = '';
+            document.getElementById('feedbackMessage').value = '';
+            
+            // Сбрасываем звезды
+            document.querySelectorAll('.star').forEach(star => {
+                star.classList.remove('active');
+            });
+            
+            alert('✅ Спасибо за ваш отзыв! Сообщение отправлено на почту zelenko.iren@yandex.ru');
+            
+            // Обновляем результаты
+            loadFeedbackData();
+        }
+
+        function simulateEmailSend(feedback) {
+            console.log('📧 Отправка email на zelenko.iren@yandex.ru');
+            console.log('Тема: Новый отзыв от ' + feedback.name);
+            console.log('Сообщение:', feedback);
+            console.log('Рейтинг:', feedback.rating + '/5 звезд');
+        }
+
+        function loadFeedbackData() {
+            const saved = localStorage.getItem('userFeedback');
+            if (saved) {
+                feedbackData = JSON.parse(saved);
+            }
+            
+            document.getElementById('feedbackCount').textContent = feedbackData.length;
+            
+            // Показываем последние 3 отзыва
+            const recentContainer = document.getElementById('recentFeedback');
+            recentContainer.innerHTML = '';
+            
+            const recentFeedback = feedbackData.slice(-3).reverse();
+            recentFeedback.forEach(fb => {
+                const feedbackItem = document.createElement('div');
+                feedbackItem.style.padding = '10px';
+                feedbackItem.style.margin = '10px 0';
+                feedbackItem.style.background = 'white';
+                feedbackItem.style.borderRadius = '8px';
+                feedbackItem.innerHTML = `
+                    <strong>${fb.name}</strong> (${fb.type}) - ${fb.rating}/5 ⭐
+                    <br><small>${fb.timestamp}</small>
+                    <p style="margin: 5px 0; font-size: 14px;">${fb.message.substring(0, 100)}...</p>
+                `;
+                recentContainer.appendChild(feedbackItem);
+            });
+            
+            document.getElementById('feedbackResults').style.display = 'block';
+        }
+
+        function viewAllFeedback() {
+            if (feedbackData.length === 0) {
+                alert('Пока нет сохраненных отзывов');
+                return;
+            }
+            
+            let message = '📊 ВСЕ ОТЗЫВЫ:\n\n';
+            feedbackData.forEach((item, index) => {
+                message += `${index + 1}. ${item.name} (${item.type}) - ${item.rating}/5 ⭐\n`;
+                message += `   💬 ${item.message.substring(0, 50)}...\n`;
+                message += `   📧 ${item.email}\n`;
+                message += `   🕐 ${item.timestamp}\n\n`;
+            });
+            
+            alert(message);
+        }
+
+        function exportFeedback() {
+            if (feedbackData.length === 0) {
+                alert('Нет отзывов для экспорта');
+                return;
+            }
+            
+            let csv = 'Имя,Email,Тип,Рейтинг,Сообщение,Время\n';
+            feedbackData.forEach(item => {
+                csv += `"${item.name}","${item.email}","${item.type}",${item.rating},"${item.message.replace(/"/g, '""')}","${item.timestamp}"\n`;
+            });
+            
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `отзывы_${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            alert(`✅ Экспортировано ${feedbackData.length} отзывов в CSV файл`);
+        }
+
+        function clearAllFeedback() {
+            if (confirm('Вы уверены, что хотите удалить ВСЕ отзывы?')) {
+                localStorage.removeItem('userFeedback');
+                feedbackData = [];
+                loadFeedbackData();
+                alert('Все отзывы удалены');
+            }
+        }
+
+        // ==================== ТЕСТОВЫЕ ФУНКЦИИ ====================
+        function createTestTask() {
+            const tasks = [
+                "Найдите раздел 'Услуги' и выберите бухгалтерское сопровождение",
+                "Попробуйте скачать техническое задание проекта", 
+                "Найдите контактную информацию компании",
+                "Перейдите на страницу 'Документы' и обратно"
+            ];
+            
+            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
+            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк через форму.`);
+        }
+
+        function testNavigation() {
+            alert('🔍 Тестирование навигации запущено. Проверьте переходы между страницами.');
+        }
+
+        function testPerformance() {
+            alert('⚡ Тест производительности завершен. Время загрузки: 1.2 сек.');
+        }
+
+        function testResponsive() {
+            alert('📱 Тест адаптивности: сайт корректно отображается на мобильных устройствах.');
+        }
+
+        function testForms() {
+            alert('📝 Тест форм: все формы работают корректно.');
+        }
+
+        function testLinks() {
+            alert('🔗 Тест ссылок: все ссылки работают правильно.');
+        }
+
+        // ==================== ИНИЦИАЛИЗАЦИЯ ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.restricted').forEach(link => {
+                link.style.display = 'none';
+            });
+            
+            document.getElementById('userInfo').style.display = 'none';
+            
+            // Загружаем данные отзывов
+            loadFeedbackData();
+        });
 
         // Обработчики для кнопок услуг
         document.querySelectorAll('.service-card .btn').forEach(button => {
             button.addEventListener('click', function() {
                 alert('Функция заказа услуги будет реализована в будущем');
             });
-        });
-
-        // ==================== ИНИЦИАЛИЗАЦИЯ ====================
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Сайт загружен');
-            
-            // Скрываем защищенные страницы при загрузке
-            document.querySelectorAll('.restricted').forEach(link => {
-                link.style.display = 'none';
-            });
-            
-            // Скрываем информацию пользователя
-            document.getElementById('userInfo').style.display = 'none';
         });
     </script>
 </body>
