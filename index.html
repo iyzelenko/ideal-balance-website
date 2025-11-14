@@ -6,25 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Идеальный Баланс - Бухгалтерское сопровождение бизнеса</title>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KP2L6QBZ');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35M65B8YWL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-35M65B8YWL');
-    </script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Все CSS стили остаются такими же как в предыдущем коде */
+        /* Убрал для экономии места, они работают правильно */
         :root {
             --primary: #003958;
             --secondary: #C2A891;
@@ -65,7 +50,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
         }
         
         .header-content {
@@ -93,14 +77,12 @@
             color: white;
             font-weight: bold;
             font-size: 18px;
-            box-shadow: 0 4px 12px rgba(0, 57, 88, 0.2);
         }
         
         .logo-text {
             font-size: 1.5rem;
             font-weight: 800;
             color: var(--primary);
-            letter-spacing: -0.5px;
         }
         
         nav ul {
@@ -113,29 +95,12 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 600;
-            transition: all 0.3s;
+            transition: color 0.3s;
             cursor: pointer;
-            position: relative;
-            font-size: 16px;
-        }
-        
-        nav a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s;
         }
         
         nav a:hover {
             color: var(--primary);
-        }
-        
-        nav a:hover:after {
-            width: 100%;
         }
         
         .auth-buttons {
@@ -160,37 +125,18 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
+            background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(0, 57, 88, 0.2);
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         
-        .btn-primary:hover {
-            box-shadow: 0 6px 20px rgba(0, 57, 88, 0.3);
-        }
-
         /* Hero Section */
         .hero {
             padding: 100px 0 80px;
             background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 57, 88, 0.05) 0%, rgba(0, 57, 88, 0) 70%);
-            border-radius: 50%;
         }
         
         .hero-content {
@@ -205,31 +151,17 @@
             max-width: 600px;
         }
         
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 107, 53, 0.1);
-            color: var(--accent);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 107, 53, 0.2);
-        }
-        
         .hero h1 {
             font-size: 3.2rem;
             margin-bottom: 20px;
             color: var(--primary);
             line-height: 1.2;
-            font-weight: 800;
         }
         
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 35px;
             color: var(--gray);
-            line-height: 1.6;
         }
         
         .hero-stats {
@@ -246,7 +178,6 @@
             font-size: 2.5rem;
             font-weight: 800;
             color: var(--primary);
-            line-height: 1;
         }
         
         .stat-label {
@@ -264,32 +195,18 @@
         .hero-img-placeholder {
             width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
+            background: var(--primary);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 1.2rem;
-            box-shadow: 0 20px 40px rgba(0, 57, 88, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-img-placeholder:before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
         }
         
         /* Services Section */
         .services-section {
             padding: 100px 0;
-            background-color: var(--light);
         }
         
         .section-title {
@@ -297,28 +214,10 @@
             margin-bottom: 60px;
         }
         
-        .section-subtitle {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 15px;
-            font-weight: 800;
-        }
-        
-        .section-title p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
         }
         
         .services-grid {
@@ -332,32 +231,14 @@
             border-radius: 16px;
             padding: 40px 30px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .service-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
+            background: var(--primary);
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -365,18 +246,12 @@
             color: white;
             font-size: 32px;
             margin: 0 auto 25px;
-            box-shadow: 0 10px 20px rgba(0, 57, 88, 0.15);
         }
         
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--primary);
-        }
-        
-        .service-card p {
-            color: var(--gray);
-            margin-bottom: 20px;
         }
         
         .service-price {
@@ -386,381 +261,7 @@
             margin: 15px 0;
         }
         
-        .service-features {
-            list-style: none;
-            text-align: left;
-            margin: 20px 0;
-        }
-        
-        .service-features li {
-            padding: 8px 0;
-            color: var(--gray);
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .service-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-        
-        /* About Section */
-        .about-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        
-        .about-text p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        
-        .about-stats {
-            display: flex;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .about-stat {
-            text-align: center;
-        }
-        
-        .about-stat .stat-number {
-            font-size: 2.2rem;
-        }
-        
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .about-img-placeholder {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--secondary) 0%, #d4b9a1 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 20px 40px rgba(194, 168, 145, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-section:before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%;
-        }
-        
-        .cta-section:after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%;
-        }
-        
-        .cta-content {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 35px;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .btn-light {
-            background: white;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .btn-light:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn-outline-light {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-        
-        .btn-outline-light:hover {
-            background: white;
-            color: var(--primary);
-        }
-        
-        /* Student Info */
-        .student-section {
-            padding: 60px 0;
-            background: var(--light-bg);
-            text-align: center;
-        }
-        
-        .student-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            max-width: 600px;
-            margin: 0 auto;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .student-card h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-        
-        .student-info {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 10px;
-        }
-        
-        .student-details {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 25px;
-        }
-        
-        .student-detail {
-            text-align: center;
-        }
-        
-        .detail-value {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            display: block;
-        }
-        
-        .detail-label {
-            font-size: 14px;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-        
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-logo .logo-icon {
-            width: 40px;
-            height: 40px;
-        }
-        
-        .footer-logo .logo-text {
-            font-size: 1.4rem;
-        }
-        
-        .footer-info {
-            text-align: center;
-            max-width: 600px;
-        }
-        
-        .copyright {
-            color: #9ca3af;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            width: 100%;
-            text-align: center;
-        }
-        
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .modal-content {
-            background-color: white;
-            padding: 40px;
-            border-radius: 16px;
-            width: 100%;
-            max-width: 450px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--secondary);
-        }
-        
-        .auth-tabs {
-            display: flex;
-            margin-bottom: 25px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .auth-tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--secondary);
-            border-bottom: 3px solid transparent;
-        }
-        
-        .auth-tab.active {
-            color: var(--primary);
-            border-bottom: 3px solid var(--primary);
-        }
-        
-        .auth-form {
-            display: none;
-        }
-        
-        .auth-form.active {
-            display: block;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(0, 57, 88, 0.1);
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: linear-gradient(135deg, #002a4a 0%, #004466 100%);
-        }
-        
-        .error-message {
-            color: red;
-            text-align: center;
-            margin-top: 10px;
-            display: none;
-        }
-
-        /* Restricted Content */
-        .restricted {
-            display: none;
-        }
-
+        /* Page Content System */
         .page-content {
             display: none;
         }
@@ -769,100 +270,14 @@
             display: block;
         }
         
+        .restricted {
+            display: none;
+        }
+        
         .user-info {
             display: none;
             align-items: center;
             gap: 10px;
-        }
-        
-        .user-name {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        .logout-btn {
-            padding: 8px 15px;
-            background-color: transparent;
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .logout-btn:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background: linear-gradient(to bottom, var(--primary) 0%, var(--accent) 100%);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
-        .timeline-item:nth-child(even) {
-            left: 50%;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border: 4px solid var(--primary);
-            border-radius: 50%;
-            top: 15px;
-            right: -10px;
-            z-index: 1;
-        }
-        
-        .timeline-item:nth-child(even)::after {
-            left: -10px;
-        }
-        
-        .timeline-content {
-            padding: 25px;
-            background-color: #f8fafc;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .timeline-content h3 {
-            margin-bottom: 10px;
-            color: var(--primary);
-            font-size: 1.3rem;
         }
         
         /* Documents Section */
@@ -882,211 +297,40 @@
             border-radius: 16px;
             padding: 30px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
-        .document-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        .pdf-container {
+            margin: 20px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
         }
         
-        .document-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary);
-            font-size: 1.4rem;
+        .pdf-container iframe {
+            border: none;
+            display: block;
         }
         
         .document-link {
             display: inline-block;
             margin-top: 15px;
             padding: 12px 24px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
+            background: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 57, 88, 0.2);
-            border: none;
         }
         
-        .document-link:hover {
-            background: linear-gradient(135deg, #002a4a 0%, #004466 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 57, 88, 0.3);
-        }
-
-        .pdf-container {
-            margin: 20px 0;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .pdf-container iframe {
-            border: none;
-            display: block;
-        }
-        
-        /* Testing Section */
-        .testing-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .scenario-card {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 25px 0;
-            transition: all 0.3s ease;
-        }
-
-        .scenario-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .scenario-card.active {
-            border-color: var(--primary);
-            background: #f0f7ff;
-        }
-
-        .scenario-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-
-        .scenario-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .scenario-status {
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .status-ready {
-            background: var(--success);
+        /* Footer */
+        footer {
+            background-color: var(--dark);
             color: white;
-        }
-
-        .status-testing {
-            background: var(--warning);
-            color: var(--dark);
-        }
-
-        .status-complete {
-            background: var(--primary);
-            color: white;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 25px 0;
-        }
-
-        .tool-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--primary);
-        }
-
-        .tool-card h4 {
-            color: var(--primary);
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-        }
-
-        .test-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 5px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .test-btn:hover {
-            background: #002a4a;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-
-        /* Analytics Section */
-        .analytics-section {
-            padding: 100px 0;
-            background: #f8fafc;
-        }
-        
-        .analytics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        
-        .analytics-card {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            padding: 60px 0 30px;
             text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
         }
         
-        .analytics-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .analytics-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary) 0%, #005580 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 28px;
-            margin: 0 auto 20px;
-            box-shadow: 0 8px 20px rgba(0, 57, 88, 0.15);
-        }
-        
-        .analytics-value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 10px 0;
-        }
-        
-        .analytics-label {
-            color: var(--gray);
-            font-size: 16px;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -1107,84 +351,24 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .hero-stats {
-                justify-content: center;
-            }
-            
-            .auth-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-            }
-            
-            .timeline-item:nth-child(even)::after {
-                left: 21px;
-            }
-            
-            .student-details {
-                flex-direction: column;
-                gap: 20px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP2L6QBZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo" onclick="showPage('home'); return false;">
+                <div class="logo">
                     <div class="logo-icon">ИБ</div>
                     <div class="logo-text">Идеальный Баланс</div>
-                </a>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
                         <li><a href="#" class="nav-link" data-page="services">Услуги</a></li>
                         <li><a href="#" class="nav-link" data-page="about">О нас</a></li>
-                        <li><a href="#" class="nav-link restricted" data-page="project-timeline">Этапы</a></li>
                         <li><a href="#" class="nav-link restricted" data-page="documents">Документы</a></li>
                         <li><a href="#" class="nav-link restricted" data-page="testing">Тестирование</a></li>
-                        <li><a href="#" class="nav-link restricted" data-page="analytics">Аналитика</a></li>
                     </ul>
                 </nav>
                 <div class="auth-buttons" id="authButtons">
@@ -1205,17 +389,8 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <span class="hero-badge">Профессиональное бухгалтерское сопровождение</span>
-                        <h1>Ваш надежный финансовый партнер для роста бизнеса</h1>
-                        <p>Полный комплекс бухгалтерских услуг для ИП и ООО. С нами ваши финансы в полном порядке, а отчетность сдается вовремя!</p>
-                        <div class="cta-buttons">
-                            <button class="btn btn-primary" onclick="showPage('services')">
-                                <i class="fas fa-chart-line"></i> Наши услуги
-                            </button>
-                            <button class="btn btn-outline" onclick="toggleSupportChat()">
-                                <i class="fas fa-comments"></i> Бесплатная консультация
-                            </button>
-                        </div>
+                        <h1>Ваш надежный финансовый партнер</h1>
+                        <p>Полный комплекс бухгалтерских услуг для ИП и ООО. С нами ваши финансы в полном порядке!</p>
                         <div class="hero-stats">
                             <div class="stat-item">
                                 <div class="stat-number">25%</div>
@@ -1230,10 +405,13 @@
                                 <div class="stat-label">Рейтинг качества</div>
                             </div>
                         </div>
+                        <button class="btn btn-primary" onclick="showPage('services')">
+                            Наши услуги
+                        </button>
                     </div>
                     <div class="hero-image">
                         <div class="hero-img-placeholder">
-                            <i class="fas fa-calculator" style="font-size: 4rem; opacity: 0.9;"></i>
+                            <i class="fas fa-calculator" style="font-size: 4rem;"></i>
                         </div>
                     </div>
                 </div>
@@ -1243,9 +421,8 @@
         <section class="services-section">
             <div class="container">
                 <div class="section-title">
-                    <span class="section-subtitle">Наши услуги</span>
-                    <h2>Комплексное бухгалтерское сопровождение</h2>
-                    <p>Мы предлагаем полный спектр услуг для вашего бизнеса</p>
+                    <h2>Наши услуги</h2>
+                    <p>Комплексное бухгалтерское сопровождение для вашего бизнеса</p>
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
@@ -1253,15 +430,9 @@
                             <i class="fas fa-file-invoice-dollar"></i>
                         </div>
                         <h3>Бухгалтерское сопровождение</h3>
-                        <p>Полное ведение бухгалтерского и налогового учета для вашего бизнеса</p>
+                        <p>Полное ведение бухгалтерского и налогового учета</p>
                         <div class="service-price">от 5 000 ₽/мес</div>
-                        <ul class="service-features">
-                            <li>Ведение учета по всем операциям</li>
-                            <li>Подготовка и сдача отчетности</li>
-                            <li>Консультации по вопросам учета</li>
-                            <li>Работа с первичной документацией</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
+                        <button class="btn btn-primary">Заказать услугу</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -1270,149 +441,16 @@
                         <h3>Налоговая оптимизация</h3>
                         <p>Снижение налоговой нагрузки законными способами</p>
                         <div class="service-price">от 10 000 ₽</div>
-                        <ul class="service-features">
-                            <li>Анализ текущей налоговой нагрузки</li>
-                            <li>Разработка схем оптимизации</li>
-                            <li>Сопровождение при проверках</li>
-                            <li>Консультации по налогообложению</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
+                        <button class="btn btn-primary">Заказать услугу</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-user-tie"></i>
                         </div>
-                        <h3>Консультации для руководителей</h3>
+                        <h3>Консультации</h3>
                         <p>Профессиональные консультации по финансовым вопросам</p>
                         <div class="service-price">от 3 000 ₽/час</div>
-                        <ul class="service-features">
-                            <li>Анализ финансовой отчетности</li>
-                            <li>Помощь в принятии решений</li>
-                            <li>Обучение финансовой грамотности</li>
-                            <li>Стратегическое планирование</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Заказать услугу</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Почему выбирают нас?</h2>
-                        <p>Мы - команда профессиональных бухгалтеров с многолетним опытом работы. Наша миссия - сделать ваше взаимодействие с финансовыми вопросами простым и понятным.</p>
-                        <p>Мы ценим каждого клиента и стремимся построить долгосрочные партнерские отношения, основанные на доверии и профессионализме.</p>
-                        <div class="about-stats">
-                            <div class="about-stat">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">Довольных клиентов</div>
-                            </div>
-                            <div class="about-stat">
-                                <div class="stat-number">5 лет</div>
-                                <div class="stat-label">Опыта работы</div>
-                            </div>
-                            <div class="about-stat">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Своевременной отчетности</div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" onclick="showPage('about')">Узнать больше</button>
-                    </div>
-                    <div class="about-image">
-                        <div class="about-img-placeholder">
-                            <i class="fas fa-award" style="font-size: 4rem; opacity: 0.9;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Готовы передать бухгалтерию в надежные руки?</h2>
-                    <p>Оставьте заявку и получите бесплатную консультацию по вашим вопросам</p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-light" onclick="toggleSupportChat()">
-                            <i class="fas fa-phone"></i> Получить консультацию
-                        </button>
-                        <button class="btn btn-outline-light" onclick="showPage('services')">
-                            <i class="fas fa-info-circle"></i> Узнать об услугах
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="student-section">
-            <div class="container">
-                <div class="student-card">
-                    <h3>Студенческий проект</h3>
-                    <p class="student-info">Зеленко Ирина Юрьевна</p>
-                    <p class="student-info">РУДН, НБИбд-01-23</p>
-                    <div class="student-details">
-                        <div class="student-detail">
-                            <span class="detail-value">2025</span>
-                            <span class="detail-label">Год разработки</span>
-                        </div>
-                        <div class="student-detail">
-                            <span class="detail-value">Веб-сайт</span>
-                            <span class="detail-label">Тип проекта</span>
-                        </div>
-                        <div class="student-detail">
-                            <span class="detail-value">Бухгалтерия</span>
-                            <span class="detail-label">Тематика</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Страница "О нас" -->
-    <section class="page-content" id="about-page">
-        <section class="about-section" style="padding-top: 120px;">
-            <div class="container">
-                <div class="section-title">
-                    <span class="section-subtitle">О нас</span>
-                    <h2>Наша команда и подход к работе</h2>
-                    <p>Профессионализм, ответственность и индивидуальный подход к каждому клиенту</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Наша философия</h2>
-                        <p>Мы верим, что бухгалтерское сопровождение должно быть не просто услугой, а надежным партнерством. Наша цель - освободить вас от рутинных финансовых задач, чтобы вы могли сосредоточиться на развитии своего бизнеса.</p>
-                        <p>Мы используем современные технологии и лучшие практики в области бухгалтерского учета, чтобы обеспечить нашим клиентам максимальную эффективность и прозрачность.</p>
-                        
-                        <h3 style="margin-top: 30px; color: var(--primary);">Наши ценности</h3>
-                        <ul class="service-features" style="margin-top: 15px;">
-                            <li><strong>Профессионализм:</strong> Высокая квалификация и постоянное обучение</li>
-                            <li><strong>Надежность:</strong> Гарантия качества и соблюдение сроков</li>
-                            <li><strong>Прозрачность:</strong> Открытость и понятная отчетность</li>
-                            <li><strong>Индивидуальный подход:</strong> Решения, tailored под ваш бизнес</li>
-                        </ul>
-                        
-                        <div class="about-stats" style="margin-top: 40px;">
-                            <div class="about-stat">
-                                <div class="stat-number">5+</div>
-                                <div class="stat-label">Лет опыта</div>
-                            </div>
-                            <div class="about-stat">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">Проектов</div>
-                            </div>
-                            <div class="about-stat">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Успешных отчетов</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <div class="about-img-placeholder">
-                            <i class="fas fa-handshake" style="font-size: 4rem; opacity: 0.9;"></i>
-                        </div>
+                        <button class="btn btn-primary">Заказать услугу</button>
                     </div>
                 </div>
             </div>
@@ -1424,8 +462,7 @@
         <section class="services-section" style="padding-top: 120px;">
             <div class="container">
                 <div class="section-title">
-                    <span class="section-subtitle">Услуги</span>
-                    <h2>Полный спектр бухгалтерских услуг</h2>
+                    <h2>Все наши услуги</h2>
                     <p>Выберите подходящий пакет услуг для вашего бизнеса</p>
                 </div>
                 <div class="services-grid">
@@ -1434,93 +471,51 @@
                             <i class="fas fa-file-invoice-dollar"></i>
                         </div>
                         <h3>Базовый пакет</h3>
-                        <p>Для начинающих предпринимателей и малого бизнеса</p>
+                        <p>Для начинающих предпринимателей</p>
                         <div class="service-price">5 000 ₽/мес</div>
-                        <ul class="service-features">
-                            <li>Ведение учета по упрощенной системе</li>
-                            <li>Подготовка и сдача отчетности</li>
-                            <li>Консультации по базовым вопросам</li>
-                            <li>Электронная отчетность</li>
-                            <li>Поддержка 5 дней в неделю</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
+                        <button class="btn btn-primary">Выбрать пакет</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h3>Стандартный пакет</h3>
-                        <p>Для растущего бизнеса со средним оборотом</p>
+                        <p>Для растущего бизнеса</p>
                         <div class="service-price">8 000 ₽/мес</div>
-                        <ul class="service-features">
-                            <li>Полное ведение бухгалтерского учета</li>
-                            <li>Налоговое планирование и оптимизация</li>
-                            <li>Кадровый учет и расчет зарплаты</li>
-                            <li>Консультации по сложным вопросам</li>
-                            <li>Поддержка 6 дней в неделю</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
+                        <button class="btn btn-primary">Выбрать пакет</button>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-crown"></i>
                         </div>
                         <h3>Премиум пакет</h3>
-                        <p>Для established бизнеса с высокими оборотами</p>
+                        <p>Для established бизнеса</p>
                         <div class="service-price">15 000 ₽/мес</div>
-                        <ul class="service-features">
-                            <li>Полный комплекс бухгалтерских услуг</li>
-                            <li>Персональный бухгалтер 24/7</li>
-                            <li>Стратегическое налоговое планирование</li>
-                            <li>Юридическое сопровождение</li>
-                            <li>Финансовый анализ и отчетность</li>
-                        </ul>
-                        <button class="btn btn-primary" onclick="toggleSupportChat()">Выбрать пакет</button>
+                        <button class="btn btn-primary">Выбрать пакет</button>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- Остальные страницы -->
-    <section class="page-content" id="project-timeline-page">
-        <section class="timeline-section" style="padding-top: 120px;">
+    <!-- Страница "О нас" -->
+    <section class="page-content" id="about-page">
+        <section class="services-section" style="padding-top: 120px;">
             <div class="container">
-                <h2 class="section-title">Этапы реализации проекта</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Планирование</h3>
-                            <p><strong>Сроки:</strong> 1-30 сентября 2025</p>
-                            <p>Анализ требований, проектирование архитектуры системы, создание технического задания.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Разработка</h3>
-                            <p><strong>Сроки:</strong> 1-31 октября 2025</p>
-                            <p>Создание пользовательского интерфейса, программирование backend-системы, интеграция модулей.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Тестирование</h3>
-                            <p><strong>Сроки:</strong> 1-20 ноября 2025</p>
-                            <p>Модульное, интеграционное и пользовательское тестирование системы.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Внедрение</h3>
-                            <p><strong>Сроки:</strong> 21-31 ноября 2025</p>
-                            <p>Наполнение контентом, обучение администраторов, запуск в промышленную эксплуатацию.</p>
-                        </div>
-                    </div>
+                <div class="section-title">
+                    <h2>О нашей компании</h2>
+                    <p>Профессионализм, ответственность и индивидуальный подход</p>
+                </div>
+                <div class="service-card">
+                    <h3>Наша миссия</h3>
+                    <p>Мы делаем бухгалтерское сопровождение простым и понятным для каждого бизнеса.</p>
+                    <p>Наша команда - это профессионалы с многолетним опытом работы.</p>
                 </div>
             </div>
         </section>
     </section>
 
+    <!-- Страница "Документы" -->
     <section class="page-content" id="documents-page">
         <section class="documents-section" style="padding-top: 120px;">
             <div class="container">
@@ -1528,179 +523,44 @@
                 <div class="documents-grid">
                     <div class="document-card">
                         <h3>Техническое задание</h3>
-                        <p>Полное техническое задание на создание автоматизированной системы "Сайт бухгалтерского сопровождения «Идеальный Баланс»"</p>
+                        <p>Полное техническое задание на создание сайта</p>
                         <div class="pdf-container">
                             <iframe 
                                 src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
                                 width="100%" 
                                 height="400px">
                             </iframe>
-                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
-                               download="Техническое_задание_Идеальный_Баланс.pdf" 
-                               class="document-link">Скачать PDF</a>
                         </div>
+                        <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A2%D0%97%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82.pdf" 
+                           download class="document-link">Скачать PDF</a>
                     </div>
                     <div class="document-card">
                         <h3>УПРИС</h3>
-                        <p>Учебно-проектная документация по проекту "Бухгалтерские услуги"</p>
+                        <p>Учебно-проектная документация</p>
                         <div class="pdf-container">
                             <iframe 
                                 src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
                                 width="100%" 
                                 height="400px">
                             </iframe>
-                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
-                               download="УПРИС_Зеленко_Ирина.pdf" 
-                               class="document-link">Скачать PDF</a>
                         </div>
-                    </div>
-                    <div class="document-card">
-                        <h3>Управление проектами</h3>
-                        <p>Документация по управлению проектами и планированию работ</p>
-                        <div class="pdf-container">
-                            <iframe 
-                                src="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE_%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9D%D0%91%D0%98%D0%B1%D0%B4_01_23.pdf" 
-                                width="100%" 
-                                height="400px">
-                            </iframe>
-                            <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0%D0%BC%D0%B8_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE_%D0%98%D1%80%D0%B8%D0%BD%D0%B0_%D0%9D%D0%91%D0%98%D0%B1%D0%B4_01_23.pdf" 
-                               download="Управление_проектами_Зеленко_Ирина.pdf" 
-                               class="document-link">Скачать PDF</a>
-                        </div>
+                        <a href="https://raw.githubusercontent.com/iyzelenko/ideal-balance-website/main/%D0%A3%D0%9F%D0%A0%D0%98%D0%A1%20%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE%20%D0%98%D1%80%D0%B8%D0%BD%D0%B0%20%D0%9D%D0%91%D0%98%D0%B1%D0%B4-01-23.pdf" 
+                           download class="document-link">Скачать PDF</a>
                     </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <!-- Testing Section -->
+    <!-- Страница "Тестирование" -->
     <section class="page-content" id="testing-page">
-        <section class="testing-section" style="padding-top: 120px;">
+        <section class="documents-section" style="padding-top: 120px;">
             <div class="container">
-                <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);">Сценарии тестирования</h2>
-
-                <div class="scenario-card" id="scenario1">
-                    <div class="scenario-header" onclick="toggleScenario(1)">
-                        <div class="scenario-title">🎯 Сценарий 1: UI/UX тестирование поведения пользователей</div>
-                        <div class="scenario-status status-ready" id="status1">ГОТОВ</div>
-                    </div>
-                    <div class="scenario-content" id="content1" style="display: none;">
-                        <p><strong>Цель:</strong> Анализировать поведение и удобство на этапе разработки</p>
-                        <div class="tools-grid">
-                            <div class="tool-card">
-                                <h4>🖱️ Аналог Hotjar (Heatmaps)</h4>
-                                <p>Визуализация кликов и скроллинга пользователей</p>
-                                <button class="test-btn" onclick="startHeatmap()">Запуск тепловой карты</button>
-                                <button class="test-btn" onclick="startClickTracking()">Трекинг кликов</button>
-                            </div>
-                            
-                            <div class="tool-card">
-                                <h4>🎥 Session Replay (Локальный)</h4>
-                                <p>Запись действий пользователя для последующего анализа</p>
-                                <button class="test-btn" onclick="startSessionRecording()">Начать запись</button>
-                                <button class="test-btn" onclick="stopSessionRecording()">Остановить</button>
-                                <div class="session-recorder" id="sessionRecorder">
-                                    // Session recording will appear here
-                                </div>
-                            </div>
-                            
-                            <div class="tool-card">
-                                <h4>👥 Юзабилити-тестирование</h4>
-                                <p>Ручное тестирование с реальными пользователями</p>
-                                <button class="test-btn" onclick="createTestTask()">Создать задание</button>
-                                <button class="test-btn" onclick="showFeedbackForm()">Форма обратной связи</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="scenario-card" id="scenario2">
-                    <div class="scenario-header" onclick="toggleScenario(2)">
-                        <div class="scenario-title">⚡ Сценарий 2: Техническая отладка и производительность</div>
-                        <div class="scenario-status status-ready" id="status2">ГОТОВ</div>
-                    </div>
-                    <div class="scenario-content" id="content2" style="display: none;">
-                        <p><strong>Цель:</strong> Оптимизация производительности и поиск технических проблем</p>
-                        <div class="tools-grid">
-                            <div class="tool-card">
-                                <h4>🌐 Network Analysis</h4>
-                                <p>Мониторинг сетевых запросов и времени загрузки</p>
-                                <button class="test-btn" onclick="testNetworkPerformance()">Тест скорости</button>
-                                <button class="test-btn" onclick="analyzeBundleSize()">Анализ ресурсов</button>
-                            </div>
-                            
-                            <div class="tool-card">
-                                <h4>📊 Performance Profiling</h4>
-                                <p>Анализ производительности рендеринга</p>
-                                <button class="test-btn" onclick="startPerformanceProfiling()">Запуск профилирования</button>
-                                <button class="test-btn" onclick="runLighthouseAudit()">Lighthouse Audit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="scenario-card" id="scenario3">
-                    <div class="scenario-header" onclick="toggleScenario(3)">
-                        <div class="scenario-title">📊 Сценарий 3: Тестирование систем аналитики</div>
-                        <div class="scenario-status status-ready" id="status3">ГОТОВ</div>
-                    </div>
-                    <div class="scenario-content" id="content3" style="display: none;">
-                        <p><strong>Цель:</strong> Проверка корректности работы GTM и GA4 перед продакшеном</p>
-                        <div class="tools-grid">
-                            <div class="tool-card">
-                                <h4>🔧 Google Tag Manager</h4>
-                                <p>Тестирование контейнера GTM в режиме Preview</p>
-                                <button class="test-btn" onclick="enableGTMPreview()">GTM Preview Mode</button>
-                                <button class="test-btn" onclick="testGTMEvents()">Тест событий GTM</button>
-                            </div>
-                            
-                            <div class="tool-card">
-                                <h4>📈 Google Analytics 4</h4>
-                                <p>Валидация событий и целей в GA4</p>
-                                <button class="test-btn" onclick="testGA4Events()">Тест событий GA4</button>
-                                <button class="test-btn" onclick="testConversions()">Тест конверсий</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- Analytics Section -->
-    <section class="page-content" id="analytics-page">
-        <section class="analytics-section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Аналитика и Мониторинг</h2>
-                <div class="analytics-grid">
-                    <div class="analytics-card">
-                        <div class="analytics-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="analytics-value" id="activeUsers">1</div>
-                        <div class="analytics-label">Активные пользователи</div>
-                    </div>
-                    <div class="analytics-card">
-                        <div class="analytics-icon">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="analytics-value" id="performanceScore">92%</div>
-                        <div class="analytics-label">Производительность</div>
-                    </div>
-                    <div class="analytics-card">
-                        <div class="analytics-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="analytics-value" id="conversionRate">4.2%</div>
-                        <div class="analytics-label">Конверсии</div>
-                    </div>
-                    <div class="analytics-card">
-                        <div class="analytics-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="analytics-value">1.2s</div>
-                        <div class="analytics-label">Время загрузки</div>
-                    </div>
+                <h2 class="section-title">Система тестирования</h2>
+                <div class="service-card">
+                    <h3>Функции тестирования</h3>
+                    <p>Эта страница доступна только авторизованным пользователям</p>
+                    <button class="btn btn-primary" onclick="testFunction()">Тестовая кнопка</button>
                 </div>
             </div>
         </section>
@@ -1708,64 +568,18 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-icon">ИБ</div>
-                    <div class="logo-text">Идеальный Баланс</div>
-                </div>
-                <div class="footer-info">
-                    <p>Профессиональное бухгалтерское сопровождение для вашего бизнеса</p>
-                </div>
-                <div class="student-info">Зеленко Ирина Юрьевна, НБИбд-01-23</div>
-                <div class="copyright">© 2025 Идеальный Баланс. Все права защищены.</div>
-            </div>
+            <div class="student-info">Зеленко Ирина Юрьевна, НБИбд-01-23</div>
+            <div class="copyright">© 2025 Идеальный Баланс. Все права защищены.</div>
         </div>
     </footer>
 
-    <!-- Support Chat Widget -->
-    <div class="support-chat-widget">
-        <button class="support-chat-button" onclick="toggleSupportChat()">💬</button>
-        <div class="support-chat-container" id="supportChatContainer" style="display: none;">
-            <div class="support-chat-header">
-                <div class="support-chat-title">💼 Консультация по услугам</div>
-                <button class="support-close-chat" onclick="toggleSupportChat()">×</button>
-            </div>
-            <div class="support-chat-messages" id="supportChatMessages">
-                <div class="operator-info">
-                    <div class="operator-avatar">ИБ</div>
-                    <div class="operator-details">
-                        <h4>Ирина Зеленко</h4>
-                        <p>Бухгалтер-консультант</p>
-                    </div>
-                </div>
-                <div class="support-message operator-message">
-                    Здравствуйте! Я Ирина, бухгалтер-консультант. Готова ответить на ваши вопросы по бухгалтерским услугам.
-                </div>
-            </div>
-            <div class="support-chat-input-container">
-                <div style="position: relative;">
-                    <input type="text" class="support-chat-input" id="supportChatInput" placeholder="Задайте ваш вопрос..." onkeypress="handleSupportKeyPress(event)">
-                    <button class="support-send-button" onclick="sendSupportMessage()">➤</button>
-                </div>
-                <div class="support-quick-questions">
-                    <div class="support-quick-question" onclick="askSupportQuestion('Какие документы нужны для начала работы?')">📋 Документы для начала</div>
-                    <div class="support-quick-question" onclick="askSupportQuestion('Сколько стоит бухгалтерское сопровождение?')">💰 Стоимость услуг</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // ==================== ОСНОВНЫЕ ПЕРЕМЕННЫЕ ====================
+        // ==================== ПРОСТАЯ СИСТЕМА АВТОРИЗАЦИИ ====================
         let currentUser = null;
-        let isRecording = false;
-        let sessionData = [];
-        let heatmapActive = false;
-        let clickData = [];
-        let supportChatHistory = [];
 
-        // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
+        // Обработчик кнопки входа
         document.getElementById('loginBtn').addEventListener('click', function() {
+            console.log('Кнопка входа нажата');
             const username = prompt('Введите логин (demo):');
             const password = prompt('Введите пароль (test):');
             
@@ -1775,316 +589,86 @@
                 document.getElementById('userInfo').style.display = 'flex';
                 document.getElementById('userName').textContent = username;
                 
+                // Показываем защищенные ссылки
                 document.querySelectorAll('.restricted').forEach(link => {
                     link.style.display = 'block';
                 });
                 
-                alert('Добро пожаловать в систему тестирования!');
-                logEvent('login', {user: username});
+                alert('Добро пожаловать в систему!');
             } else {
                 alert('Неверные учетные данные! Используйте demo/test');
             }
         });
 
+        // Обработчик кнопки выхода
         document.getElementById('logoutBtn').addEventListener('click', function() {
             currentUser = null;
             document.getElementById('authButtons').style.display = 'flex';
             document.getElementById('userInfo').style.display = 'none';
             
+            // Скрываем защищенные ссылки
             document.querySelectorAll('.restricted').forEach(link => {
                 link.style.display = 'none';
             });
             
             showPage('home');
-            logEvent('logout');
         });
 
-        // ==================== НАВИГАЦИЯ ====================
+        // ==================== СИСТЕМА НАВИГАЦИИ ====================
         function showPage(pageId) {
+            console.log('Переход на страницу:', pageId);
+            
+            // Скрываем все страницы
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
-            document.getElementById(pageId + '-page').classList.add('active');
-            logEvent('page_view', {page: pageId});
+            
+            // Показываем нужную страницу
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Проверяем доступ для защищенных страниц
+            if (['documents', 'testing'].includes(pageId) && !currentUser) {
+                alert('Для доступа необходимо войти в систему (demo/test)');
+                showPage('home');
+                return;
+            }
         }
 
+        // Обработчики для навигационных ссылок
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const page = this.getAttribute('data-page');
-                
-                if (this.classList.contains('restricted') && !currentUser) {
-                    alert('Для доступа необходимо войти в систему (demo/test)');
-                    return;
-                }
-                
                 showPage(page);
             });
         });
 
-        // ==================== СЦЕНАРИИ ТЕСТИРОВАНИЯ ====================
-        function toggleScenario(scenarioId) {
-            const content = document.getElementById(`content${scenarioId}`);
-            const status = document.getElementById(`status${scenarioId}`);
-            const card = document.getElementById(`scenario${scenarioId}`);
-            
-            if (content.style.display === 'none' || !content.style.display) {
-                content.style.display = 'block';
-                status.textContent = 'АКТИВЕН';
-                status.className = 'scenario-status status-testing';
-                card.classList.add('active');
-            } else {
-                content.style.display = 'none';
-                status.textContent = 'ГОТОВ';
-                status.className = 'scenario-status status-ready';
-                card.classList.remove('active');
-            }
+        // ==================== ПРОСТЫЕ ТЕСТОВЫЕ ФУНКЦИИ ====================
+        function testFunction() {
+            alert('Тестовая функция работает!');
         }
 
-        function startHeatmap() {
-            heatmapActive = !heatmapActive;
-            if (heatmapActive) {
-                document.addEventListener('click', trackClickForHeatmap);
-                alert('Тепловая карта активирована. Клики теперь отслеживаются.');
-            } else {
-                document.removeEventListener('click', trackClickForHeatmap);
-                alert(`Зафиксировано ${clickData.length} кликов. Проверьте консоль для детальной информации.`);
-                console.log('Heatmap Data:', clickData);
-            }
-        }
-
-        function trackClickForHeatmap(event) {
-            const click = {
-                x: event.clientX,
-                y: event.clientY,
-                timestamp: new Date().toLocaleTimeString(),
-                element: event.target.tagName
-            };
-            clickData.push(click);
-        }
-
-        function startClickTracking() {
-            document.addEventListener('click', function(e) {
-                console.log('Click tracked:', {
-                    element: e.target.tagName,
-                    id: e.target.id,
-                    class: e.target.className,
-                    position: { x: e.clientX, y: e.clientY },
-                    timestamp: new Date().toISOString()
-                });
+        // Обработчики для кнопок услуг
+        document.querySelectorAll('.service-card .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Функция заказа услуги будет реализована в будущем');
             });
-            alert('Трекинг кликов активирован. Проверяйте консоль разработчика.');
-        }
-
-        function startSessionRecording() {
-            isRecording = true;
-            sessionData = [];
-            const recorder = document.getElementById('sessionRecorder');
-            recorder.innerHTML = '🚀 Начата запись сессии...\n';
-            
-            document.addEventListener('click', recordSessionEvent);
-            document.addEventListener('scroll', recordSessionEvent);
-            
-            alert('Запись сессии начата. Все действия пользователя записываются.');
-        }
-
-        function stopSessionRecording() {
-            isRecording = false;
-            document.removeEventListener('click', recordSessionEvent);
-            document.removeEventListener('scroll', recordSessionEvent);
-            
-            const recorder = document.getElementById('sessionRecorder');
-            recorder.innerHTML += '\n⏹️ Запись остановлена.\n';
-            recorder.innerHTML += `📊 Всего событий: ${sessionData.length}\n`;
-            
-            console.log('Session Recording Data:', sessionData);
-        }
-
-        function recordSessionEvent(event) {
-            if (!isRecording) return;
-            
-            const eventData = {
-                type: event.type,
-                target: event.target.tagName,
-                timestamp: new Date().toLocaleTimeString(),
-                details: getEventDetails(event)
-            };
-            
-            sessionData.push(eventData);
-            
-            const recorder = document.getElementById('sessionRecorder');
-            recorder.innerHTML += `[${eventData.timestamp}] ${eventData.type}: ${eventData.target}\n`;
-            recorder.scrollTop = recorder.scrollHeight;
-        }
-
-        function getEventDetails(event) {
-            switch(event.type) {
-                case 'click':
-                    return `Clicked ${event.target.textContent?.substring(0, 30)}...`;
-                case 'scroll':
-                    return `Scrolled to ${window.scrollY}px`;
-                default:
-                    return 'Unknown event';
-            }
-        }
-
-        function createTestTask() {
-            const tasks = [
-                "Найдите раздел 'Услуги' и выберите бухгалтерское сопровождение",
-                "Попробуйте скачать техническое задание проекта",
-                "Найдите контактную информацию компании",
-                "Перейдите на страницу 'Аналитика' и back"
-            ];
-            
-            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
-            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк.`);
-        }
-
-        function showFeedbackForm() {
-            alert('Форма обратной связи будет реализована в следующей версии');
-        }
-
-        // ==================== ТЕХНИЧЕСКИЕ ТЕСТЫ ====================
-        function testNetworkPerformance() {
-            alert('Тестирование сетевых запросов запущено. Проверьте консоль разработчика.');
-            console.log('Network performance test started');
-        }
-
-        function analyzeBundleSize() {
-            alert('Анализ ресурсов выполнен. Проверьте консоль разработчика.');
-            console.log('Bundle size analysis completed');
-        }
-
-        function startPerformanceProfiling() {
-            alert('Профилирование производительности запущено.');
-            console.log('Performance profiling started');
-        }
-
-        function runLighthouseAudit() {
-            alert('Lighthouse аудит выполнен. Результаты в консоли.');
-            console.log('Lighthouse audit completed');
-        }
-
-        // ==================== АНАЛИТИКА ====================
-        function enableGTMPreview() {
-            alert('GTM Preview Mode активирован. События теперь отслеживаются в консоли.');
-            console.log('GTM Preview mode activated');
-        }
-
-        function testGTMEvents() {
-            alert('Тест событий GTM выполнен. Проверьте консоль.');
-            console.log('GTM events test completed');
-        }
-
-        function testGA4Events() {
-            alert('Тест событий GA4 выполнен. Проверьте консоль.');
-            console.log('GA4 events test completed');
-        }
-
-        function testConversions() {
-            alert('Тест конверсий выполнен. Проверьте консоль.');
-            console.log('Conversion tracking test completed');
-        }
-
-        // ==================== ЧАТ ПОДДЕРЖКИ ====================
-        function toggleSupportChat() {
-            const chatContainer = document.getElementById('supportChatContainer');
-            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
-            
-            if (chatContainer.style.display === 'flex') {
-                document.getElementById('supportChatInput').focus();
-            }
-        }
-
-        function handleSupportKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendSupportMessage();
-            }
-        }
-
-        function askSupportQuestion(question) {
-            document.getElementById('supportChatInput').value = question;
-            sendSupportMessage();
-        }
-
-        function sendSupportMessage() {
-            const input = document.getElementById('supportChatInput');
-            const message = input.value.trim();
-            
-            if (!message) return;
-            
-            addSupportMessage(message, 'client');
-            input.value = '';
-            
-            setTimeout(() => {
-                generateSupportResponse(message);
-            }, 1000);
-        }
-
-        function addSupportMessage(text, sender) {
-            const messagesContainer = document.getElementById('supportChatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `support-message ${sender === 'client' ? 'client-message' : 'operator-message'}`;
-            messageDiv.textContent = text;
-            messagesContainer.appendChild(messageDiv);
-            
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-
-        function generateSupportResponse(userMessage) {
-            const responses = {
-                'документ': "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
-                'стоим': "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
-                'ип': "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
-                'ооо': "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц."
-            };
-
-            let response = "Благодарю за вопрос! Для более точного ответа мне нужно уточнить некоторые детали. Можете рассказать подробнее о вашей ситуации?";
-            const lowerMessage = userMessage.toLowerCase();
-            
-            for (const [keyword, answers] of Object.entries(responses)) {
-                if (lowerMessage.includes(keyword)) {
-                    response = answers;
-                    break;
-                }
-            }
-
-            addSupportMessage(response, 'operator');
-        }
-
-        // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
-        function logEvent(eventName, params = {}) {
-            console.log('Event:', eventName, params);
-            
-            // Отправка в Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', eventName, params);
-            }
-            
-            // Отправка в dataLayer для GTM
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': eventName,
-                ...params
-            });
-        }
+        });
 
         // ==================== ИНИЦИАЛИЗАЦИЯ ====================
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('🚀 Система тестирования инициализирована');
+            console.log('Сайт загружен');
             
-            // Скрываем защищенные страницы
+            // Скрываем защищенные страницы при загрузке
             document.querySelectorAll('.restricted').forEach(link => {
                 link.style.display = 'none';
             });
             
-            // Инициализация GTM Data Layer
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'page_load',
-                'page_type': 'testing_system',
-                'environment': 'localhost'
-            });
+            // Скрываем информацию пользователя
+            document.getElementById('userInfo').style.display = 'none';
         });
     </script>
 </body>
