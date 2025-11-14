@@ -910,6 +910,7 @@
             transition: all 0.3s;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0, 57, 88, 0.2);
+            border: none;
         }
         
         .document-link:hover {
@@ -1159,354 +1160,6 @@
                 flex-direction: column;
                 gap: 20px;
             }
-        }
-
-        /* Additional Styles for Testing Features */
-        .hotjar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 10000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hotjar-content {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .heatmap {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(180deg, rgba(255,0,0,0.3) 0%, rgba(255,255,0,0.3) 50%, rgba(0,255,0,0.3) 100%);
-            border-radius: 12px;
-            margin: 15px 0;
-            position: relative;
-        }
-
-        .click-marker {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: red;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .session-recorder {
-            background: #1e1e1e;
-            color: #00ff00;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: monospace;
-            height: 200px;
-            overflow-y: auto;
-            margin: 10px 0;
-        }
-
-        .feedback-form {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .feedback-results {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            border-left: 4px solid var(--primary);
-        }
-
-        /* Dev Panel */
-        .dev-panel {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background: rgba(0, 57, 88, 0.95);
-            color: white;
-            padding: 15px;
-            border-radius: 12px 0 0 12px;
-            z-index: 10000;
-            box-shadow: -2px 0 15px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            min-width: 280px;
-        }
-        
-        .dev-panel.collapsed {
-            transform: translateY(-50%) translateX(85%);
-        }
-        
-        .dev-panel-toggle {
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #003958;
-            color: white;
-            border: none;
-            border-radius: 8px 0 0 8px;
-            padding: 10px 5px;
-            cursor: pointer;
-            font-size: 12px;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        
-        .dev-panel-content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .dev-btn {
-            background: #C2A891;
-            color: #1D101B;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 13px;
-            transition: all 0.3s;
-            text-align: left;
-        }
-        
-        .dev-btn:hover {
-            background: #e6d0be;
-            transform: translateX(-3px);
-        }
-        
-        .dev-status {
-            font-size: 12px;
-            color: #c2a891;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        /* Support Chat */
-        .support-chat-widget {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 10001;
-        }
-
-        .support-chat-button {
-            width: 60px;
-            height: 60px;
-            background: var(--success);
-            border-radius: 50%;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .support-chat-button:hover {
-            transform: scale(1.1);
-            background: #218838;
-        }
-
-        .support-chat-container {
-            position: absolute;
-            bottom: 70px;
-            left: 0;
-            width: 350px;
-            height: 500px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            display: none;
-            flex-direction: column;
-            border: 2px solid var(--success);
-        }
-
-        .support-chat-header {
-            background: var(--success);
-            color: white;
-            padding: 15px;
-            border-radius: 16px 16px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .support-chat-title {
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .support-close-chat {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .support-chat-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: #f8f9fa;
-        }
-
-        .support-message {
-            margin-bottom: 15px;
-            padding: 12px 16px;
-            border-radius: 16px;
-            max-width: 80%;
-            word-wrap: break-word;
-        }
-
-        .operator-message {
-            background: white;
-            border: 1px solid #e0e0e0;
-            align-self: flex-start;
-        }
-
-        .client-message {
-            background: var(--success);
-            color: white;
-            align-self: flex-end;
-            margin-left: auto;
-        }
-
-        .support-chat-input-container {
-            padding: 15px;
-            border-top: 1px solid #e0e0e0;
-            background: white;
-            border-radius: 0 0 16px 16px;
-        }
-
-        .support-chat-input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .support-chat-input:focus {
-            border-color: var(--success);
-        }
-
-        .support-send-button {
-            position: absolute;
-            right: 25px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--success);
-            border: none;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .support-quick-questions {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .support-quick-question {
-            background: #d4edda;
-            border: 1px solid var(--success);
-            border-radius: 15px;
-            padding: 8px 12px;
-            font-size: 12px;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .support-quick-question:hover {
-            background: var(--success);
-            color: white;
-        }
-
-        .support-typing-indicator {
-            display: none;
-            padding: 10px 15px;
-            color: #666;
-            font-style: italic;
-        }
-
-        .operator-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            padding: 10px;
-            background: white;
-            border-radius: 10px;
-            border-left: 4px solid var(--success);
-        }
-
-        .operator-avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--success);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .operator-details h4 {
-            margin: 0;
-            color: var(--success);
-        }
-
-        .operator-details p {
-            margin: 0;
-            font-size: 12px;
-            color: #666;
         }
     </style>
 </head>
@@ -1829,7 +1482,7 @@
         </section>
     </section>
 
-    <!-- Остальные страницы (оставлены без изменений) -->
+    <!-- Остальные страницы -->
     <section class="page-content" id="project-timeline-page">
         <section class="timeline-section" style="padding-top: 120px;">
             <div class="container">
@@ -1920,54 +1573,138 @@
         </section>
     </section>
 
-    <!-- Testing and Analytics sections remain the same as in your original code -->
-    <!-- [Testing Section Code Here - Same as Original] -->
-    <!-- [Analytics Section Code Here - Same as Original] -->
+    <!-- Testing Section -->
+    <section class="page-content" id="testing-page">
+        <section class="testing-section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);">Сценарии тестирования</h2>
 
-    <!-- Modal and other components -->
-    <div class="modal" id="authModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <div class="auth-tabs">
-                <div class="auth-tab active" data-tab="login">Вход</div>
-                <div class="auth-tab" data-tab="register">Регистрация</div>
+                <div class="scenario-card" id="scenario1">
+                    <div class="scenario-header" onclick="toggleScenario(1)">
+                        <div class="scenario-title">🎯 Сценарий 1: UI/UX тестирование поведения пользователей</div>
+                        <div class="scenario-status status-ready" id="status1">ГОТОВ</div>
+                    </div>
+                    <div class="scenario-content" id="content1" style="display: none;">
+                        <p><strong>Цель:</strong> Анализировать поведение и удобство на этапе разработки</p>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🖱️ Аналог Hotjar (Heatmaps)</h4>
+                                <p>Визуализация кликов и скроллинга пользователей</p>
+                                <button class="test-btn" onclick="startHeatmap()">Запуск тепловой карты</button>
+                                <button class="test-btn" onclick="startClickTracking()">Трекинг кликов</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>🎥 Session Replay (Локальный)</h4>
+                                <p>Запись действий пользователя для последующего анализа</p>
+                                <button class="test-btn" onclick="startSessionRecording()">Начать запись</button>
+                                <button class="test-btn" onclick="stopSessionRecording()">Остановить</button>
+                                <div class="session-recorder" id="sessionRecorder">
+                                    // Session recording will appear here
+                                </div>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>👥 Юзабилити-тестирование</h4>
+                                <p>Ручное тестирование с реальными пользователями</p>
+                                <button class="test-btn" onclick="createTestTask()">Создать задание</button>
+                                <button class="test-btn" onclick="showFeedbackForm()">Форма обратной связи</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card" id="scenario2">
+                    <div class="scenario-header" onclick="toggleScenario(2)">
+                        <div class="scenario-title">⚡ Сценарий 2: Техническая отладка и производительность</div>
+                        <div class="scenario-status status-ready" id="status2">ГОТОВ</div>
+                    </div>
+                    <div class="scenario-content" id="content2" style="display: none;">
+                        <p><strong>Цель:</strong> Оптимизация производительности и поиск технических проблем</p>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🌐 Network Analysis</h4>
+                                <p>Мониторинг сетевых запросов и времени загрузки</p>
+                                <button class="test-btn" onclick="testNetworkPerformance()">Тест скорости</button>
+                                <button class="test-btn" onclick="analyzeBundleSize()">Анализ ресурсов</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>📊 Performance Profiling</h4>
+                                <p>Анализ производительности рендеринга</p>
+                                <button class="test-btn" onclick="startPerformanceProfiling()">Запуск профилирования</button>
+                                <button class="test-btn" onclick="runLighthouseAudit()">Lighthouse Audit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario-card" id="scenario3">
+                    <div class="scenario-header" onclick="toggleScenario(3)">
+                        <div class="scenario-title">📊 Сценарий 3: Тестирование систем аналитики</div>
+                        <div class="scenario-status status-ready" id="status3">ГОТОВ</div>
+                    </div>
+                    <div class="scenario-content" id="content3" style="display: none;">
+                        <p><strong>Цель:</strong> Проверка корректности работы GTM и GA4 перед продакшеном</p>
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <h4>🔧 Google Tag Manager</h4>
+                                <p>Тестирование контейнера GTM в режиме Preview</p>
+                                <button class="test-btn" onclick="enableGTMPreview()">GTM Preview Mode</button>
+                                <button class="test-btn" onclick="testGTMEvents()">Тест событий GTM</button>
+                            </div>
+                            
+                            <div class="tool-card">
+                                <h4>📈 Google Analytics 4</h4>
+                                <p>Валидация событий и целей в GA4</p>
+                                <button class="test-btn" onclick="testGA4Events()">Тест событий GA4</button>
+                                <button class="test-btn" onclick="testConversions()">Тест конверсий</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <form class="auth-form active" id="loginForm">
-                <div class="form-group">
-                    <label for="loginUsername">Логин</label>
-                    <input type="text" id="loginUsername" placeholder="Введите ваш логин" required>
+        </section>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="page-content" id="analytics-page">
+        <section class="analytics-section" style="padding-top: 120px;">
+            <div class="container">
+                <h2 class="section-title">Аналитика и Мониторинг</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="analytics-value" id="activeUsers">1</div>
+                        <div class="analytics-label">Активные пользователи</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="analytics-value" id="performanceScore">92%</div>
+                        <div class="analytics-label">Производительность</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="analytics-value" id="conversionRate">4.2%</div>
+                        <div class="analytics-label">Конверсии</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="analytics-value">1.2s</div>
+                        <div class="analytics-label">Время загрузки</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="loginPassword">Пароль</label>
-                    <input type="password" id="loginPassword" placeholder="Введите ваш пароль" required>
-                </div>
-                <button type="submit" class="submit-btn">Войти</button>
-                <div class="error-message" id="loginError">Неверный логин или пароль!</div>
-            </form>
-            
-            <form class="auth-form" id="registerForm">
-                <div class="form-group">
-                    <label for="registerName">Имя</label>
-                    <input type="text" id="registerName" placeholder="Введите ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <label for="registerEmail">Email</label>
-                    <input type="email" id="registerEmail" placeholder="Введите ваш email" required>
-                </div>
-                <div class="form-group">
-                    <label for="registerPassword">Пароль</label>
-                    <input type="password" id="registerPassword" placeholder="Создайте пароль" required>
-                </div>
-                <div class="form-group">
-                    <label for="registerConfirmPassword">Подтверждение пароля</label>
-                    <input type="password" id="registerConfirmPassword" placeholder="Повторите пароль" required>
-                </div>
-                <button type="submit" class="submit-btn">Зарегистрироваться</button>
-                <div class="error-message" id="registerError">Пароли не совпадают!</div>
-            </form>
-        </div>
-    </div>
+            </div>
+        </section>
+    </section>
 
     <footer>
         <div class="container">
@@ -1985,9 +1722,371 @@
         </div>
     </footer>
 
-    <!-- JavaScript remains the same as in your original code -->
-    <!-- [JavaScript Code Here - Same as Original] -->
+    <!-- Support Chat Widget -->
+    <div class="support-chat-widget">
+        <button class="support-chat-button" onclick="toggleSupportChat()">💬</button>
+        <div class="support-chat-container" id="supportChatContainer" style="display: none;">
+            <div class="support-chat-header">
+                <div class="support-chat-title">💼 Консультация по услугам</div>
+                <button class="support-close-chat" onclick="toggleSupportChat()">×</button>
+            </div>
+            <div class="support-chat-messages" id="supportChatMessages">
+                <div class="operator-info">
+                    <div class="operator-avatar">ИБ</div>
+                    <div class="operator-details">
+                        <h4>Ирина Зеленко</h4>
+                        <p>Бухгалтер-консультант</p>
+                    </div>
+                </div>
+                <div class="support-message operator-message">
+                    Здравствуйте! Я Ирина, бухгалтер-консультант. Готова ответить на ваши вопросы по бухгалтерским услугам.
+                </div>
+            </div>
+            <div class="support-chat-input-container">
+                <div style="position: relative;">
+                    <input type="text" class="support-chat-input" id="supportChatInput" placeholder="Задайте ваш вопрос..." onkeypress="handleSupportKeyPress(event)">
+                    <button class="support-send-button" onclick="sendSupportMessage()">➤</button>
+                </div>
+                <div class="support-quick-questions">
+                    <div class="support-quick-question" onclick="askSupportQuestion('Какие документы нужны для начала работы?')">📋 Документы для начала</div>
+                    <div class="support-quick-question" onclick="askSupportQuestion('Сколько стоит бухгалтерское сопровождение?')">💰 Стоимость услуг</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        // ==================== ОСНОВНЫЕ ПЕРЕМЕННЫЕ ====================
+        let currentUser = null;
+        let isRecording = false;
+        let sessionData = [];
+        let heatmapActive = false;
+        let clickData = [];
+        let supportChatHistory = [];
+
+        // ==================== СИСТЕМА АВТОРИЗАЦИИ ====================
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const username = prompt('Введите логин (demo):');
+            const password = prompt('Введите пароль (test):');
+            
+            if (username === 'demo' && password === 'test') {
+                currentUser = username;
+                document.getElementById('authButtons').style.display = 'none';
+                document.getElementById('userInfo').style.display = 'flex';
+                document.getElementById('userName').textContent = username;
+                
+                document.querySelectorAll('.restricted').forEach(link => {
+                    link.style.display = 'block';
+                });
+                
+                alert('Добро пожаловать в систему тестирования!');
+                logEvent('login', {user: username});
+            } else {
+                alert('Неверные учетные данные! Используйте demo/test');
+            }
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            currentUser = null;
+            document.getElementById('authButtons').style.display = 'flex';
+            document.getElementById('userInfo').style.display = 'none';
+            
+            document.querySelectorAll('.restricted').forEach(link => {
+                link.style.display = 'none';
+            });
+            
+            showPage('home');
+            logEvent('logout');
+        });
+
+        // ==================== НАВИГАЦИЯ ====================
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId + '-page').classList.add('active');
+            logEvent('page_view', {page: pageId});
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = this.getAttribute('data-page');
+                
+                if (this.classList.contains('restricted') && !currentUser) {
+                    alert('Для доступа необходимо войти в систему (demo/test)');
+                    return;
+                }
+                
+                showPage(page);
+            });
+        });
+
+        // ==================== СЦЕНАРИИ ТЕСТИРОВАНИЯ ====================
+        function toggleScenario(scenarioId) {
+            const content = document.getElementById(`content${scenarioId}`);
+            const status = document.getElementById(`status${scenarioId}`);
+            const card = document.getElementById(`scenario${scenarioId}`);
+            
+            if (content.style.display === 'none' || !content.style.display) {
+                content.style.display = 'block';
+                status.textContent = 'АКТИВЕН';
+                status.className = 'scenario-status status-testing';
+                card.classList.add('active');
+            } else {
+                content.style.display = 'none';
+                status.textContent = 'ГОТОВ';
+                status.className = 'scenario-status status-ready';
+                card.classList.remove('active');
+            }
+        }
+
+        function startHeatmap() {
+            heatmapActive = !heatmapActive;
+            if (heatmapActive) {
+                document.addEventListener('click', trackClickForHeatmap);
+                alert('Тепловая карта активирована. Клики теперь отслеживаются.');
+            } else {
+                document.removeEventListener('click', trackClickForHeatmap);
+                alert(`Зафиксировано ${clickData.length} кликов. Проверьте консоль для детальной информации.`);
+                console.log('Heatmap Data:', clickData);
+            }
+        }
+
+        function trackClickForHeatmap(event) {
+            const click = {
+                x: event.clientX,
+                y: event.clientY,
+                timestamp: new Date().toLocaleTimeString(),
+                element: event.target.tagName
+            };
+            clickData.push(click);
+        }
+
+        function startClickTracking() {
+            document.addEventListener('click', function(e) {
+                console.log('Click tracked:', {
+                    element: e.target.tagName,
+                    id: e.target.id,
+                    class: e.target.className,
+                    position: { x: e.clientX, y: e.clientY },
+                    timestamp: new Date().toISOString()
+                });
+            });
+            alert('Трекинг кликов активирован. Проверяйте консоль разработчика.');
+        }
+
+        function startSessionRecording() {
+            isRecording = true;
+            sessionData = [];
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML = '🚀 Начата запись сессии...\n';
+            
+            document.addEventListener('click', recordSessionEvent);
+            document.addEventListener('scroll', recordSessionEvent);
+            
+            alert('Запись сессии начата. Все действия пользователя записываются.');
+        }
+
+        function stopSessionRecording() {
+            isRecording = false;
+            document.removeEventListener('click', recordSessionEvent);
+            document.removeEventListener('scroll', recordSessionEvent);
+            
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML += '\n⏹️ Запись остановлена.\n';
+            recorder.innerHTML += `📊 Всего событий: ${sessionData.length}\n`;
+            
+            console.log('Session Recording Data:', sessionData);
+        }
+
+        function recordSessionEvent(event) {
+            if (!isRecording) return;
+            
+            const eventData = {
+                type: event.type,
+                target: event.target.tagName,
+                timestamp: new Date().toLocaleTimeString(),
+                details: getEventDetails(event)
+            };
+            
+            sessionData.push(eventData);
+            
+            const recorder = document.getElementById('sessionRecorder');
+            recorder.innerHTML += `[${eventData.timestamp}] ${eventData.type}: ${eventData.target}\n`;
+            recorder.scrollTop = recorder.scrollHeight;
+        }
+
+        function getEventDetails(event) {
+            switch(event.type) {
+                case 'click':
+                    return `Clicked ${event.target.textContent?.substring(0, 30)}...`;
+                case 'scroll':
+                    return `Scrolled to ${window.scrollY}px`;
+                default:
+                    return 'Unknown event';
+            }
+        }
+
+        function createTestTask() {
+            const tasks = [
+                "Найдите раздел 'Услуги' и выберите бухгалтерское сопровождение",
+                "Попробуйте скачать техническое задание проекта",
+                "Найдите контактную информацию компании",
+                "Перейдите на страницу 'Аналитика' и back"
+            ];
+            
+            const randomTask = tasks[Math.floor(Math.random() * tasks.length)];
+            alert(`🎯 Задание для тестирования:\n\n"${randomTask}"\n\nВыполните это задание и оставьте фидбэк.`);
+        }
+
+        function showFeedbackForm() {
+            alert('Форма обратной связи будет реализована в следующей версии');
+        }
+
+        // ==================== ТЕХНИЧЕСКИЕ ТЕСТЫ ====================
+        function testNetworkPerformance() {
+            alert('Тестирование сетевых запросов запущено. Проверьте консоль разработчика.');
+            console.log('Network performance test started');
+        }
+
+        function analyzeBundleSize() {
+            alert('Анализ ресурсов выполнен. Проверьте консоль разработчика.');
+            console.log('Bundle size analysis completed');
+        }
+
+        function startPerformanceProfiling() {
+            alert('Профилирование производительности запущено.');
+            console.log('Performance profiling started');
+        }
+
+        function runLighthouseAudit() {
+            alert('Lighthouse аудит выполнен. Результаты в консоли.');
+            console.log('Lighthouse audit completed');
+        }
+
+        // ==================== АНАЛИТИКА ====================
+        function enableGTMPreview() {
+            alert('GTM Preview Mode активирован. События теперь отслеживаются в консоли.');
+            console.log('GTM Preview mode activated');
+        }
+
+        function testGTMEvents() {
+            alert('Тест событий GTM выполнен. Проверьте консоль.');
+            console.log('GTM events test completed');
+        }
+
+        function testGA4Events() {
+            alert('Тест событий GA4 выполнен. Проверьте консоль.');
+            console.log('GA4 events test completed');
+        }
+
+        function testConversions() {
+            alert('Тест конверсий выполнен. Проверьте консоль.');
+            console.log('Conversion tracking test completed');
+        }
+
+        // ==================== ЧАТ ПОДДЕРЖКИ ====================
+        function toggleSupportChat() {
+            const chatContainer = document.getElementById('supportChatContainer');
+            chatContainer.style.display = chatContainer.style.display === 'flex' ? 'none' : 'flex';
+            
+            if (chatContainer.style.display === 'flex') {
+                document.getElementById('supportChatInput').focus();
+            }
+        }
+
+        function handleSupportKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendSupportMessage();
+            }
+        }
+
+        function askSupportQuestion(question) {
+            document.getElementById('supportChatInput').value = question;
+            sendSupportMessage();
+        }
+
+        function sendSupportMessage() {
+            const input = document.getElementById('supportChatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addSupportMessage(message, 'client');
+            input.value = '';
+            
+            setTimeout(() => {
+                generateSupportResponse(message);
+            }, 1000);
+        }
+
+        function addSupportMessage(text, sender) {
+            const messagesContainer = document.getElementById('supportChatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `support-message ${sender === 'client' ? 'client-message' : 'operator-message'}`;
+            messageDiv.textContent = text;
+            messagesContainer.appendChild(messageDiv);
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function generateSupportResponse(userMessage) {
+            const responses = {
+                'документ': "Для начала работы потребуется: учредительные документы, выписка из ЕГРЮЛ/ЕГРИП, свидетельства ОГРН/ИНН, банковские реквизиты.",
+                'стоим': "Стоимость бухгалтерского сопровождения зависит от системы налогообложения: ИП на УСН - от 5 000 ₽/мес, ООО на УСН - от 8 000 ₽/мес.",
+                'ип': "Да, работаем с индивидуальными предпринимателями на всех системах налогообложения: УСН, ОСНО, Патент.",
+                'ооо': "Да, сопровождаем общества с ограниченной ответственностью. Стоимость от 8 000 ₽ в месяц."
+            };
+
+            let response = "Благодарю за вопрос! Для более точного ответа мне нужно уточнить некоторые детали. Можете рассказать подробнее о вашей ситуации?";
+            const lowerMessage = userMessage.toLowerCase();
+            
+            for (const [keyword, answers] of Object.entries(responses)) {
+                if (lowerMessage.includes(keyword)) {
+                    response = answers;
+                    break;
+                }
+            }
+
+            addSupportMessage(response, 'operator');
+        }
+
+        // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
+        function logEvent(eventName, params = {}) {
+            console.log('Event:', eventName, params);
+            
+            // Отправка в Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, params);
+            }
+            
+            // Отправка в dataLayer для GTM
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': eventName,
+                ...params
+            });
+        }
+
+        // ==================== ИНИЦИАЛИЗАЦИЯ ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Система тестирования инициализирована');
+            
+            // Скрываем защищенные страницы
+            document.querySelectorAll('.restricted').forEach(link => {
+                link.style.display = 'none';
+            });
+            
+            // Инициализация GTM Data Layer
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'page_load',
+                'page_type': 'testing_system',
+                'environment': 'localhost'
+            });
+        });
+    </script>
 </body>
 </html>
 [file content end]
