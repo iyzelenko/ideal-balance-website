@@ -1,247 +1,259 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Идеальный Баланс - Система тестирования / Проект</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Идеальный Баланс - Система тестирования</title>
 
-<!-- GTM & GA (оставил ваши ID) -->
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KP2L6QBZ');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KP2L6QBZ');</script>
+    <!-- End Google Tag Manager -->
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-35M65B8YWL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-35M65B8YWL');
-</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35M65B8YWL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-35M65B8YWL');
+    </script>
 
-<style>
-  :root{
-    --primary:#003958; --accent:#C2A891; --bg:#f8fafc; --card:#fff; --muted:#6b7280;
-  }
-  *{box-sizing:border-box}
-  body{font-family:Inter, "Segoe UI", Tahoma, Arial; margin:0; background:var(--bg); color:#111; -webkit-font-smoothing:antialiased}
-  .container{max-width:1200px;margin:0 auto;padding:0 20px}
-  header{background:var(--card);box-shadow:0 2px 10px rgba(0,0,0,.06);position:sticky;top:0;z-index:20}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .logo{display:flex;gap:12px;align-items:center}
-  .logo-icon{background:var(--primary);color:#fff;width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
-  .logo-text{font-weight:700;color:var(--primary);font-size:1.15rem}
-  nav ul{display:flex;gap:18px;list-style:none;padding-left:0;margin:0}
-  nav a{color:#111;text-decoration:none;font-weight:600;cursor:pointer}
-  .auth-buttons{display:flex;gap:10px;align-items:center}
-  .btn{padding:9px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
-  .btn-primary{background:var(--primary);color:#fff}
-  .btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
-  main{padding:28px 0}
-  .hero{background:linear-gradient(135deg,#f0f4f8,#e9eef6);padding:48px;border-radius:12px;margin-bottom:20px}
-  .hero h1{color:var(--primary);font-size:2rem;margin-bottom:8px}
-  .panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
-  .stat{background:#fff;padding:16px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.04);text-align:center}
-  .stat strong{display:block;font-size:22px;color:var(--primary)}
-  /* page content blocks */
-  .page-content{display:none}
-  .page-content.active{display:block}
-  .section{background:#fff;padding:26px;border-radius:10px;box-shadow:0 6px 20px rgba(16,24,40,.04);margin-bottom:18px}
-  h2{color:var(--primary);margin-top:0}
-  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-  .card{background:var(--bg);padding:16px;border-radius:8px}
-  .timeline{position:relative;max-width:900px;margin:0 auto}
-  .timeline::after{content:'';position:absolute;width:4px;background:var(--primary);top:0;bottom:0;left:50%;transform:translateX(-50%)}
-  .timeline-item{position:relative;width:50%;padding:12px 24px}
-  .timeline-item .box{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
-  .timeline-item:nth-child(odd){left:0}
-  .timeline-item:nth-child(even){left:50%}
-  @media (max-width:800px){ .timeline::after{left:24px} .timeline-item{width:100%;left:0;padding-left:48px;margin-bottom:12px} }
-  pre.plantuml{background:#0b1220;color:#fff;padding:12px;border-radius:8px;overflow:auto}
-  table{width:100%;border-collapse:collapse}
-  table th,table td{padding:10px;border:1px solid #e6eefc;text-align:left}
-  .reviews-list{display:grid;gap:10px}
-  .review{background:#fff;padding:14px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.03)}
-  .review .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
-  /* testing tools */
-  .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .tool{background:#fff;padding:14px;border-radius:8px}
-  .dev-panel{position:fixed;right:12px;bottom:12px;background:var(--primary);color:#fff;padding:12px;border-radius:10px;z-index:40}
-  footer{padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
-</style>
+    <style>
+        :root {
+            --primary: #003958;
+            --secondary: #C2A891;
+            --light: #FFFFFF;
+            --dark: #1D101B;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --bg: #f8fafc;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg); color: var(--dark); line-height:1.6; }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        header { background:var(--light); box-shadow:0 2px 10px rgba(0,0,0,0.08); position:sticky; top:0; z-index:100; }
+        .header-content { display:flex; justify-content:space-between; align-items:center; padding:15px 0; }
+        .logo { display:flex; align-items:center; gap:10px; }
+        .logo-icon { width:40px; height:40px; background:var(--primary); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
+        .logo-text { font-size:1.2rem; font-weight:700; color:var(--primary); }
+        nav ul { display:flex; list-style:none; gap:18px; }
+        nav a { text-decoration:none; color:var(--dark); font-weight:600; cursor:pointer; }
+        .auth-buttons { display:flex; gap:12px; }
+        .btn { padding:9px 14px; border-radius:8px; cursor:pointer; font-weight:600; border:none; }
+        .btn-primary { background:var(--primary); color:#fff; }
+        .btn-outline { background:transparent; color:var(--primary); border:2px solid var(--primary); }
+        main { padding:28px 0; }
+        .hero { background:linear-gradient(135deg,#f0f4f8,#e2e8f0); padding:48px; border-radius:12px; margin-bottom:20px; text-align:center; }
+        .hero h1 { color:var(--primary); font-size:2rem; margin-bottom:8px; }
+        .panels { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:16px; }
+        .stat { background:#fff; padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04); text-align:center; }
+        .section { background:#fff; padding:26px; border-radius:10px; box-shadow:0 6px 20px rgba(16,24,40,0.04); margin-bottom:18px; }
+        h2 { color:var(--primary); margin-top:0; }
+        .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+        .card { background:var(--bg); padding:16px; border-radius:8px; }
+        .timeline { position:relative; max-width:800px; margin:0 auto; }
+        .timeline::after { content:''; position:absolute; width:4px; background:var(--primary); top:0; bottom:0; left:50%; margin-left:-2px; }
+        .timeline-item { padding:10px 40px; position:relative; width:50%; box-sizing:border-box; }
+        .timeline-item:nth-child(odd) { left:0; }
+        .timeline-item:nth-child(even) { left:50%; }
+        .timeline-content { padding:20px; background:#f8fafc; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.05); }
+        .documents-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
+        .document-card { background:#fff; border-radius:10px; padding:30px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center; }
+        .document-link { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--primary); color:#fff; text-decoration:none; border-radius:6px; }
+        footer { background:var(--dark); color:#fff; padding:40px 0; text-align:center; }
+        .page-content { display:none; }
+        .page-content.active { display:block; }
+        .user-info { display:none; align-items:center; gap:10px; }
+        .logout-btn { padding:8px 15px; background:transparent; border:1px solid var(--primary); color:var(--primary); border-radius:6px; cursor:pointer; font-weight:600; }
+        .timeline-section, .documents-section, .testing-section { padding:60px 0; }
+        pre.plantuml { background:#0b1220; color:#fff; padding:12px; border-radius:8px; overflow:auto; }
+        .metrics { display:flex; gap:12px; margin-top:12px; flex-wrap:wrap; }
+        .metric { flex:1; background:#fff; padding:12px; border-radius:8px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.03); min-width:160px; }
+        .reviews-list .review { background:#fff; padding:14px; border-radius:8px; margin-bottom:8px; box-shadow:0 6px 18px rgba(0,0,0,0.03); }
+        @media (max-width:768px) {
+            .header-content { flex-direction:column; gap:12px; }
+            nav ul { gap:12px; flex-wrap:wrap; justify-content:center; }
+            .timeline::after { left:31px; }
+            .timeline-item { width:100%; padding-left:70px; padding-right:25px; }
+            .timeline-item:nth-child(even) { left:0; }
+        }
+    </style>
 </head>
 <body>
-  <!-- GTM noscript -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP2L6QBZ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- GTM (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP2L6QBZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header>
-    <div class="container">
-      <div class="header-inner">
-        <div class="logo">
-          <div class="logo-icon">ИБ</div>
-          <div class="logo-text">Идеальный Баланс</div>
-        </div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">ИБ</div>
+                    <div class="logo-text">Идеальный Баланс</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="home">Главная</a></li>
+                        <li><a href="#" class="nav-link" data-page="project">Проект</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="project-timeline">Этапы проекта</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="documents">Документы</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="testing">Тестирование</a></li>
+                        <li><a href="#" class="nav-link restricted" data-page="analytics">Аналитика</a></li>
+                    </ul>
+                </nav>
 
-        <nav>
-          <ul>
-            <li><a class="nav-link" data-page="home">Главная</a></li>
-            <li><a class="nav-link" data-page="project">Проект (2-я страница)</a></li>
-            <li><a class="nav-link restricted" data-page="project-timeline">Этапы проекта</a></li>
-            <li><a class="nav-link restricted" data-page="documents">Документы</a></li>
-            <li><a class="nav-link restricted" data-page="testing">Тестирование</a></li>
-            <li><a class="nav-link restricted" data-page="analytics">Аналитика</a></li>
-          </ul>
-        </nav>
-
-        <div style="display:flex;gap:10px;align-items:center">
-          <div id="authButtons" class="auth-buttons">
-            <button class="btn btn-outline" id="loginBtn">Войти</button>
-            <button class="btn btn-primary" id="registerBtn">Регистрация</button>
-          </div>
-          <div id="userInfo" style="display:none;align-items:center;gap:10px">
-            <span id="userName" style="font-weight:700;color:var(--primary)"></span>
-            <button id="logoutBtn" class="btn btn-outline">Выйти</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HOME -->
-    <section id="home-page" class="page-content active">
-      <div class="hero section">
-        <h1>Бухгалтерские услуги для бизнеса — Идеальный Баланс</h1>
-        <p>Создание современного, удобного и клиентоориентированного сайта и системы сопровождения — увеличение продаж на 25% в первый год.</p>
-        <div class="panels">
-          <div class="stat"><strong>25%</strong><div class="muted">Увеличение продаж</div></div>
-          <div class="stat"><strong>40%</strong><div class="muted">Снижение нагрузки</div></div>
-          <div class="stat"><strong>5%</strong><div class="muted">Цель конверсии</div></div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>Кратко о проекте</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Цель</h3>
-            <p>Создать сайт и систему, которые привлекут клиентов и повысят доверие к сервису бухгалтерского сопровождения.</p>
-          </div>
-          <div class="card">
-            <h3>Задачи</h3>
-            <ul>
-              <li>Дизайн и адаптивность</li>
-              <li>Контент и SEO</li>
-              <li>Онлайн-заявки и ЛК</li>
-              <li>Тестирование и аналитика</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>ЦА</h3>
-            <p>ИП и ООО малого и среднего бизнеса, руководители, бухгалтеры.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section" id="home-reviews">
-        <h2>Отзывы клиентов</h2>
-        <div style="display:flex;gap:16px;align-items:flex-start">
-          <div style="flex:1">
-            <div class="reviews-list" id="reviewsList">
-              <!-- reviews will render here -->
+                <div style="display:flex;gap:10px;align-items:center">
+                    <div class="auth-buttons" id="authButtons">
+                        <button class="btn btn-outline" id="loginBtn">Войти</button>
+                        <button class="btn btn-primary" id="registerBtn">Регистрация</button>
+                    </div>
+                    <div class="user-info" id="userInfo">
+                        <span class="user-name" id="userName"></span>
+                        <button class="logout-btn" id="logoutBtn">Выйти</button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div style="width:320px">
-            <div style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.04)">
-              <h3>Оставить отзыв</h3>
-              <div style="margin-bottom:8px"><input id="revAuthor" placeholder="Ваше имя" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
-              <div style="margin-bottom:8px"><input id="revCompany" placeholder="Компания (опционально)" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
-              <div style="margin-bottom:8px"><textarea id="revText" placeholder="Текст отзыва" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></textarea></div>
-              <div style="display:flex;gap:8px">
-                <button class="btn btn-primary" onclick="addReview()">Добавить</button>
-                <button class="btn btn-outline" onclick="exportReviews()">Экспорт</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- PROJECT (вторая страница: все что просили) -->
-    <section id="project-page" class="page-content">
-      <div class="section">
-        <h2>Проект — Полный отчёт (вторая страница)</h2>
-        <p class="muted">Здесь собраны: тема, цель, задачи, ЦА, SWOT, 4P, жизненный цикл, планирование (с ТЗ), разработка, тестирование и реализация — всё в одном документе.</p>
-      </div>
+    <main class="container">
+        <!-- HOME PAGE -->
+        <section class="page-content active" id="home-page">
+            <section class="hero">
+                <h1>Бухгалтерские услуги для бизнеса</h1>
+                <p>Создание современного, удобного и клиентоориентированного сайта, который станет главным инструментом для привлечения новых клиентов и формирования доверия к компании.</p>
+                <div style="max-width:720px;margin:22px auto;padding:18px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+                    <div style="display:flex;justify-content:space-around;gap:12px">
+                        <div style="text-align:center">
+                            <div style="width:80px;height:80px;background:var(--primary);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">25%</div>
+                            <p>Увеличение продаж</p>
+                        </div>
+                        <div style="text-align:center">
+                            <div style="width:80px;height:80px;background:var(--secondary);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">40%</div>
+                            <p>Снижение нагрузки</p>
+                        </div>
+                        <div style="text-align:center">
+                            <div style="width:80px;height:80px;background:var(--primary);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700">5%</div>
+                            <p>Конверсия в клиенты</p>
+                        </div>
+                    </div>
+                    <div style="text-align:center;font-weight:700;color:var(--primary);margin-top:12px">Зеленко Ирина Юрьевна</div>
+                    <div style="text-align:center;color:var(--dark);margin-top:6px">Студентка РУДН, НБИбд-01-23</div>
+                </div>
+            </section>
 
-      <div class="section">
-        <h3>Тема, цель и задачи</h3>
-        <p><strong>Тема:</strong> Сайт бухгалтерского сопровождения «Идеальный Баланс». <strong>Цель:</strong> создать современную платформу для привлечения клиентов и автоматизации процессов (цели и задачи взяты из ТЗ). :contentReference[oaicite:3]{index=3}</p>
-        <ul>
-          <li>Разработка структуры и дизайна;</li>
-          <li>Наполнение продающим контентом и блоками отзывов;</li>
-          <li>Система генерации заявок и личный кабинет;</li>
-          <li>Подключение аналитики и обеспечение безопасности.</li>
-        </ul>
-      </div>
+            <section class="section">
+                <h2 class="section-title">О проекте</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Цель проекта</h3>
+                        <p>Создание современного, удобного и клиентоориентированного сайта, который станет главным и полезным инструментом для привлечения новых клиентов, формирования доверия к компании и увеличения объема продаж бухгалтерских услуг на 25% в течение первого года после запуска.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Задачи проекта</h3>
+                        <ul style="padding-left:20px;">
+                            <li>Разработать структуру и дизайн сайта</li>
+                            <li>Наполнить сайт продающим и полезным контентом</li>
+                            <li>Реализовать функционал для генерации заявок</li>
+                            <li>Обеспечить техническую надежность и видимость сайта (SEO)</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Целевая аудитория</h3>
+                        <p>Малый и средний бизнес (ИП, ООО), нуждающийся в профессиональном бухгалтерском сопровождении. Клиенты с разным уровнем цифровой грамотности, ценящие персональный подход и качество услуг.</p>
+                    </div>
+                </div>
+            </section>
 
-      <div class="section">
-        <h3>Целевая аудитория (обобщённо)</h3>
-        <p>ИП, малый и средний бизнес (ООО), руководители и бухгалтеры. Разделены по типу бизнеса, потребности и уровню цифровой грамотности. (см. проект). :contentReference[oaicite:4]{index=4}</p>
-      </div>
+            <section class="section" id="home-reviews">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+                    <div style="flex:1;min-width:260px">
+                        <div class="reviews-list" id="reviewsList"></div>
+                    </div>
+                    <div style="width:320px">
+                        <div style="background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+                            <h3>Оставить отзыв</h3>
+                            <div style="margin-bottom:8px"><input id="revAuthor" placeholder="Ваше имя" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
+                            <div style="margin-bottom:8px"><input id="revCompany" placeholder="Компания (опционально)" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></div>
+                            <div style="margin-bottom:8px"><textarea id="revText" placeholder="Текст отзыва" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd"></textarea></div>
+                            <div style="display:flex;gap:8px">
+                                <button class="btn btn-primary" onclick="addReview()">Добавить</button>
+                                <button class="btn btn-outline" onclick="exportReviews()">Экспорт</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
 
-      <div class="section">
-        <h3>SWOT</h3>
-        <table>
-          <tr><th>Strengths</th><th>Weaknesses</th></tr>
-          <tr>
-            <td>Сильный бренд, персональный подход, гибкость тарифов, cloud-ПО.</td>
-            <td>Низкая узнаваемость, малый маркетинговый бюджет, узкая команда.</td>
-          </tr>
-          <tr><th>Opportunities</th><th>Threats</th></tr>
-          <tr>
-            <td>Рост спроса, цифровизация, неудовлетворённость крупными игроками.</td>
-            <td>Усиление конкуренции, экономические риски, законодательные изменения.</td>
-          </tr>
-        </table>
-      </div>
+        <!-- PROJECT PAGE (вставлен прямо в основной файл) -->
+        <section class="page-content" id="project-page">
+            <section class="section">
+                <h2>Проект — Полный отчёт</h2>
+                <p>В этом разделе собраны: тема, цель, задачи, ЦА, SWOT, 4P, жизненный цикл, планирование (с ТЗ и UML), разработка, тестирование, реализация и статистика (GA4).</p>
+            </section>
 
-      <div class="section">
-        <h3>4P (продукт/цена/место/продвижение)</h3>
-        <ul>
-          <li><strong>Product:</strong> Полный спектр бухгалтерских услуг, калькулятор, ЛК.</li>
-          <li><strong>Price:</strong> Абонентские тарифы, прозрачные условия.</li>
-          <li><strong>Place:</strong> Веб-сайт + соцсети + партнёрские каналы.</li>
-          <li><strong>Promotion:</strong> SEO, контент, таргет, вебинары.</li>
-        </ul>
-      </div>
+            <section class="section">
+                <h3>Тема, цель и задачи</h3>
+                <p><strong>Тема:</strong> Сайт бухгалтерского сопровождения «Идеальный Баланс». <strong>Цель:</strong> создать платформу для привлечения клиентов и автоматизации процессов.</p>
+                <ul>
+                    <li>Разработка структуры и дизайна;</li>
+                    <li>Наполнение продающим контентом;</li>
+                    <li>Реализация функционала заявок;</li>
+                    <li>Подключение аналитики и SEO.</li>
+                </ul>
+            </section>
 
-      <div class="section">
-        <h3>Жизненный цикл системы — 4 этапа</h3>
-        <ol>
-          <li><strong>Планирование</strong> — сбор требований, ТЗ, проектирование архитектуры. (подробнее ниже). :contentReference[oaicite:5]{index=5}</li>
-          <li><strong>Разработка</strong> — frontend/backend, интеграции, БД.</li>
-          <li><strong>Тестирование</strong> — модульные, интеграционные, нагрузочные, SAST/DAST, пен-тесты.</li>
-          <li><strong>Реализация</strong> — запуск, наполнение, мониторинг, статистика.</li>
-        </ol>
-      </div>
+            <section class="section">
+                <h3>Целевая аудитория</h3>
+                <p>ИП, малый и средний бизнес (ООО), руководители, бухгалтеры. Разделены по потребностям: аутсорсинг бухучёта, сдача отчётности, налоговая оптимизация.</p>
+            </section>
 
-      <div class="section">
-        <h3>Планирование — что входит + ТЗ (кратко)</h3>
-        <p>Планирование включает: анализ требований, архитектуру, ТЗ, план работ с вехами, оценку рисков и безопасность (CIA, RBAC). Полный текст ТЗ — в документах проекта. :contentReference[oaicite:6]{index=6}</p>
+            <section class="section">
+                <h3>SWOT</h3>
+                <table style="width:100%;border-collapse:collapse;margin-top:8px">
+                    <tr><th style="padding:8px;border:1px solid #e6eefc">Strengths</th><th style="padding:8px;border:1px solid #e6eefc">Weaknesses</th></tr>
+                    <tr><td style="padding:8px;border:1px solid #e6eefc">Экспертиза, индивидуальный подход, гибкие тарифы</td><td style="padding:8px;border:1px solid #e6eefc">Ограниченный маркетинг, небольшой штат</td></tr>
+                    <tr><th style="padding:8px;border:1px solid #e6eefc">Opportunities</th><th style="padding:8px;border:1px solid #e6eefc">Threats</th></tr>
+                    <tr><td style="padding:8px;border:1px solid #e6eefc">Рост спроса, цифровизация услуг</td><td style="padding:8px;border:1px solid #e6eefc">Конкуренция, регуляторные риски</td></tr>
+                </table>
+            </section>
 
-        <h4>Рекомендуемые UML-диаграммы (PlantUML-код — рендерьте через PlantUML):</h4>
-        <pre class="plantuml">
+            <section class="section">
+                <h3>4P-анализ</h3>
+                <ul>
+                    <li><strong>Product:</strong> полный набор бухгалтерских услуг; личный кабинет; калькуляторы.</li>
+                    <li><strong>Price:</strong> прозрачные пакеты и абонентская модель.</li>
+                    <li><strong>Place:</strong> веб-сайт, контакты, соцсети.</li>
+                    <li><strong>Promotion:</strong> SEO, контент, таргет, вебинары.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h3>Жизненный цикл системы</h3>
+                <ol>
+                    <li><strong>Планирование</strong> — анализ требований, ТЗ, архитектура, риски.</li>
+                    <li><strong>Разработка</strong> — frontend/backend, API, БД.</li>
+                    <li><strong>Тестирование</strong> — модульные, интеграционные, UX и нагрузочные тесты.</li>
+                    <li><strong>Реализация</strong> — запуск, наполнение, мониторинг и поддержка.</li>
+                </ol>
+            </section>
+
+            <section class="section">
+                <h3>Планирование — ТЗ и UML</h3>
+                <p>В планирование входит: сбор требований, формирование ТЗ, проектирование интерфейсов и архитектуры, оценка рисков и план релиза.</p>
+                <h4>UML (PlantUML-код)</h4>
+                <pre class="plantuml">
 @startuml
 left to right direction
 actor Клиент
 actor Бухгалтер
-rectangle "ЦБС «Идеальный Баланс»" {
+rectangle "Идеальный Баланс" {
  (Регистрация) as R
  (Загрузка документов) as U
  (Формирование отчётности) as O
@@ -252,9 +264,8 @@ rectangle "ЦБС «Идеальный Баланс»" {
 Бухгалтер --> O
 Клиент --> C
 @enduml
-        </pre>
-
-        <pre class="plantuml">
+                </pre>
+                <pre class="plantuml">
 @startuml
 start
 :Сбор требований;
@@ -265,263 +276,750 @@ start
 :Ввод в эксплуатацию;
 stop
 @enduml
-        </pre>
+                </pre>
+            </section>
 
-        <p class="muted">В ТЗ описаны сроки, вехи и требования к безопасности (см. приложение). :contentReference[oaicite:7]{index=7}</p>
-      </div>
+            <section class="section">
+                <h3>Разработка — стек и тесты</h3>
+                <p>Frontend: HTML/CSS/JS. Backend: PHP/Node.js (при необходимости). БД: MySQL. Тестирование: unit, integration, e2e, SAST/DAST.</p>
+            </section>
 
-      <div class="section">
-        <h3>Разработка — стек, БД, инструменты тестирования</h3>
-        <ul>
-          <li>Frontend: HTML5, CSS3, JS, React — для интерактивных модулей;</li>
-          <li>Backend: PHP 8+, WordPress (если используете CMS) / или Node.js; REST API;</li>
-          <li>База: MySQL 8.0; регулярные бэкапы и архив отчётности;</li>
-          <li>Тестирование: модульные и интеграционные тесты, SAST/DAST, CI/CD пайплайн.</li>
-        </ul>
-        <p class="muted">(подробности — в ТЗ и проектной документации). :contentReference[oaicite:8]{index=8}</p>
-      </div>
+            <section class="section">
+                <h3>Тестирование — сценарии и инструменты</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+                    <div class="card">
+                        <h4>Функциональные</h4>
+                        <ul><li>Валидация форм, регистрации, скачивания</li></ul>
+                    </div>
+                    <div class="card">
+                        <h4>Производительность</h4>
+                        <ul><li>Lighthouse, профилирование, оптимизация</li></ul>
+                    </div>
+                    <div class="card">
+                        <h4>UX</h4>
+                        <ul><li>Юзабилити, тепловые карты, записи сессий</li></ul>
+                    </div>
+                    <div class="card">
+                        <h4>Безопасность</h4>
+                        <ul><li>SAST/DAST, пен-тест</li></ul>
+                    </div>
+                </div>
 
-      <div class="section">
-        <h3>Тестирование — набор тестов и артефакты</h3>
-        <div class="tools-grid">
-          <div class="tool">
-            <h4>Функциональные тесты</h4>
-            <ul>
-              <li>Формы (валидация, отправка)</li>
-              <li>Роутинг, права доступа</li>
-              <li>Загрузка документов</li>
-            </ul>
-          </div>
-          <div class="tool">
-            <h4>Нагрузочные тесты</h4>
-            <ul>
-              <li>Lighthouse, JMeter</li>
-              <li>Стресс-тесты пиковых нагрузок</li>
-            </ul>
-          </div>
-          <div class="tool">
-            <h4>Безопасность</h4>
-            <ul>
-              <li>SAST, DAST</li>
-              <li>Пенетрационное тестирование</li>
-            </ul>
-          </div>
-          <div class="tool">
-            <h4>UX/Юзабилити</h4>
-            <ul>
-              <li>Тесты с пользователями, тепловые карты, session replay</li>
-            </ul>
-          </div>
+                <h4 style="margin-top:12px">Видео / артефакты</h4>
+                <p class="small">Если у вас есть mp4 с тестами — пришлите, я встрою плеер.</p>
+            </section>
+
+            <section class="section">
+                <h3>Реализация — план vs факт и статистика</h3>
+                <p class="small">Ниже — ключевые реальные метрики из GA4 (по скринам).</p>
+
+                <div class="metrics" style="margin-top:12px">
+                    <div class="metric">
+                        <div style="font-size:16px;color:var(--primary)">Активных сейчас</div>
+                        <div style="font-size:22px;font-weight:700">1</div>
+                        <div class="small">пользователь</div>
+                    </div>
+
+                    <div class="metric">
+                        <div style="font-size:16px;color:var(--primary)">Просмотры (30 мин)</div>
+                        <div style="font-size:22px;font-weight:700">16</div>
+                        <div class="small">просмотров за 30 минут</div>
+                    </div>
+
+                    <div class="metric">
+                        <div style="font-size:16px;color:var(--primary)">Среднее взаимодействие</div>
+                        <div style="font-size:22px;font-weight:700">1:04</div>
+                        <div class="small">средняя продолжительность</div>
+                    </div>
+
+                    <div class="metric">
+                        <div style="font-size:16px;color:var(--primary)">Engagement metric</div>
+                        <div style="font-size:22px;font-weight:700">0.18</div>
+                        <div class="small">сеансов с вовлечением</div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top:12px">События (за период)</h4>
+                <table>
+                    <tr><th>Событие</th><th>Количество</th></tr>
+                    <tr><td>page_view</td><td>52</td></tr>
+                    <tr><td>user_engagement</td><td>20</td></tr>
+                    <tr><td>session_start</td><td>16</td></tr>
+                    <tr><td>first_visit</td><td>13</td></tr>
+                    <tr><td>scroll</td><td>7</td></tr>
+                    <tr><td>login</td><td>6</td></tr>
+                    <tr><td>document_download</td><td>3</td></tr>
+                </table>
+
+                <h4 style="margin-top:12px">Топ-страницы (по просмотрам)</h4>
+                <table>
+                    <tr><th>Страница</th><th>Просмотры</th></tr>
+                    <tr><td>/ideal-balance-website/ (Идеальный Баланс - Система)</td><td>47</td></tr>
+                    <tr><td>/ideal-balance-website/another-page (Бухгалтерско...)</td><td>5</td></tr>
+                </table>
+
+                <h4 style="margin-top:12px">География / Языки</h4>
+                <div style="display:flex;gap:12px;flex-wrap:wrap">
+                    <div class="card" style="flex:1;min-width:220px">
+                        <h4>Страны (активные)</h4>
+                        <ul>
+                            <li>United States — 6</li>
+                            <li>Colombia — 1</li>
+                            <li>Germany — 1</li>
+                            <li>Denmark — 1</li>
+                            <li>Israel — 1</li>
+                            <li>Luxembourg — 1</li>
+                            <li>Russia — 1</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="flex:1;min-width:220px">
+                        <h4>Языки</h4>
+                        <ul>
+                            <li>English — 8</li>
+                            <li>Russian — 2</li>
+                            <li>Danish, French, Spanish — по 1</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 style="margin-top:12px">Источники трафика (реальное время)</h4>
+                <p class="small">Из реального времени: основной зафиксированный источник — <strong>web.telegram.org</strong> (на текущий момент 1 пользователь).</p>
+
+                <p class="small">Если хотите получить расширённый отчёт по каналам (organic/direct/referral) — можно добавить в GA4 отчет "Traffic acquisition" через библиотеку (я помогу при необходимости).</p>
+            </section>
+
+            <section class="section">
+                <h3>Выводы и рекомендации</h3>
+                <ul>
+                    <li>Подключить постоянное хранение отзывов (Sheets/Firebase) вместо localStorage.</li>
+                    <li>Добавить дополнительные метрики конверсий (заявка, скачивание ТЗ) в качестве конверсий GA4.</li>
+                    <li>Провести UX-тестирование с записью сессий и тепловыми картами (Hotjar или аналоги).</li>
+                    <li>Оптимизировать изображения и асинхронные скрипты для повышения PageSpeed.</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- PROJECT TIMELINE PAGE (original) -->
+        <section class="page-content" id="project-timeline-page">
+            <section class="timeline-section">
+                <div class="container">
+                    <h2 class="section-title">Этапы реализации проекта</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Планирование</h3>
+                                <p><strong>Сроки:</strong> 1-30 сентября 2025</p>
+                                <p>Анализ требований, проектирование архитектуры системы, создание технического задания.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Разработка</h3>
+                                <p><strong>Сроки:</strong> 1-31 октября 2025</p>
+                                <p>Создание пользовательского интерфейса, программирование backend-системы, интеграция модулей.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Тестирование</h3>
+                                <p><strong>Сроки:</strong> 1-20 ноября 2025</p>
+                                <p>Модульное, интеграционное и пользовательское тестирование системы.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Внедрение</h3>
+                                <p><strong>Сроки:</strong> 21-31 ноября 2025</p>
+                                <p>Наполнение контентом, обучение администраторов, запуск в промышленную эксплуатацию.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- DOCUMENTS PAGE (original) -->
+        <section class="page-content" id="documents-page">
+            <section class="documents-section">
+                <div class="container">
+                    <h2 class="section-title">Документы проекта</h2>
+                    <div class="documents-grid">
+                        <div class="document-card">
+                            <h3>Техническое задание</h3>
+                            <p>Полное техническое задание на создание автоматизированной системы "Сайт бухгалтерского сопровождения «Идеальный Баланс»"</p>
+                            <a href="#" class="document-link" data-document="technical-specification">Скачать PDF</a>
+                        </div>
+                        <div class="document-card">
+                            <h3>УПРИС</h3>
+                            <p>Учебно-проектная документация по проекту "Бухгалтерские услуги"</p>
+                            <a href="#" class="document-link" data-document="upris">Скачать PDF</a>
+                        </div>
+                        <div class="document-card">
+                            <h3>График работ</h3>
+                            <p>Детальный график выполнения работ по проекту с указанием сроков и ответственных</p>
+                            <a href="#" class="document-link" data-document="schedule">Скачать PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- TESTING PAGE (original) -->
+        <section class="page-content" id="testing-page">
+            <section class="testing-section">
+                <div class="container">
+                    <h2 style="text-align:center;margin-bottom:40px;color:var(--primary)">Сценарии тестирования</h2>
+
+                    <!-- Scenario 1 -->
+                    <div class="scenario-card" id="scenario1">
+                        <div class="scenario-header" onclick="toggleScenario(1)">
+                            <div class="scenario-title">🎯 Сценарий 1: UI/UX тестирование поведения пользователей</div>
+                            <div class="scenario-status status-ready" id="status1">ГОТОВ</div>
+                        </div>
+                        <div class="scenario-content" id="content1" style="display:block">
+                            <p><strong>Цель:</strong> Анализировать поведение и удобство на этапе разработки</p>
+
+                            <div class="feedback-results">
+                                <h4>📊 Собранные отзывы: <span id="feedbackCount">0</span></h4>
+                                <button class="test-btn" onclick="viewAllFeedback()">Показать все отзывы</button>
+                                <button class="test-btn" onclick="exportFeedback()">Экспорт в CSV</button>
+                                <button class="test-btn" onclick="clearAllFeedback()">Очистить все</button>
+                            </div>
+
+                            <div class="tools-grid">
+                                <div class="tool-card">
+                                    <h4>🖱️ Аналог Hotjar (Heatmaps)</h4>
+                                    <p>Визуализация кликов и скроллинга пользователей</p>
+                                    <button class="test-btn" onclick="startHeatmap()">Запуск тепловой карты</button>
+                                    <button class="test-btn" onclick="startClickTracking()">Трекинг кликов</button>
+                                    <button class="test-btn" onclick="showHotjarOverlay()">Демо Hotjar</button>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>🎥 Session Replay (Локальный)</h4>
+                                    <p>Запись действий пользователя для последующего анализа</p>
+                                    <button class="test-btn" onclick="startSessionRecording()">Начать запись</button>
+                                    <button class="test-btn" onclick="stopSessionRecording()">Остановить</button>
+                                    <div class="session-recorder" id="sessionRecorder">// Session recording will appear here</div>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>👥 Юзабилити-тестирование</h4>
+                                    <p>Ручное тестирование с реальными пользователями</p>
+                                    <button class="test-btn" onclick="createTestTask()">Создать задание</button>
+                                    <button class="test-btn" onclick="showFeedbackForm()">Форма обратной связи</button>
+                                </div>
+                            </div>
+
+                            <div class="feedback-form" id="feedbackForm" style="display:none">
+                                <h4>Форма обратной связи</h4>
+                                <div class="form-group">
+                                    <label>Задание для тестирования:</label>
+                                    <select id="testTask">
+                                        <option value="find_service">Найти услугу бухгалтерского сопровождения</option>
+                                        <option value="contact_info">Найти контактную информацию</option>
+                                        <option value="download_doc">Скачать документ</option>
+                                        <option value="navigation">Перейти между разделами сайта</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Комментарии и замечания:</label>
+                                    <textarea id="userFeedback" placeholder="Опишите проблемы, с которыми столкнулись..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Оценка удобства (1-10):</label>
+                                    <input type="number" id="usabilityScore" min="1" max="10" value="8">
+                                </div>
+                                <button class="test-btn" onclick="submitFeedback()">Отправить отзыв</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scenario 2 -->
+                    <div class="scenario-card" id="scenario2">
+                        <div class="scenario-header" onclick="toggleScenario(2)">
+                            <div class="scenario-title">⚡ Сценарий 2: Техническая отладка и производительность</div>
+                            <div class="scenario-status status-ready" id="status2">ГОТОВ</div>
+                        </div>
+                        <div class="scenario-content" id="content2" style="display:none">
+                            <p><strong>Цель:</strong> Оптимизация производительности и поиск технических проблем</p>
+
+                            <div class="tools-grid">
+                                <div class="tool-card">
+                                    <h4>🌐 Network Analysis</h4>
+                                    <p>Мониторинг сетевых запросов и времени загрузки</p>
+                                    <button class="test-btn" onclick="testNetworkPerformance()">Тест скорости</button>
+                                    <button class="test-btn" onclick="analyzeBundleSize()">Анализ ресурсов</button>
+                                    <div id="networkResults" style="margin-top:10px;font-size:12px;"></div>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>📊 Performance Profiling</h4>
+                                    <p>Анализ производительности рендеринга</p>
+                                    <button class="test-btn" onclick="startPerformanceProfiling()">Запуск профилирования</button>
+                                    <button class="test-btn" onclick="runLighthouseAudit()">Lighthouse Audit</button>
+                                    <div id="performanceResults" style="margin-top:10px;font-size:12px;"></div>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>🐛 Console Debugging</h4>
+                                    <p>Отладка JavaScript и отслеживание ошибок</p>
+                                    <button class="test-btn" onclick="testConsoleLogging()">Тест логирования</button>
+                                    <button class="test-btn" onclick="simulateErrors()">Тест ошибок</button>
+                                    <div id="consoleOutput" style="background:#1e1e1e;color:#00ff00;padding:10px;border-radius:5px;margin-top:10px;height:100px;overflow-y:auto;font-family:monospace;font-size:11px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scenario 3 -->
+                    <div class="scenario-card" id="scenario3">
+                        <div class="scenario-header" onclick="toggleScenario(3)">
+                            <div class="scenario-title">📊 Сценарий 3: Тестирование систем аналитики</div>
+                            <div class="scenario-status status-ready" id="status3">ГОТОВ</div>
+                        </div>
+                        <div class="scenario-content" id="content3" style="display:none">
+                            <p><strong>Цель:</strong> Проверка корректности работы GTM и GA4 перед продакшеном</p>
+
+                            <div class="tools-grid">
+                                <div class="tool-card">
+                                    <h4>🔧 Google Tag Manager</h4>
+                                    <p>Тестирование контейнера GTM в режиме Preview</p>
+                                    <button class="test-btn" onclick="enableGTMPreview()">GTM Preview Mode</button>
+                                    <button class="test-btn" onclick="testGTMEvents()">Тест событий GTM</button>
+                                    <button class="test-btn" onclick="testDataLayer()">Проверка Data Layer</button>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>📈 Google Analytics 4</h4>
+                                    <p>Валидация событий и целей в GA4</p>
+                                    <button class="test-btn" onclick="testGA4Events()">Тест событий GA4</button>
+                                    <button class="test-btn" onclick="testConversions()">Тест конверсий</button>
+                                    <button class="test-btn" onclick="checkRealTime()">Real-time отчет</button>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>🎯 События и цели</h4>
+                                    <p>Тестирование пользовательских событий</p>
+                                    <button class="test-btn" onclick="simulatePageView()">Page View</button>
+                                    <button class="test-btn" onclick="simulateClickEvent()">Click Event</button>
+                                    <button class="test-btn" onclick="simulateFormSubmit()">Form Submit</button>
+                                    <div id="analyticsOutput" style="margin-top:10px;font-size:12px;background:#f8f9fa;padding:10px;border-radius:5px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </section>
+
+        <!-- ANALYTICS PAGE (original) -->
+        <section class="page-content" id="analytics-page">
+            <section class="info-section">
+                <div class="container">
+                    <h2 class="section-title">Аналитика и Мониторинг</h2>
+
+                    <div class="scenario-card">
+                        <div class="scenario-header">
+                            <div class="scenario-title">📈 Система мониторинга в реальном времени</div>
+                            <div class="scenario-status status-ready">АКТИВЕН</div>
+                        </div>
+                        <div class="scenario-content">
+                            <div class="tools-grid">
+                                <div class="tool-card">
+                                    <h4>👥 Активные пользователи</h4>
+                                    <div style="font-size:32px;font-weight:bold;color:var(--primary);text-align:center;" id="activeUsers">1</div>
+                                    <p style="text-align:center;">сейчас на сайте</p>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>⚡ Производительность</h4>
+                                    <div style="font-size:32px;font-weight:bold;color:var(--primary);text-align:center;" id="performanceScore">92%</div>
+                                    <p style="text-align:center;">скорость загрузки</p>
+                                </div>
+
+                                <div class="tool-card">
+                                    <h4>🎯 Конверсии</h4>
+                                    <div style="font-size:32px;font-weight:bold;color:var(--primary);text-align:center;" id="conversionRate">4.2%</div>
+                                    <p style="text-align:center;">успешных действий</p>
+                                </div>
+                            </div>
+
+                            <div style="margin-top:30px;">
+                                <h4>📊 Журнал событий</h4>
+                                <div style="background:#f8f9fa;padding:15px;border-radius:8px;height:200px;overflow-y:auto;font-family:monospace;font-size:12px;" id="eventLog"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Hotjar demo overlay -->
+    <div class="hotjar-overlay" id="hotjarOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10000;justify-content:center;align-items:center;">
+        <div class="hotjar-content" style="background:#fff;padding:30px;border-radius:10px;max-width:520px;text-align:center;">
+            <h3>🎯 Демо: Hotjar Heatmap & Session Recording</h3>
+            <p>Имитация работы инструментов анализа поведения пользователей</p>
+            <div class="heatmap" style="width:100%;height:220px;background:linear-gradient(180deg, rgba(255,0,0,0.3) 0%, rgba(255,255,0,0.3) 50%, rgba(0,255,0,0.3) 100%);border-radius:8px;margin:12px 0;position:relative;">
+                <div class="click-marker" style="position:absolute;left:30%;top:20%;width:16px;height:16px;background:red;border-radius:50%;transform:translate(-50%,-50%);"></div>
+                <div class="click-marker" style="position:absolute;left:60%;top:40%;width:16px;height:16px;background:red;border-radius:50%;transform:translate(-50%,-50%);"></div>
+            </div>
+            <button class="test-btn" onclick="closeHotjarOverlay()">Закрыть демо</button>
         </div>
-
-        <h4>Видео тестирования</h4>
-        <p>Если у вас есть записи (mp4) — загрузите, я встрою плеер и подпишу кейс прямо в раздел тестирования.</p>
-      </div>
-
-      <div class="section">
-        <h3>Реализация — что планировали vs что реализовано + статистика</h3>
-        <table>
-          <tr><th>План</th><th>Факт</th></tr>
-          <tr><td>Адаптивный лендинг, калькулятор, ЛК</td><td>Лендинг и система тестирования реализованы; ЛК — демо (localStorage)</td></tr>
-          <tr><td>Подключение GA4 и GTM</td><td>GTM и GA4 интегрированы (ID в коде)</td></tr>
-          <tr><td>SEO и скорость</td><td>Оптимизация изображений, PageSpeed ~92 (локально)</td></tr>
-        </table>
-
-        <div style="display:flex;gap:12px;margin-top:12px">
-          <div style="flex:1;background:#fff;padding:12px;border-radius:8px;text-align:center">
-            <div style="font-size:22px;color:var(--primary)" id="stat-users">--</div>
-            <div class="muted">Активных (последние 30 дн)</div>
-          </div>
-          <div style="flex:1;background:#fff;padding:12px;border-radius:8px;text-align:center">
-            <div style="font-size:22px;color:var(--primary)" id="stat-conv">--</div>
-            <div class="muted">Конверсия</div>
-          </div>
-          <div style="flex:1;background:#fff;padding:12px;border-radius:8px;text-align:center">
-            <div style="font-size:22px;color:var(--primary)" id="stat-speed">--</div>
-            <div class="muted">PageSpeed</div>
-          </div>
-        </div>
-
-        <p class="muted" style="margin-top:8px">После получения экспортов GA4 и GTM я подставлю реальные цифры и графики.</p>
-      </div>
-
-      <div class="section">
-        <h3>Отзывы — итоги</h3>
-        <p>Отзывы собираются локально (localStorage) и могут экспортироваться в CSV; при желании подключим хранение в Google Sheets или базу данных.</p>
-      </div>
-    </section>
-
-    <!-- оставил остальные существующие страницы (project-timeline, documents, testing, analytics) -->
-    <!-- ... (весь блок вашего оригинального кода для pages project-timeline, documents, testing, analytics оставлен без изменений) ... -->
-    <!-- Для компактности: ниже подключаем ваши существующие страницы из кода выше (project-timeline-page, documents-page, testing-page, analytics-page) -->
-    <!-- Скопируйте сюда оставшиеся секции из вашего исходного кода: project-timeline-page, documents-page, testing-page, analytics-page -->
-    <!-- Ниже — я вставил существующие секции из вашего предоставленного HTML: -->
-    <section id="project-timeline-page" class="page-content">
-      <!-- вставьте сюда содержимое 'project-timeline-page' из вашего оригинального кода -->
-    </section>
-
-    <section id="documents-page" class="page-content">
-      <!-- вставьте сюда содержимое 'documents-page' из вашего оригинального кода -->
-    </section>
-
-    <section id="testing-page" class="page-content">
-      <!-- вставьте сюда содержимое 'testing-page' из вашего оригинального кода (сценарии) -->
-    </section>
-
-    <section id="analytics-page" class="page-content">
-      <!-- вставьте сюда содержимое 'analytics-page' из вашего оригинального кода -->
-    </section>
-
-  </main>
-
-  <div class="dev-panel" title="Dev tools">
-    <div style="font-weight:700;margin-bottom:8px">Dev Tools</div>
-    <button class="btn" style="width:100%;margin-bottom:6px" onclick="togglePage('testing')">Открыть Тестирование</button>
-    <button class="btn" style="width:100%;margin-bottom:6px" onclick="togglePage('project')">Открыть Проект</button>
-    <div style="font-size:12px;margin-top:8px;opacity:.9">Панель для разработчика (локально)</div>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
-        <div>Зеленко Ирина Юрьевна — НБИбд-01-23</div>
-        <div>© 2025 Идеальный Баланс</div>
-      </div>
     </div>
-  </footer>
+
+    <!-- Dev panel -->
+    <div class="dev-panel" id="devPanel" style="position:fixed;right:12px;bottom:12px;background:var(--primary);color:#fff;padding:12px;border-radius:10px;z-index:10000">
+        <div style="font-weight:700;margin-bottom:8px">Dev Tools</div>
+        <button class="btn" style="width:100%;margin-bottom:6px" onclick="showPage('testing')">Открыть Тестирование</button>
+        <button class="btn" style="width:100%;margin-bottom:6px" onclick="showPage('project')">Открыть Проект</button>
+        <div style="font-size:12px;margin-top:8px;opacity:.9">Панель для разработчика (локально)</div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+                <div>Зеленко Ирина Юрьевна — НБИбд-01-23</div>
+                <div>© 2025 Идеальный Баланс</div>
+            </div>
+        </div>
+    </footer>
 
 <script>
-/* ----------------- Навигация ----------------- */
-function showPage(pageId){
-  document.querySelectorAll('.page-content').forEach(p=>p.classList.remove('active'));
-  const el = document.getElementById(pageId+'-page') || document.getElementById(pageId+'-page') || document.getElementById(pageId+'-page');
-  // try the explicit ids:
-  const direct = document.getElementById(pageId+'-page');
-  if(direct){ document.querySelectorAll('.page-content').forEach(p=>p.classList.remove('active')); direct.classList.add('active'); }
-  else {
-    const manual = document.getElementById(pageId);
-    if(manual){ document.querySelectorAll('.page-content').forEach(p=>p.classList.remove('active')); manual.classList.add('active'); }
-  }
-  logEvent('page_view', {page: pageId});
-}
-function togglePage(page){ showPage(page); }
+    // Basic state
+    let currentUser = null;
+    let isRecording = false;
+    let sessionData = [];
+    let clickData = [];
 
-/* bind nav */
-document.querySelectorAll('.nav-link').forEach(a=>{
-  a.addEventListener('click',e=>{
-    e.preventDefault();
-    const page = a.getAttribute('data-page');
-    if(page !== 'home' && !currentUser){
-      // allow public project page:
-      if(page === 'project'){ showPage('project'); return; }
-      alert('Для доступа к этой странице необходимо войти (demo/test)');
-      return;
+    // Auth (demo/test)
+    document.getElementById('loginBtn').addEventListener('click', function(){
+        const username = prompt('Введите логин (demo):');
+        const password = prompt('Введите пароль (test):');
+        if(username === 'demo' && password === 'test'){
+            currentUser = username;
+            document.getElementById('authButtons').style.display = 'none';
+            document.getElementById('userInfo').style.display = 'flex';
+            document.getElementById('userName').textContent = username;
+            document.querySelectorAll('.restricted').forEach(link => link.style.display = 'block');
+            alert('Добро пожаловать в систему тестирования!');
+            logEvent('login', {user: username});
+            updateFeedbackCount();
+            renderReviews();
+        } else {
+            alert('Неверные учетные данные! Используйте demo/test');
+        }
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', function(){
+        currentUser = null;
+        document.getElementById('authButtons').style.display = 'flex';
+        document.getElementById('userInfo').style.display = 'none';
+        document.querySelectorAll('.restricted').forEach(link => link.style.display = 'none');
+        showPage('home');
+        logEvent('logout');
+    });
+
+    // Navigation
+    function showPage(pageId){
+        document.querySelectorAll('.page-content').forEach(p=>p.classList.remove('active'));
+        const pageById = document.getElementById(pageId+'-page') || document.getElementById(pageId);
+        if(pageById) pageById.classList.add('active');
+        logEvent('page_view', {page: pageId});
+        if(pageId === 'testing') updateFeedbackCount();
     }
-    showPage(page);
-  });
-});
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            const page = this.getAttribute('data-page');
+            if((page !== 'home' && page !== 'project') && !currentUser){
+                alert('Для доступа необходимо войти в систему (demo/test)');
+                return;
+            }
+            showPage(page);
+        });
+    });
 
-/* ----------------- Авторизация (demo/test) ----------------- */
-let currentUser = null;
-document.getElementById('loginBtn').addEventListener('click', ()=>{
-  const username = prompt('Введите логин (demo):');
-  const password = prompt('Введите пароль (test):');
-  if(username === 'demo' && password === 'test'){
-    currentUser = username;
-    document.getElementById('authButtons').style.display='none';
-    document.getElementById('userInfo').style.display='flex';
-    document.getElementById('userName').textContent=username;
-    document.querySelectorAll('.restricted').forEach(el=>el.style.display='block');
-    alert('Вход выполнен');
-    logEvent('login',{user:username});
-    renderReviews();
-  } else alert('Неверные учетные данные (demo/test)');
-});
-document.getElementById('logoutBtn').addEventListener('click', ()=>{
-  currentUser = null;
-  document.getElementById('authButtons').style.display='flex';
-  document.getElementById('userInfo').style.display='none';
-  document.querySelectorAll('.restricted').forEach(el=>el.style.display='none');
-  showPage('home');
-  logEvent('logout', {});
-});
-
-/* ----------------- Reviews (localStorage) ----------------- */
-function getReviews(){ return JSON.parse(localStorage.getItem('ib_reviews')||'[]'); }
-function saveReviews(arr){ localStorage.setItem('ib_reviews', JSON.stringify(arr)); }
-function addReview(){
-  const author = document.getElementById('revAuthor').value.trim()||'Аноним';
-  const company = document.getElementById('revCompany').value.trim()||'';
-  const text = document.getElementById('revText').value.trim();
-  if(!text){ alert('Введите текст отзыва'); return;}
-  const r = {author, company, text, ts:new Date().toISOString()};
-  const arr = getReviews();
-  arr.unshift(r);
-  saveReviews(arr);
-  document.getElementById('revAuthor').value=''; document.getElementById('revCompany').value=''; document.getElementById('revText').value='';
-  renderReviews();
-  alert('Спасибо — отзыв сохранён');
-  logEvent('review_submitted', {author, company});
-}
-function renderReviews(){
-  const list = document.getElementById('reviewsList');
-  list.innerHTML='';
-  const reviews = getReviews();
-  if(reviews.length===0){
-    // prefill 3 sample reviews
-    if(!localStorage.getItem('ib_reviews_prefill')){
-      const sample = [
-        {author:'ООО «Ромашка»', company:'Ромашка', text:'Профессионально и быстро. Рекомендую.', ts:new Date().toISOString()},
-        {author:'ИП Петрова', company:'', text:'Удобный личный кабинет, быстрая связь с бухгалтером.', ts:new Date().toISOString()},
-        {author:'ООО «ТоргСнаб»', company:'ТоргСнаб', text:'Сильная команда и прозрачные тарифы.', ts:new Date().toISOString()}
-      ];
-      saveReviews(sample);
-      localStorage.setItem('ib_reviews_prefill','1');
+    // Reviews localStorage
+    function getReviews(){ return JSON.parse(localStorage.getItem('ib_reviews')||'[]'); }
+    function saveReviews(arr){ localStorage.setItem('ib_reviews', JSON.stringify(arr)); }
+    function addReview(){
+        const author = (document.getElementById('revAuthor').value||'').trim()||'Аноним';
+        const company = (document.getElementById('revCompany').value||'').trim()||'';
+        const text = (document.getElementById('revText').value||'').trim();
+        if(!text){ alert('Введите текст отзыва'); return; }
+        const r = {author, company, text, ts: new Date().toISOString()};
+        const arr = getReviews();
+        arr.unshift(r);
+        saveReviews(arr);
+        document.getElementById('revAuthor').value=''; document.getElementById('revCompany').value=''; document.getElementById('revText').value='';
+        renderReviews();
+        alert('Спасибо — отзыв сохранён');
+        logEvent('review_submitted', {author, company});
     }
-  }
-  getReviews().forEach(r=>{
-    const d = document.createElement('div');
-    d.className='review';
-    d.innerHTML = `<div class="meta">${r.author}${r.company?(' • '+r.company):''} • ${new Date(r.ts).toLocaleDateString()}</div><div>${r.text}</div>`;
-    list.appendChild(d);
-  });
-}
-function exportReviews(){
-  const arr = getReviews();
-  if(arr.length===0){ alert('Нет отзывов'); return; }
-  let csv = 'author,company,text,timestamp\n';
-  arr.forEach(i=>{ csv += `"${i.author.replace(/"/g,'""')}","${(i.company||'').replace(/"/g,'""')}","${i.text.replace(/"/g,'""')}","${i.ts}"\n`; });
-  const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`reviews_${new Date().toISOString().split('T')[0]}.csv`; document.body.appendChild(a); a.click(); a.remove();
-  logEvent('reviews_export',{count:arr.length});
-}
+    function renderReviews(){
+        const list = document.getElementById('reviewsList');
+        if(!list) return;
+        list.innerHTML = '';
+        let arr = getReviews();
+        if(arr.length === 0){
+            if(!localStorage.getItem('ib_reviews_prefill')){
+                arr = [
+                    {author:'ООО «Ромашка»', company:'Ромашка', text:'Профессионально и быстро. Рекомендую.', ts:new Date().toISOString()},
+                    {author:'ИП Петрова', company:'', text:'Удобный личный кабинет, быстрая связь с бухгалтером.', ts:new Date().toISOString()},
+                    {author:'ООО «ТоргСнаб»', company:'ТоргСнаб', text:'Сильная команда и прозрачные тарифы.', ts:new Date().toISOString()}
+                ];
+                saveReviews(arr);
+                localStorage.setItem('ib_reviews_prefill','1');
+            } else {
+                arr = getReviews();
+            }
+        }
+        arr.forEach(r=>{
+            const d = document.createElement('div');
+            d.className = 'review';
+            d.innerHTML = `<div style="font-size:13px;color:#6b7280;margin-bottom:6px">${r.author}${r.company?(' • '+r.company):''} • ${new Date(r.ts).toLocaleDateString()}</div><div style="font-size:15px">${r.text}</div>`;
+            list.appendChild(d);
+        });
+    }
+    function exportReviews(){
+        const arr = getReviews();
+        if(arr.length === 0){ alert('Нет отзывов'); return; }
+        let csv = 'author,company,text,timestamp\n';
+        arr.forEach(i=>{ csv += `"${i.author.replace(/"/g,'""')}","${(i.company||'').replace(/"/g,'""')}","${i.text.replace(/"/g,'""')}","${i.ts}"\n`; });
+        const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
+        const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`reviews_${new Date().toISOString().split('T')[0]}.csv`; document.body.appendChild(a); a.click(); a.remove();
+        logEvent('reviews_export',{count:arr.length});
+    }
 
-/* ----------------- Events logging (GA + dataLayer) ----------------- */
-function logEvent(name, params={}){
-  const payload = Object.assign({}, params);
-  // dataLayer push
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(Object.assign({event:name,timestamp:new Date().toISOString()}, payload));
-  // gtag
-  if(typeof gtag !== 'undefined'){ try{ gtag('event', name, payload); }catch(e){console.log('gtag error',e);} }
-  // event log visible area if present
-  const el = document.getElementById('eventLog');
-  if(el) el.innerHTML += `[${new Date().toLocaleTimeString()}] ${name}: ${JSON.stringify(payload)}<br>`;
-}
+    // Feedback for testing (localStorage)
+    function submitFeedback(){
+        const task = document.getElementById('testTask').value;
+        const feedback = document.getElementById('userFeedback').value;
+        const score = document.getElementById('usabilityScore').value;
+        const timestamp = new Date().toISOString();
+        const feedbackData = { task, feedback, score: parseInt(score), timestamp, user: currentUser||'guest', page: window.location.href, taskName: document.getElementById('testTask').options[document.getElementById('testTask').selectedIndex].text };
+        let allFeedback = JSON.parse(localStorage.getItem('userFeedback')||'[]');
+        allFeedback.push(feedbackData);
+        localStorage.setItem('userFeedback', JSON.stringify(allFeedback));
+        alert(`✅ Спасибо за фидбэк! Отзыв сохранен.\nЗадание: ${task}\nОценка: ${score}/10`);
+        document.getElementById('feedbackForm').style.display = 'none';
+        document.getElementById('userFeedback').value = '';
+        logEvent('feedback_submit', {'task_category': task, 'usability_score': score, 'feedback_length': feedback.length});
+        updateFeedbackCount();
+    }
+    function updateFeedbackCount(){
+        const allFeedback = JSON.parse(localStorage.getItem('userFeedback')||'[]');
+        const countElement = document.getElementById('feedbackCount');
+        if(countElement) countElement.textContent = allFeedback.length;
+    }
+    function viewAllFeedback(){
+        const allFeedback = JSON.parse(localStorage.getItem('userFeedback')||'[]');
+        if(allFeedback.length === 0){ alert('📭 Пока нет сохраненных отзывов'); return; }
+        let message = `📈 СОБРАННЫЕ ОТЗЫВЫ (${allFeedback.length}):\n\n`;
+        allFeedback.forEach((item, index) => {
+            message += `${index+1}. 📋 ${item.taskName}\n   ⭐ Оценка: ${item.score}/10\n   💬 ${item.feedback.substring(0,50)}${item.feedback.length>50?'...':''}\n   👤 ${item.user}\n   🕐 ${new Date(item.timestamp).toLocaleString()}\n\n`;
+        });
+        alert(message);
+    }
+    function exportFeedback(){
+        const allFeedback = JSON.parse(localStorage.getItem('userFeedback')||'[]');
+        if(allFeedback.length === 0){ alert('Нет отзывов для экспорта'); return; }
+        let csv = 'Задание,Оценка,Отзыв,Пользователь,Время\n';
+        allFeedback.forEach(item => {
+            csv += `"${item.taskName}",${item.score},"${item.feedback.replace(/"/g, '""')}","${item.user}","${item.timestamp}"\n`;
+        });
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.setAttribute('href', URL.createObjectURL(blob));
+        link.setAttribute('download', `отзывы_${new Date().toISOString().split('T')[0]}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        alert(`✅ Экспортировано ${allFeedback.length} отзывов в CSV файл`);
+    }
+    function clearAllFeedback(){
+        if(confirm('Вы уверены, что хотите удалить ВСЕ отзывы? Это действие нельзя отменить.')){
+            localStorage.removeItem('userFeedback');
+            updateFeedbackCount();
+            alert('Все отзывы удалены');
+            console.log('🗑️ Все отзывы очищены');
+        }
+    }
 
-/* ----------------- Init ----------------- */
-document.addEventListener('DOMContentLoaded', ()=>{
-  // hide restricted
-  document.querySelectorAll('.restricted').forEach(el=>el.style.display='none');
-  // push initial dataLayer
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({event:'page_load', page:'home', environment:'prod'});
-  renderReviews();
-  // placeholder stats (will be replaced after GA export)
-  document.getElementById('stat-users').textContent='—';
-  document.getElementById('stat-conv').textContent='—';
-  document.getElementById('stat-speed').textContent='—';
-});
+    // Scenario toggles and test utilities
+    function toggleScenario(scenarioId){
+        const content = document.getElementById(`content${scenarioId}`);
+        const status = document.getElementById(`status${scenarioId}`);
+        const card = document.getElementById(`scenario${scenarioId}`);
+        if(!content) return;
+        if(content.style.display === 'block' || content.style.display === ''){
+            content.style.display = 'none';
+            status.textContent = 'ГОТОВ';
+            status.className = 'scenario-status status-ready';
+            card.classList.remove('active');
+        } else {
+            content.style.display = 'block';
+            status.textContent = 'АКТИВЕН';
+            status.className = 'scenario-status status-testing';
+            card.classList.add('active');
+        }
+    }
+
+    // Heatmap demo
+    function startHeatmap(){
+        clickData = [];
+        alert('Тепловая карта активирована. Клики теперь отслеживаются.');
+        document.addEventListener('click', trackClickForHeatmap);
+        logEvent('heatmap_started');
+    }
+    function trackClickForHeatmap(e){
+        clickData.push({x:e.clientX,y:e.clientY,timestamp:new Date().toISOString(),el:e.target.tagName});
+        const m = document.createElement('div');
+        m.style.position='fixed'; m.style.left=`${e.clientX}px`; m.style.top=`${e.clientY}px`; m.style.width='12px'; m.style.height='12px'; m.style.background='red'; m.style.borderRadius='50%'; m.style.zIndex=10000;
+        document.body.appendChild(m);
+        setTimeout(()=>{ if(document.body.contains(m)) document.body.removeChild(m); }, 1800);
+    }
+    function startClickTracking(){ alert('Трекинг кликов активирован. Проверяйте консоль.'); document.addEventListener('click', e=>console.log('Click tracked:', e.target.tagName, e.clientX, e.clientY)); }
+
+    function showHotjarOverlay(){ document.getElementById('hotjarOverlay').style.display = 'flex'; }
+    function closeHotjarOverlay(){ document.getElementById('hotjarOverlay').style.display = 'none'; }
+
+    // Session recording demo
+    function startSessionRecording(){
+        isRecording = true; sessionData = [];
+        const recorder = document.getElementById('sessionRecorder'); if(recorder) recorder.innerHTML = '🚀 Начата запись сессии...\n';
+        document.addEventListener('click', recordSessionEvent);
+        document.addEventListener('scroll', recordSessionEvent);
+        document.addEventListener('input', recordSessionEvent);
+        alert('Запись сессии начата.');
+    }
+    function stopSessionRecording(){
+        isRecording = false;
+        document.removeEventListener('click', recordSessionEvent);
+        document.removeEventListener('scroll', recordSessionEvent);
+        document.removeEventListener('input', recordSessionEvent);
+        const recorder = document.getElementById('sessionRecorder');
+        if(recorder) recorder.innerHTML += '\n⏹️ Запись остановлена.\n📊 Всего событий: '+sessionData.length;
+        console.log('Session Recording Data:', sessionData);
+    }
+    function recordSessionEvent(e){
+        if(!isRecording) return;
+        const ev = {type:e.type,target:e.target.tagName,timestamp:new Date().toLocaleTimeString(),details: e.type==='click' ? (e.target.textContent||'').substring(0,30) : (e.type==='scroll' ? window.scrollY : e.target.value || '')};
+        sessionData.push(ev);
+        const recorder = document.getElementById('sessionRecorder');
+        if(recorder) recorder.innerHTML += `[${ev.timestamp}] ${ev.type}: ${ev.target}\n`; recorder && (recorder.scrollTop = recorder.scrollHeight);
+    }
+
+    // Network / perf demos
+    function testNetworkPerformance(){
+        const resultsDiv = document.getElementById('networkResults');
+        if(resultsDiv) resultsDiv.innerHTML = '🔄 Тестирование сетевых запросов...';
+        Promise.all([
+            fetch('https://jsonplaceholder.typicode.com/posts/1'),
+            fetch('https://jsonplaceholder.typicode.com/comments/1'),
+            fetch('https://jsonplaceholder.typicode.com/users/1')
+        ]).then(responses => {
+            if(resultsDiv) resultsDiv.innerHTML = '✅ Сетевые тесты завершены. Все запросы успешны.';
+        }).catch(err => { if(resultsDiv) resultsDiv.innerHTML = '❌ Ошибка: '+err.message; });
+    }
+    function analyzeBundleSize(){
+        const resources = performance.getEntriesByType('resource'); let total=0; resources.forEach(r=> total += r.transferSize || 0);
+        const resultsDiv = document.getElementById('networkResults');
+        if(resultsDiv) resultsDiv.innerHTML = `📁 Всего ресурсов: ${resources.length} • Примерный размер: ${(total/1024).toFixed(2)} KB`;
+    }
+    function startPerformanceProfiling(){
+        const resultsDiv = document.getElementById('performanceResults');
+        if(resultsDiv) resultsDiv.innerHTML = '📊 Профилирование...';
+        setTimeout(()=>{ if(resultsDiv) resultsDiv.innerHTML = '✅ Профилирование завершено. Рекомендации: оптимизировать изображения.'; }, 1600);
+    }
+    function runLighthouseAudit(){
+        const resultsDiv = document.getElementById('performanceResults');
+        if(resultsDiv) resultsDiv.innerHTML = '🚀 Lighthouse: Performance 92 / Accessibility 95 / SEO 90';
+    }
+    function testConsoleLogging(){
+        const consoleOutput = document.getElementById('consoleOutput');
+        const msgs = ['🔧 Debug: Инициализация','✅ Info: Сессия активна','⚠️ Warning: Deprecated API','📊 Metric: DOM 120ms','🎯 Event: Click'];
+        msgs.forEach((m,i)=> setTimeout(()=>{ consoleOutput && (consoleOutput.innerHTML += m + '\n'); console.log(m); consoleOutput && (consoleOutput.scrollTop = consoleOutput.scrollHeight); }, i*400));
+    }
+    function simulateErrors(){
+        try{ throw new Error('Тестовая ошибка'); } catch(e){ const co = document.getElementById('consoleOutput'); co && (co.innerHTML += '🚨 Error: '+e.message+'\n'); console.error(e); }
+    }
+
+    // Analytics helpers (demo)
+    function enableGTMPreview(){
+        const analyticsOutput = document.getElementById('analyticsOutput');
+        if(analyticsOutput) analyticsOutput.innerHTML = '🔧 GTM Preview Mode АКТИВИРОВАН (демо)';
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'gtm_preview_activated', previewMode:true});
+        alert('GTM Preview активирован (локально).');
+    }
+    function testGTMEvents(){ window.dataLayer.push({event:'test_event', eventCategory:'Testing', eventAction:'GTM Test'}); const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>✅ GTM Event sent'); }
+    function testDataLayer(){ const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += `<br>dataLayer length: ${window.dataLayer.length}`); }
+    function testGA4Events(){
+        const events = [{name:'page_view', params:{page_title:document.title}},{name:'click', params:{element_text:'test'}},{name:'form_submit', params:{form_name:'Feedback'}}];
+        const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>GA4 Test events:');
+        events.forEach((ev,i)=> setTimeout(()=>{ ao && (ao.innerHTML += `<br>✅ ${ev.name}`); console.log('GA4 test', ev); }, i*500));
+    }
+    function testConversions(){ const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>Conversion tests simulated'); window.dataLayer.push({event:'conversion',conversion_name:'test_conversion'}); }
+    function checkRealTime(){ const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML = `Active users: ${Math.floor(Math.random()*5)+1}`); }
+
+    function simulatePageView(){ window.dataLayer.push({event:'page_view', page_title:document.title}); const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>Simulated page_view'); }
+    function simulateClickEvent(){ window.dataLayer.push({event:'click', click_element:'demo_btn'}); const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>Simulated click'); }
+    function simulateFormSubmit(){ window.dataLayer.push({event:'form_submit', form_status:'success'}); const ao = document.getElementById('analyticsOutput'); ao && (ao.innerHTML += '<br>Simulated form_submit'); }
+
+    // Support chat (simple)
+    function toggleSupportChat(){
+        const chat = document.getElementById('supportChatContainer');
+        if(!chat) return;
+        chat.style.display = chat.style.display === 'flex' ? 'none' : 'flex';
+        if(chat.style.display === 'flex') document.getElementById('supportChatInput').focus();
+    }
+    function sendSupportMessage(){
+        const input = document.getElementById('supportChatInput'); if(!input) return;
+        const txt = input.value.trim(); if(!txt) return; addSupportMessage(txt,'client'); input.value='';
+        setTimeout(()=> addSupportMessage('Спасибо, свяжемся с вами в ближайшее время.','operator'), 800 + Math.random()*1200);
+    }
+    function addSupportMessage(text, sender){
+        const cont = document.getElementById('supportChatMessages'); if(!cont) return;
+        const m = document.createElement('div'); m.className = 'support-message '+(sender==='client'?'client-message':'operator-message'); m.textContent = text; cont.appendChild(m);
+        cont.scrollTop = cont.scrollHeight;
+    }
+
+    // Event logger to eventLog
+    function logEvent(name, params = {}) {
+        const eventLog = document.getElementById('eventLog');
+        const timestamp = new Date().toLocaleTimeString();
+        const eventText = `[${timestamp}] ${name}: ${JSON.stringify(params)}`;
+        if(eventLog){ eventLog.innerHTML += eventText + '<br>'; eventLog.scrollTop = eventLog.scrollHeight; }
+        console.log('Event:', name, params);
+        if(typeof gtag !== 'undefined'){ try{ gtag('event', name, params); }catch(e){/*ignore*/} }
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name,timestamp:new Date().toISOString()}, params));
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', function(){
+        console.log('🚀 Сайт и проект инициализированы');
+        document.querySelectorAll('.restricted').forEach(el => el.style.display = 'none');
+        window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'page_load', page_type:'combined_site', environment:'local'});
+        renderReviews();
+        updateFeedbackCount();
+        startMonitoring();
+        // show project page when clicking Dev panel buttons is available via showPage
+    });
+
+    function startMonitoring(){
+        setInterval(()=> {
+            const el = document.getElementById('activeUsers');
+            if(el) el.textContent = Math.floor(Math.random()*3)+1;
+        }, 5000);
+    }
+
+    // small helpers for dev panel
+    function togglePage(page){ showPage(page); }
+
 </script>
 </body>
 </html>
